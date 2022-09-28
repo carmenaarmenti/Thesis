@@ -1,0 +1,46 @@
+\begin{thebibliography}{1}
+
+\bibitem{Cirik2016VisualizingAU}
+V.~Cirik, E.~H. Hovy, and L.-P. Morency.
+\newblock Visualizing and understanding curriculum learning for long short-term
+  memory networks.
+\newblock {\em ArXiv}, abs/1611.06204, 2016.
+
+\bibitem{ELMAN199371}
+J.~L. Elman.
+\newblock Learning and development in neural networks: the importance of
+  starting small.
+\newblock {\em Cognition}, 48(1):71--99, 1993.
+
+\bibitem{Leclair2020}
+A.~LeClair, S.~Haque, L.~Wu, and C.~McMillan.
+\newblock Improved code summarization via a graph neural network.
+\newblock {\em CoRR}, abs/2004.02843, 2020.
+
+\bibitem{Levenshtein_SPD66}
+V.~I. Levenshtein.
+\newblock Binary codes capable of correcting deletions, insertions and
+  reversals.
+\newblock {\em Soviet Physics Doklady}, 10(8):707--710, feb 1966.
+\newblock Doklady Akademii Nauk SSSR, V163 No4 845-848 1965.
+
+\bibitem{Mastropaolo2022}
+A.~Mastropaolo, L.~Pascarella, and G.~Bavota.
+\newblock Using deep learning to generate complete log statements.
+\newblock {\em CoRR}, abs/2201.04837, 2022.
+
+\bibitem{Tufano2019}
+M.~Tufano, C.~Watson, G.~Bavota, M.~D. Penta, M.~White, and D.~Poshyvanyk.
+\newblock An empirical study on learning bug-fixing patches in the wild via
+  neural machine translation.
+\newblock {\em ACM Trans. Softw. Eng. Methodol.}, 28(4), sep 2019.
+
+\bibitem{Wang2020}
+X.~Wang, Y.~Chen, and W.~Zhu.
+\newblock A comprehensive survey on curriculum learning.
+\newblock {\em CoRR}, abs/2010.13166, 2020.
+
+\bibitem{lizard}
+T.~Yin.
+
+\end{thebibliography}

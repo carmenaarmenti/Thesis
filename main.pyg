@@ -1,0 +1,3 @@
+        public void METHOD_1 ( TYPE_1 VAR_1 )
+        { VAR_2 . add ( VAR_1 ) ;
+        VAR_3 . METHOD_2 ( ) ; }
