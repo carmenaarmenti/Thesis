@@ -20,20 +20,11 @@
 \contentsline {section}{\numberline {4.2}Canonical Training}{9}{section.23}%
 \contentsline {section}{\numberline {4.3}Training with Curriculum Learning}{9}{section.24}%
 \contentsline {section}{\numberline {4.4}Bug fixing task}{9}{section.25}%
-\contentsline {subsection}{\numberline {4.4.1}Dataset characteristics}{9}{subsection.26}%
-\contentsline {subsection}{\numberline {4.4.2}Difficulty Measurer}{9}{subsection.31}%
-\contentsline {subsection}{\numberline {4.4.3}Training Scheduler}{10}{subsection.32}%
-\contentsline {section}{\numberline {4.5}Code summarization task}{10}{section.33}%
-\contentsline {subsection}{\numberline {4.5.1}Dataset characteristics}{10}{subsection.34}%
-\contentsline {subsection}{\numberline {4.5.2}Difficulty Measurer}{10}{subsection.42}%
-\contentsline {subsection}{\numberline {4.5.3}Training Scheduler}{11}{subsection.44}%
-\contentsline {section}{\numberline {4.6}Log generation task}{11}{section.45}%
-\contentsline {subsection}{\numberline {4.6.1}Dataset characteristics}{11}{subsection.46}%
-\contentsline {subsection}{\numberline {4.6.2}Difficulty Measurer}{12}{subsection.70}%
-\contentsline {subsection}{\numberline {4.6.3}Training Scheduler}{12}{subsection.71}%
-\contentsline {chapter}{\numberline {5}Analysis of results}{13}{chapter.72}%
-\contentsline {section}{\numberline {5.1}Bug fixing task}{13}{section.73}%
-\contentsline {section}{\numberline {5.2}Code summarization task}{13}{section.74}%
-\contentsline {section}{\numberline {5.3}Log generation task}{13}{section.75}%
-\contentsline {chapter}{\numberline {6}Conclusion}{15}{chapter.76}%
-\contentsline {chapter}{\numberline {A}Appendix}{17}{appendix.77}%
+\contentsline {section}{\numberline {4.5}Code summarization task}{10}{section.30}%
+\contentsline {section}{\numberline {4.6}Log generation task}{11}{section.39}%
+\contentsline {chapter}{\numberline {5}Analysis of results}{13}{chapter.63}%
+\contentsline {section}{\numberline {5.1}Bug fixing task}{13}{section.64}%
+\contentsline {section}{\numberline {5.2}Code summarization task}{13}{section.65}%
+\contentsline {section}{\numberline {5.3}Log generation task}{13}{section.66}%
+\contentsline {chapter}{\numberline {6}Conclusion}{15}{chapter.67}%
+\contentsline {chapter}{\numberline {A}Appendix}{17}{appendix.68}%

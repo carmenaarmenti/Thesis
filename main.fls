@@ -1421,6 +1421,7 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.toc
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.toc
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.toc
+OUTPUT /Users/carmenarmenti/Desktop/Thesis document/main.toc
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplro8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
@@ -1428,7 +1429,6 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
-OUTPUT /Users/carmenarmenti/Desktop/Thesis document/main.toc
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.lof
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.lof
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.lof

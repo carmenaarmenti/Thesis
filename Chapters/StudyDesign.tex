@@ -108,8 +108,7 @@ and LSTM RNN cells. Bucketing and padding was used to deal with the variable len
 \section{Bug fixing task}
 In this section the way how the bug fixing task is applied in the CL approach is presented.
 
-\subsection{Dataset characteristics}
-The dataset used to train the NMT model is the union between \textit{small} and \textit{medium} method-level datasets
+\textbf{Dataset characteristics.} The dataset used to train the NMT model is the union between \textit{small} and \textit{medium} method-level datasets
 used by Tufano \textit{et al.} \cite{Tufano2019}. The reason for this specific choice was firstly
 to avoid any type of context dependance, secondly to achive a reasonable number of training instances.
 Each instance of the dataset is a pair $(m_b, m_f)$, where $m_b$ is a buggy code component and $m_f$ is the
@@ -144,23 +143,20 @@ from the buggy to the fixed method, thus being able to generate fixing patches.
 %%%%%%%%%%%%%%%%%%%%%%%
 
 %%% DATASET DESCRIPTION
-\subsection{Difficulty Measurer}
-As stated above, a difficulty measurer definition is the core element of the approch implemented.\\
+\textbf{Difficulty Measurer.} As stated above, a difficulty measurer definition is the core element of the approch implemented.\\
 For the task at issue here the \textbf{Levenshtain distance} was used as metric. The \textit{Levenshtein distance}, also known as the \textit{edit distance}, 
 was introduced by Vladimir Levenshtein in 1965 \cite{Levenshtein_SPD66}. It is a string metric for measuring difference between two sequences, specifically the number of insertions, deletions, and substitutions
 required to transform one string into the other. However, the distance we used for our experiments was token based, thus the granularity is word based instead of being single-character based.\\
 Defined the measure, the distance between buggy and fixed method for each of the BFPs was computed and we observed the data distribution; then we used the quartiles' values to divide the initial dataset in multiples
 smaller datasets, where each of these represents a different level of difficulty.\\
 By doing so, we clearly obtained 4 level of difficulty; thus we defined an incremental difficulty criteria to feed the model with: 
-the bug-fixing training scheduler described in Section ~\ref{scheduling-bf}.
+the bug-fixing training scheduler described as follows.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % TODO: Insert data distribution figure
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Training Scheduler}
-\label{scheduling-bf}
-The \textbf{training scheduler} decides the sequence of data subsets throughout the training process based
+\textbf{Training Scheduler.} The \textbf{training scheduler} decides the sequence of data subsets throughout the training process based
 on the judgment from the difficulty measurer. As mentioned in the introduction of this chapter, Baby Step approach switches to the next difficulty level
 as soon as the model converges on the previous one.\\ 
 In the bug-fixing task, the scheduler adjusts
@@ -178,8 +174,7 @@ what a chunk of code does and what is the purpose of the program by and large, w
 itself.\\
 In this section CL the application of Curriculum Learning is applied to code summarization task.
 
-\subsection{Dataset characteristics}
-The training dataset used to test this software engineering task, is a subset of the data set of 2.1 million 
+\textbf{Dataset characteristics.} The training dataset used to test this software engineering task, is a subset of the data set of 2.1 million 
 Java method-comment pairs used by LeClair \textit{et al} \cite{Leclair2020}. A random sample of 200K instances was picked from
 the initial dataset; evaluation and test datasets, however, were used as-is. The scope of the training here 
 was to make the model able to learn how to summarize pieces of code, starting from a sequence of tokenized methods.
@@ -200,8 +195,7 @@ was to make the model able to learn how to summarize pieces of code, starting fr
 % TODO: Insert instance ex.
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Difficulty Measurer}
-In Natural Language Processing tasks the \textbf{sentence lenght} intuitively expresses the complexity 
+\textbf{Difficulty Measurer.} In Natural Language Processing tasks the \textbf{sentence lenght} intuitively expresses the complexity 
 of a sentence. However, instead of focusing on the source of the couple, for this task we decided to sort out the subdatasets computing the
 difficulty measure on the target, namely the lenght of each method's comment. 
 Once obtained the lenghts, accordingly to the data distribution we took advantage of the quartiles obtained to split the intial dataset in 4 smaller 
@@ -216,8 +210,7 @@ buckets.
 % TODO: Insert data distribution figure
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Training Scheduler}
-Similarly to what happens in bug-fixing task, the training scheduler decides to sample from more harder data only when the model converges on the 
+\textbf{Training Scheduler.} Similarly to what happens in bug-fixing task, the training scheduler decides to sample from more harder data only when the model converges on the 
 previous easier bucket. The convergence is assessed after a fixed number of epochs, after which early stopping with patience of 5 epochs
 is run. Once the model converget on the first bucket, the training proceeds on the second and so forth. 
 
@@ -226,8 +219,7 @@ Inserting log messages is a practice broadly used and decide where to inject log
 and at which log level is as hard as it is crucial \cite{Mastropaolo2022}. In the following section Curriculum Learning is applied
 at log generation task.
 
-\subsection{Dataset characteristics}
-The dataset for this task is composed by couple of methods, where the source is the method without the log statement,
+\textbf{Dataset characteristics.} The dataset for this task is composed by couple of methods, where the source is the method without the log statement,
 the target instead has not only the log statement but also the log message.\\
 Those couples where used to train the model to generate and inject log statements in Java code.
 
@@ -266,8 +258,7 @@ Those couples where used to train the model to generate and inject log statement
 % TODO: Insert instance ex.
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Difficulty Measurer}
-Given the dataset at our dispose we choose as difficulty measurer the 
+\textbf{Difficulty Measurer.} Given the dataset at our dispose we choose as difficulty measurer the 
 complexity of the instruction set in program execution tasks. More specifically we 
 computed \textbf{cyclomatic complexity} through Lizard tool \cite{lizard}. Cyclomatic complexity
 is a quantitative software metric developed by Thomas J. McCabe in 1976 used to indicate
@@ -287,8 +278,7 @@ for each instance, the dataset was ready to be used by the training scheduler.
 % TODO: Insert data distribution figure
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Training Scheduler}
-Once again we observed the data distribution and considered the 3 quartiles
+\textbf{Training Scheduler.} Once again we observed the data distribution and considered the 3 quartiles
 to divide the whole dataset in 4 subsets. Each of those represented a differen level of difficulty.\\
 As soon as the model converged on the current bucket, BLEU values after each epoch were considered,
 and early stopping was applied. We took the best model before divergence to restart the training 
