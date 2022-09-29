@@ -15,16 +15,19 @@
 \contentsline {subsection}{\numberline {3.2.2}Code summarization task}{5}{subsection.17}%
 \contentsline {subsection}{\numberline {3.2.3}Log generation task}{5}{subsection.18}%
 \contentsline {section}{\numberline {3.3}}{5}{section.19}%
-\contentsline {chapter}{\numberline {4}Case Study}{7}{chapter.20}%
+\contentsline {chapter}{\numberline {4}Evaluating Curriculum Learning in Software Engineering tasks}{7}{chapter.20}%
 \contentsline {section}{\numberline {4.1}Neural Machine Translation}{8}{section.22}%
 \contentsline {section}{\numberline {4.2}Canonical Training}{9}{section.23}%
-\contentsline {section}{\numberline {4.3}Training with Curriculum Learning}{9}{section.24}%
-\contentsline {section}{\numberline {4.4}Bug fixing task}{9}{section.25}%
-\contentsline {section}{\numberline {4.5}Code summarization task}{10}{section.30}%
-\contentsline {section}{\numberline {4.6}Log generation task}{11}{section.39}%
-\contentsline {chapter}{\numberline {5}Analysis of results}{13}{chapter.63}%
-\contentsline {section}{\numberline {5.1}Bug fixing task}{13}{section.64}%
-\contentsline {section}{\numberline {5.2}Code summarization task}{13}{section.65}%
-\contentsline {section}{\numberline {5.3}Log generation task}{13}{section.66}%
-\contentsline {chapter}{\numberline {6}Conclusion}{15}{chapter.67}%
-\contentsline {chapter}{\numberline {A}Appendix}{17}{appendix.68}%
+\contentsline {subsection}{\numberline {4.2.1}Bug-fixing}{9}{subsection.24}%
+\contentsline {subsection}{\numberline {4.2.2}Code summarization}{10}{subsection.25}%
+\contentsline {subsection}{\numberline {4.2.3}Log generation}{10}{subsection.26}%
+\contentsline {section}{\numberline {4.3}Training with Curriculum Learning}{10}{section.27}%
+\contentsline {subsection}{\numberline {4.3.1}Bug fixing task}{10}{subsection.28}%
+\contentsline {subsection}{\numberline {4.3.2}Code summarization task}{11}{subsection.33}%
+\contentsline {subsection}{\numberline {4.3.3}Log generation task}{11}{subsection.42}%
+\contentsline {chapter}{\numberline {5}Analysis of results}{15}{chapter.66}%
+\contentsline {section}{\numberline {5.1}Bug fixing task}{15}{section.67}%
+\contentsline {section}{\numberline {5.2}Code summarization task}{15}{section.68}%
+\contentsline {section}{\numberline {5.3}Log generation task}{15}{section.69}%
+\contentsline {chapter}{\numberline {6}Conclusion}{17}{chapter.70}%
+\contentsline {chapter}{\numberline {A}Appendix}{19}{appendix.71}%
