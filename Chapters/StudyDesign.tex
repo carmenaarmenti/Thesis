@@ -18,21 +18,21 @@ as illustrated in Figure ~\ref{fig:CLdesign}.
 \end{figure}
 First of all, the Difficulty Measurer sorts all the training examples from the easiest 
 to the hardest and passes them to the Training Scheduler. Then, at each training epoch \textit{t}, the Training Scheduler
-samples a batch of training instances from the easier subset and give them to Model Trainer for training.\\
-As training epochs increase, the Scheduler decide qhen to sample from more harder data, generally until uniform sampling
+samples a batch of training instances from the easier subset and gives them to the Model Trainer for training.\\
+As training epochs increase, the Scheduler decide when to sample from more harder data, generally until uniform sampling
 from the whole training set. This schedule either depends on the training loss feedback from the Model Trainer, or on some other
 parameters that implies that the model would deverge, if left to training for more epochs.\\
 A distinction between \textbf{predefined CL} and \textbf{automatic CL} must be clarified. The first refers to the framework
 where both the Difficulty Measurer and Training Scheduler are defined by human prior knowledge, thus with no data-driven
 algorithms involved; the latter instead, if any - or both - of the components are designed by data-driven algorithms.\\
 Usually, the power of introducting Curriculum into Machine Learning depends on how the curriculum for specific
-applications and dataset is designed. Due to this, Difficulty Measurers often relies on the data
+applications and dataset is designed. Due to this, Difficulty Measurers often relie on the data
 characteristics of specific tasks, and most of them are defined by complexity, diversity, or noise estimation
 definitions.\\
 
 We adopted the most popular discrete scheduler, known as \textit{Baby Step}, where the complexity of the training
-data needs to be gradually increasing. Due to this a reliable metric to split the initial dataset of each task needed to be defined.
-This approach distributes the sorted data into buckets, from easy to hard, according to the metric and starts training with the easiest bucket. 
+data needs to be gradually increasing. Due to this, a reliable metric to split the initial dataset of each task needed to be defined.
+This approach distributes the sorted data into buckets, from easy to hard according to the metric, and starts training with the easiest bucket. 
 Starting from the easiest bucket, after a fixed number of training epochs or convergence, the subsequent bucket is merged
 into the current training subset - main characteristic of \textit{Baby Step} approach.
 Finally, once all the buckets are merged and used, the
@@ -49,11 +49,11 @@ Engineering tasks, i.e. \textit{bug-fixing}, \textit{code summarization}, and \t
 tasks. \\
 For each of the tasks considered, the following aspects are described thoroughly:
 \begin{itemize}
-    \item \textbf{Dataset characteristics}: the datasets used are composed by a couple, where the first element is the source of the training, while the second is the target;
     \item \textbf{Difficulty Measurer}: a measure to sort the datasets' instances is needed, each task was experimented with a different metric; 
     \item \textbf{Training Scheduler}: sequence of data subsets are presented to the model following a training schedule.
 \end{itemize}
 
+%\item \textbf{Dataset characteristics}: the datasets used are composed by a couple, where the first element is the source of the training, while the second is the target;
 
 The goal of this study is to asses whether Neural Machine Translation, combined with the Curriculum Learning approach, 
 can be used for the tasks experimented. In the following section, the design of our study is described in detail.
@@ -100,7 +100,7 @@ and LSTM RNN cells. Bucketing and padding was used to deal with the variable len
 \section{Canonical Training}
 Before experiment the curriculum learning approach, we reproduced the baseline approaches for each task experimented
 that include the conventional technique of randomly ordering the training samples with the aim to investigate how the performance 
-of the original models are compared to the experiment affected by curriculum learning.
+of the original models are, compared to the experiment affected by curriculum learning.
 \subsection{Bug-fixing}
 As for the bug-fixing task, the datasets used to train the NMT model is the union between \textit{small} and \textit{medium} method-level datasets
 used by Tufano \textit{et al.} \cite{Tufano2019}. So, we worked with the standard training, evaluation and test set splits of respectively
@@ -113,26 +113,30 @@ out of which we considered the best model, early stopping the model before overf
 The best model configuration was then used to run the inference.
 Indeed, after the model was trained, it was evaluated on the test set of unseen buggy code. 
 Instead of using the classic greeding decoding that selects the output term \(y_i\) with the highest probability, however, we used another decoding
-strategy known as Beam Search [reference prese da 2.3.3 michele tufano]. The key idea is that the decoding process keeps track of \textit{k}
+strategy known as Beam Search. 
+%[references 2.3.3 michele tufano]. 
+The key idea is that the decoding process keeps track of \textit{k}
 hypotheses - being \textit{k} the beam size or width.\\
 The beam search algorithm selects multiple tokens for a position in a given sequence based on conditional probability. Moreover, the algorithm
 can take any number of \textit{N} best alternatives through a hyperparameter known as beam size or width indeed. Conversely to what greedy search does, 
 Beam search broad the search to include other words that might fit better apart from the best word for each position in the sequence.
 If Greedy search looks at each position in the output sequence in isolation, deciding the word based on highest probability and then moving down to the resto of the sentence,
 Beam search also takes the N best output sequences and look at the current preceding words and probabilities compared to the current position that is being decoded in the sequence.\\
-We considered the following sizes: 1 (that corresponds to the Greedy Naïve Approach), 5, 10, 15, 20, 25, 30, 35, 40, 45, 50.
+We considered the following sizes: 1 - that corresponds to the Greedy Naïve Approach -, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50.
 
 \subsection{Code summarization}
-Regarding the task of code summarization, we selected a random sample of 200k instances from a dataset of 2 million items.
+Regarding the task of code summarization, we selected a random sample of 200k instances from a dataset of 2.1 million items.
 Also here we considered the canonical division between training, test and evaluation of respectively 200.000, 105.832, and 106.153 instances.
-We trained the model on the training set for 20 epochs, that correspond to 125.000 steps, and we took the best model over the 20 model configuration evaluated after every epoch,
+We trained the model on the training set for 20 epochs, that corresponds to 125.000 steps, and we took the best model over the 20 model configuration evaluated after every epoch,
 thus using the best checkpoint to run the inference step. This time, to guide the selection of the best configuration, we used the BLEU values computed on the validation set instead of using
 the loss function. Conversely, the results are computed on the test set. Indeed, the same way it was done for the previous task, after the training step the model is
-evaluated over the test set of unseen functions to generate code summarizations of such methods.
+evaluated over the test set of unseen functions to generate code summarizations of such methods.\\
+The scope of the training here 
+was to make the model able to learn how to summarize pieces of code, starting from a sequence of tokenized methods.
 
 \subsection{Log generation}
 As well as happened in both the previous task experimented, also in log generation we considered the well-known split between training set, test set, and evaluation set.
-The sets in question are - following the same order - of the amount of 105.985, 12.020, and 13.260. The model was trained for 45 epochs, i.e. 149.625 steps, and 
+The sets in question are - following the same order - of the amount of 106.382, 12.020, and 13.260. The model was trained for 45 epochs, i.e. 149.625 steps, and 
 it must be specified that it was evaluated every epoch. The best configuration in this case was guided on an early-stopping criterion based on BLEU values. 
 Once the model was trained, it was evaluated against the test set of unseen methods without log statements and messages in order to assess its ability to correctly inject log statements and messages within methods.
 \section{Training with Curriculum Learning}
@@ -140,24 +144,15 @@ Once the model was trained, it was evaluated against the test set of unseen meth
 As stated in the Curriculum Learning literature, the training instances need to be ordered based on the curriculum.
 Each of the task considered is related to a different curriculum, specifically the datasets were ordered
 following 3 different complexity ideas. Since a curriculum approach requires the definition of a \textbf{Difficulty Measurer}
-and a \textbf{Training Scheduler}, we defined those for each task. In the following section details are explained.
+and a \textbf{Training Scheduler}, we defined those for each task. In the following sections details are explained.
 
 \subsection{Bug fixing task}
-In this section the way how the bug fixing task is applied in the CL approach is presented.\\
-\noindent\textbf{Dataset Details.} 
- The reason for this specific choice was firstly
-to avoid any type of context dependance, secondly to achive a reasonable number of training instances.
+Based on the entire training dataset at our dispose of couple of buggy-fixed methods, we defined a Difficulty Measurer to divide the dataset
+and a Training Scheduler to rule the order in which the instances were given to the model. Since both the source and the target
+were tokenized, we thought that computing the number of changes from the buggy version to the fixed one of each method was a quite reliable
+way to define the complexity for the type of instances used in this task.\newline
 
-
-\begin{lstlisting}[language=Java, caption={Buggy code},label={lst:buggy1}, mathescape=true, breaklines=true]{Name}   
-    public void METHOD_1 ( TYPE_1 VAR_1 ) { VAR_2 . METHOD_2 ( VAR_3 ) ; ( VAR_4 ) ++ ; METHOD_3 ( ) ; } 
-\end{lstlisting}
-
-
-\begin{lstlisting}[language=Java, caption={Fixed code},label={lst:fixed1}, mathescape=true, breaklines=true]{Name}
-    public void METHOD_1 ( TYPE_1 VAR_1 ) { if ( VAR_2 . METHOD_2 ( VAR_3 ) ) { ( VAR_4 ) ++ ; METHOD_3 ( ) ; } }
-\end{lstlisting}
-
+%\noindent\textbf{Dataset Details.} 
 %\noindent\begin{minipage}{.45\textwidth}
 %\begin{lstlisting}[language=Java, caption={Buggy code},label={lst:buggy1}, mathescape=true, breaklines=true, frame=tlrb]{Name}
 %    public void METHOD_1 ( TYPE_1 VAR_1 ) 
@@ -184,7 +179,7 @@ required to transform one string into the other. However, the distance we used f
 Defined the measure, the distance between buggy and fixed method for each of the BFPs was computed and we observed the data distribution; then we used the quartiles' values to divide the initial dataset in multiples
 smaller datasets, where each of these represents a different level of difficulty.\\
 By doing so, we clearly obtained 4 level of difficulty; thus we defined an incremental difficulty criteria to feed the model with: 
-the bug-fixing training scheduler described as follows.
+the bug-fixing training scheduler described as follows.\newline
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % TODO: Insert data distribution figure
@@ -192,45 +187,37 @@ the bug-fixing training scheduler described as follows.
 
 \noindent\textbf{Training Scheduler.} The training scheduler decides the sequence of data subsets throughout the training process based
 on the judgment from the difficulty measurer. As mentioned in the introduction of this chapter, Baby Step approach switches to the next difficulty level
-as soon as the model converges on the previous one.\\ 
+as soon as the model converges on the previous one.
 In the bug-fixing task, the scheduler adjusts
 the training data subsets based on an early stopping criterion: after a fixed number of steps
 early stopping is run and it considers the model as being converging if the loss value
 does not improve after 5K steps.
 
-To guide the selection of the best configuration, we used the loss function computed on the validation set
-and not on the test set, while the results are computed on the test set.
 
 \subsection{Code summarization task}
-Automatic source code summarization is the task of generating short natural language description 
-for source code \cite{Leclair2020}. The idea is that a brief description allows programmers to understand
-what a chunk of code does and what is the purpose of the program by and large, without necessarily read the code 
-itself.\\
-In this section CL the application of Curriculum Learning is applied to code summarization task.
+As well as happened for the training on the baseline model, a random sample of 200K method-comment pairs was picked from the initial dataset;
+evaluation and test datasets, however, were used as-is. This initial dataset was then divided in 4 sub-datasets, each representing a different
+level of difficulty.\newline  
 
-\noindent\textbf{Dataset characteristics.} The training dataset used to test this software engineering task, is a subset of the data set of 2.1 million 
-Java method-comment pairs used by LeClair \textit{et al} \cite{Leclair2020}. A random sample of 200K instances was picked from
-the initial dataset; evaluation and test datasets, however, were used as-is. The scope of the training here 
-was to make the model able to learn how to summarize pieces of code, starting from a sequence of tokenized methods.
+%\begin{lstlisting}[language=Java, caption={Function},label={lst:buggy1}, mathescape=true, breaklines=true]{Name}
+%    protected String creatorName() {
+%        return Texts.getText("solver");
+%    }
+%\end{lstlisting}
 
-\begin{lstlisting}[language=Java, caption={Function},label={lst:buggy1}, mathescape=true, breaklines=true]{Name}
-    protected String creatorName() {
-        return Texts.getText("solver");
-    }
-\end{lstlisting}
-
-\begin{lstlisting}[language=Java, caption={Comment},label={lst:fixed1}, mathescape=true, breaklines=true]{Name}
-    //Gives the name of this solver as used to tag new solutions.
-    //@return the name of this solver
-\end{lstlisting}
+%\begin{lstlisting}[language=Java, caption={Comment},label={lst:fixed1}, mathescape=true, breaklines=true]{Name}
+%    //Gives the name of this solver as used to tag new solutions.
+%    //@return the name of this solver
+%\end{lstlisting}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % TODO: Insert instance ex.
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\noindent\textbf{Difficulty Measurer.} In Natural Language Processing tasks the \textbf{sentence lenght} intuitively expresses the complexity 
-of a sentence. However, instead of focusing on the source of the couple, for this task we decided to sort out the subdatasets computing the
+\noindent\textbf{Difficulty Measurer.} In Natural Language Processing tasks, the \textbf{sentence lenght} intuitively expresses the complexity 
+of a sentence, thus we used the instances' lenghts as measure of complexity. 
+However, instead of focusing on the source of the couple, for this task we decided to sort out the subdatasets computing the
 difficulty measure on the target, namely the lenght of each method's comment. 
 Once obtained the lenghts, accordingly to the data distribution we took advantage of the quartiles obtained to split the intial dataset in 4 smaller 
 buckets. 
@@ -243,50 +230,54 @@ buckets.
 %%%%%%%%%%%%%%%%%%%%%%%
 % TODO: Insert data distribution figure
 %%%%%%%%%%%%%%%%%%%%%%%
+Accordingly to the training set, the evaluation set was splitted in 4 sub-datasets as well, because the model trained on a defined level (or levels) of difficulty
+needs to be evaluated on instances with the same complexity, according to the curriculum learning idea.\newline
 
 \noindent\textbf{Training Scheduler.} Similarly to what happens in bug-fixing task, the training scheduler decides to sample from more harder data only when the model converges on the 
 previous easier bucket. The convergence is assessed after a fixed number of epochs, after which early stopping with patience of 5 epochs
-is run. Once the model converget on the first bucket, the training proceeds on the second and so forth. 
+is run. Once the model converges on the first bucket, the training proceeds on the second and so forth. 
 
 \subsection{Log generation task}
 Inserting log messages is a practice broadly used and decide where to inject log statements, what information to report through it, 
-and at which log level is as hard as it is crucial \cite{Mastropaolo2022}. In the following section Curriculum Learning is applied
-at log generation task.
-
-\noindent\textbf{Dataset characteristics.} The dataset for this task is composed by couple of methods, where the source is the method without the log statement,
+and at which log level is as hard as it is crucial \cite{Mastropaolo2022}. In the following section Curriculum Learning approach 
+is applied at log generation task. The dataset for this task is composed by couple of methods, where the source is the method without the log statement,
 the target instead has not only the log statement but also the log message.\\
 Those couples where used to train the model to generate and inject log statements in Java code.
+If the training set for the training on the baseline model was composed by 106.382, the training set for the experiment with curriculum learning 
+is of 105.985 instances. This was because of the Difficulty Measurer we choose to use: according to the latter, 397 instances had a null difficulty, hence
+were excluded from the set. The same happend in the case of the evaluation set, 13.197 instances were used instead of 13.260. 
+The test set ??? \newline
 
 
-\noindent\begin{minipage}{.45\textwidth}
-\begin{lstlisting}[language=Java, caption={Method},label={lst:buggy1}, mathescape=true, breaklines=true]{Name}
-    public CsvDestination setPath ( final String path ) 
-    { if ( csvFile != null ) 
-    { throw new UnsupportedOperationException ( ""Changing the value of path after opening the destination is not allowed."" ) ; } 
-    if ( outputChannel != null ) 
-    { try 
-    { outputChannel . close ( ) ; 
-    outputChannel = null ; } 
-    catch ( final IOException e ) { } } 
-    this . path = path ; 
-    return this ; }
-\end{lstlisting}
-\end{minipage}\hfill
-\begin{minipage}{.45\textwidth}
-\begin{lstlisting}[language=Java, caption={Method + log statement},label={lst:fixed1}, mathescape=true, breaklines=true]{Name}
-    public CsvDestination setPath ( final String path ) 
-    { if ( csvFile != null ) 
-    { throw new UnsupportedOperationException ( ""Changing the value of path after opening the destination is not allowed."" ) ; } 
-    if ( outputChannel != null ) 
-    { try 
-    { outputChannel . close ( ) ; 
-    outputChannel = null ; } 
-    catch ( final IOException e ) 
-    { log . error ( String . format ( ""Could not close file channel with CSV results for file %s."" , csvFile ) , e ) ; } } 
-    this . path = path ; 
-    return this ; }
-\end{lstlisting}
-\end{minipage}
+%\noindent\begin{minipage}{.45\textwidth}
+%\begin{lstlisting}[language=Java, caption={Method},label={lst:buggy1}, mathescape=true, breaklines=true]{Name}
+%    public CsvDestination setPath ( final String path ) 
+%    { if ( csvFile != null ) 
+%    { throw new UnsupportedOperationException ( ""Changing the value of path after opening the destination is not allowed."" ) ; } 
+%    if ( outputChannel != null ) 
+%    { try 
+%    { outputChannel . close ( ) ; 
+%    outputChannel = null ; } 
+%    catch ( final IOException e ) { } } 
+%    this . path = path ; 
+%    return this ; }
+%\end{lstlisting}
+%\end{minipage}\hfill
+%\begin{minipage}{.45\textwidth}
+%\begin{lstlisting}[language=Java, caption={Method + log statement},label={lst:fixed1}, mathescape=true, breaklines=true]{Name}
+%    public CsvDestination setPath ( final String path ) 
+%    { if ( csvFile != null ) 
+%    { throw new UnsupportedOperationException ( ""Changing the value of path after opening the destination is not allowed."" ) ; } 
+%    if ( outputChannel != null ) 
+%    { try 
+%    { outputChannel . close ( ) ; 
+%    outputChannel = null ; } 
+%    catch ( final IOException e ) 
+%    { log . error ( String . format ( ""Could not close file channel with CSV results for file %s."" , csvFile ) , e ) ; } } 
+%    this . path = path ; 
+%    return this ; }
+%\end{lstlisting}
+%\end{minipage}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % TODO: Insert instance ex.
@@ -295,7 +286,7 @@ Those couples where used to train the model to generate and inject log statement
 \noindent\textbf{Difficulty Measurer.} Given the dataset at our dispose we choose as difficulty measurer the 
 complexity of the instruction set in program execution tasks. More specifically we 
 computed \textbf{cyclomatic complexity} through Lizard tool \cite{lizard}. Cyclomatic complexity
-is a quantitative software metric developed by Thomas J. McCabe in 1976 used to indicate
+is a quantitative software metric developed by Thomas J. McCabe in 1976, used to indicate
 the complexity of a program.  
 It measures the number of linearly-independent paths through a program module. 
 The measure is computed using the control-flow graph of the program where
@@ -306,17 +297,17 @@ modules, methods or classes within a program. We decided to compute it on each o
 the source methods.\\
 It must be said that from the initial dataset were removed 397 instances whose
 cyclomatic complexity was 0. Decided and computed the difficulty measure
-for each instance, the dataset was ready to be used by the training scheduler.
+for each instance, the dataset was ready to be used by the training scheduler.\newline
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % TODO: Insert data distribution figure
 %%%%%%%%%%%%%%%%%%%%%%%
 
 \noindent\textbf{Training Scheduler.} Once again we observed the data distribution and considered the 3 quartiles
-to divide the whole dataset in 4 subsets. Each of those represented a differen level of difficulty.\\
-As soon as the model converged on the current bucket, BLEU values after each epoch were considered,
+to divide the whole dataset in 4 subsets. Each of those represented a different level of difficulty.\\
+As soon as the model converged on the current bucket, BLEU values after each epoch were assessed,
 and early stopping was applied. We took the best model before divergence to restart the training 
-on the following bucket. 
+from the following bucket. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%

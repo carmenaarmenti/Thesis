@@ -274,8 +274,10 @@
 
 \RequirePackage{geometry}
 \geometry{
+	lmargin=50mm,
+	rmargin=50mm,
 	headheight=4mm,
-	headsep=4mm,
+	headsep=20mm,
 	includehead,
 	includefoot
 }
