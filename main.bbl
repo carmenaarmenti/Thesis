@@ -1,4 +1,10 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{bengio2009curriculum}
+Y.~Bengio, J.~Louradour, R.~Collobert, and J.~Weston.
+\newblock Curriculum learning.
+\newblock In {\em Proceedings of the 26th annual international conference on
+  machine learning}, pages 41--48, 2009.
 
 \bibitem{Cirik2016VisualizingAU}
 V.~Cirik, E.~H. Hovy, and L.-P. Morency.
@@ -6,11 +12,22 @@ V.~Cirik, E.~H. Hovy, and L.-P. Morency.
   memory networks.
 \newblock {\em ArXiv}, abs/1611.06204, 2016.
 
+\bibitem{Elman1}
+J.~Elman.
+\newblock Learning and development in neural networks: the importance of
+  starting small.
+\newblock {\em Cognition}, 48:71--99, 08 1993.
+
 \bibitem{ELMAN199371}
 J.~L. Elman.
 \newblock Learning and development in neural networks: the importance of
   starting small.
 \newblock {\em Cognition}, 48(1):71--99, 1993.
+
+\bibitem{krueger2009}
+K.~A. Krueger and P.~Dayan.
+\newblock Flexible shaping: How learning in small steps helps.
+\newblock {\em Cognition}, 110(3):380--394, 2009.
 
 \bibitem{Leclair2020}
 A.~LeClair, S.~Haque, L.~Wu, and C.~McMillan.
@@ -42,5 +59,6 @@ X.~Wang, Y.~Chen, and W.~Zhu.
 
 \bibitem{lizard}
 T.~Yin.
+\newblock \href{https://github.com/terryyin/lizard}{Lizard}.
 
 \end{thebibliography}

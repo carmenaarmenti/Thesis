@@ -1,19 +1,48 @@
 \chapter{Deep Learning and Curriculum Learning}
-Inspired by human learning, curriculum learning is an algorithm that emphasizes
+Humans are different from other species in many ways, but two of them are particularly noteworthy. 
+First of all, humans display an exceptional capacity to learn;
+moreover, humans are remarkable for the long time they take to reach maturity. Human beings need about two decades to be trained as fully functional adults for our society and it may
+be argued that, through culture, learning has created the basis for a non-genetically based transmission of behaviors and habits which might
+accellerate the evolution of our species. Infancy and childhood are times of great vulnerability for the young, when the first skills are developed and when the adults who
+must care for and protect their own young go through a severe restriction of their range of activities. Then, why would evolutionary process not prune a long period of 
+immaturity from our species? Previous research carried out by Elman \textit{et al.}\cite{Elman1} at the intersection of cognitive science
+and machine learning underline that it is important to remember that the evolution looks at the whole individuals rather than at the value of isolated traits; the adaptive success of individuals therefore is 
+determined by the joint interaction of all their traits. Thus, it might be that to understand the persistence of one trait with apparently negative consequences - such as the lenghty period of immaturity, possible interactions
+with other traits - such as the ability to learn - may need to be considered. The perfect example of such an interaction, is that in human beings the greatest learning occurs precisely in the period of time
+when they are undergoing major changes, during childhood indeed.\\
+
+\section{State of the art}
+In humans, learning and development interact in an as important as non-obvious way; maturational changes might provide the enabling 
+conditions which allow learning to be most effective. It is a matter of fact that humans need about two decades to be trained as fully functional 
+adults, and the higher the training is organized, the better the knowledge of the person. Humans in fact learn much better when the ecamples are not randomly presented, but organized in such a way 
+where the amount of concepts is incremented gradually, and where the complexity of them increases over time. The majority of education systems are organized in order to illustrate 
+different concepts at different times, exploiting previously learned notions to ease the learning of new abstractions. By choosing which examples to present and in which order to explain them to the learning system, one can guide
+training and consequently increase the speed at which learning can happen. This is the same idea exploited in \textit{animal training} by Skinner (1958), Peterson (2004) and Krueger \& Dayan (2009)\footnote{hello} 
+where it is called \textit{shaping}. \\
+In the context of machine learning, such a meaningful learning-like process is known as \textit{curriculum learning}, whose basic idea - traced back to Elaman - is to start small, learn eaasier aspects
+of the task, and then gradually increase the difficulty level.
+Inspired by human learning in fact, curriculum learning (CL) is a training strategy that emphasizes
 the order of training instances in a computational learning setup.
-As a feature of human learning, curriculum, or even better learning in a meaningful way,
+As a feature of human learning, curriculum - or even better learning in a meaningful way -
 has been transferred to machine learning, thus creating the subdiscipline named
-\textit{curriculum learning} \cite{Wang2020}.\\
+\textit{curriculum learning}.\\
 Essentially, human education is organized as curricula, by starting small indeed, and gradually presenting more complex
 concepts. The paramount hypothesis is that simpler instances should be learned
-during the first steps as building blocks to then learn more complex ones. Several experiments on sentiment 
+during the first steps as building blocks, to then learn more complex ones. Several experiments on sentiment 
 analysis task and tasks similar to sequence prediction tasks in NLP carried on by Cirick \textit{et al} \cite{Cirik2016VisualizingAU} prove that
 curriculum learning has positive effects on LSTM's internal states, by biasing the model through building constructive representations. 
 Specifically, the internal representation at the previous timestep is used as building block for the next one, thus
 contributing at the final prediction.
 
 
-\section{State of the art}
+
+In traditional machine learning algorithms all the training examples are randomly presented to the model,
+thus ignoring the different complexities of data instances and the learning status of the current model. 
+Owning to this, it is fairily intuitive wondering if the curriculum training strategy could ever benefit machine learning.
+Extensive experiments from early [], [], [] to recent works [], [], [], [] in various applications of machine learning show that such strategy is of benefit in this field, but not always, and 
+because of that the power of introducing the curriculum-like strategy depends on how the curriculum for specific applications and datasets is designed.
+
+
 \section{Curriculum Learning related works}
 \section{Curriculum Learning application in Deep Learning tasks}
 

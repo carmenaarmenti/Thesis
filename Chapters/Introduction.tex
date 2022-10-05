@@ -1,14 +1,78 @@
 \chapter{Introduction}
+Humans and animals acquire an extensive and flexible repertoire of complex behaviors through learning. They can perform
+much more complex tasks than they can acquire using simple trial and error learning. 
+This gap is filled by teaching indeed, and in instruction contexts one important method is \textit{shaping}. Shaping starts with a task analysis in which a desired
+behavior is broken down into smaller and more manageable steps that would move the learner, namely the child, successively closer to that desired behavior. Once the small approximations of the desired behavior are clearly
+identified, one must select the reinforcement to be used and make sure that everyone working with the tutee knows which behavior, when, and how to reinforce the approximations.
+Data on the behavior should be collected and reviewed by the team. The program must continue until the learner demonstrate the desired behavior.
+In order for shaping to be successful, it is important to clearly define the behavioral objective and the target behavior. Also, in order to gradually achieve the target, 
+a teacher must know when to deliver or withhold reinforcement. \\
+The term \textit{shaping} was first coined 
+by B. F. Skinner\footnote{Skinner is an american psychologist, behaviorist, author, inventor, and social philosopher.}, 
+who described it as a "method of successive approximations". In shaping indeed, a sequence of intermediate, simple tasks is taught, in order to aid acquisition of an original,
+complex task. Approximately shaping shares the same idea of the divide-and-conquer concept.\\
+Even though all the previous said looks to be more appropriate
+to behavior engineering\footnote{Behavioral engineering, also called Applied behavioral analysis (ABA) is a sceintific discipline that applies
+empirical approaches based upon the principles of respondend and operant conditioning to change behavior of social significance.}
+- being it related to the attempts that experts of the field put into practice to change human or animal behaviors - 
+shaping was related to the context of machine learning.\\
 
 \section{Application context}
+Bengio \textit{et al} \cite{bengio2009curriculum} in their work "Curriculum Learning" are the first to relate the shaping concept
+to the context of machine learning theory, calling the training strategy of organizing the training in a meaningful order "curriculum learning" indeed.
+Curriculum learning was originally inspired by the learning experience of humans, since human beings tend to learn better and faster when 
+they are first introduced to simpler concepts and exploit previously learned concepts and skills to ease the learning of new abstractions.
+However, the basic idea of training a learning machine with a curriculum method can be traced back
+at the very least to Elman \cite{Elman1}. Elman realized a concept described in terms of \textit{less is more}, in the context of the learning 
+of grammars in simple recurrent networks. The idea was to use an initial phase of training with only simpler incarnations of the rules of the grammar.
+The experimental results, based on learning a simple grammar with a recurrent network, suggested that
+successful learning of grammatical structure depends, rather than on innate knowledge of grammar,
+on starting with a limited architecture that is at first quite restricted in complexity, but afterward expands its resources
+gradually as it learns. Such conclusions are important for developmental psychology, because they 
+illustrate the adaptive value of starting, as human infants fo, with a simpler initial state, and then building on that to develope
+more and more sophisticated representations of structure. Thequestion of guiding learning of a recurrent neural network for learning
+a simple language and increasing its capacity along the way was revisited by Krueger \& Dayan \cite{krueger2009},
+who used an unelaborated form of the 
+long short term memory (LSTM) model, studying
+the additional role that shaping might play in generating complex behavior in tasks, and providing
+evidence for faster convergence using a shaping-like procedure. Similar ideas were also explored
+in robotics, where by gradually making the learning task more difficult reinforcement learning was applied.
+
 \section{Motivations and Objectives}
+Whether machine learning algorithms benefit from a similar training strategy is a question that has been widely answered so far, 
+every time differently depending on the task experimented and on the results aimed. Without surprise, curriculum learning 
+has been found most helpful in end-to-end neural network architectures \cite{bengio2009curriculum},
+given that the performance that an artificial network can achieve mostly depends on the quality of training data given to it.\\
+Recently, the application of curriculum learning is also studied for Neural Machine Translation (NMT), that translates text from a source
+language to a target language in an end-to-end fashion with a single neural network. On top of that, the performance of 
+NMT has been improved significantly in recent years, as these architectures evolved from the initial Recurrent Neural Network (RNN) based models, to convolutional
+seq2seq models and further to Transformer models. \\
+
+Since many clarified when and why a \textit{curriculum} or \textit{starting small} strategy can benefit
+machine learning algorithms, and given that none of the previous work in the current state of the art 
+involved software engineering tasks, we decided to bridge this gap focusing our attention on three software engineering tasks: \textbf{bug-fixing}, 
+\textbf{code summarization}, and \textbf{log generation}.\\
+
+Not only are curriculum learning applications of benefit of improving model performances
+on target tasks - given by the metaphor with 
+the effective human-based learning approach, but also of accelerating the training process.
+However, since we worked with a NMT and training an NMT model is a time-consuming task \textit{a priori}, 
+we were curious to see results in terms of the first of the two most significant requirements 
+in major machine learning research aforementioned. On the other hand we were not sure about the time needed for the training.
+
 \section{Results}
+By and large, the CL training times for the bug-fixing 
+and code summarization tasks were not that much different from
+the plain-training process times without curricula; quite the opposite, as for the log generation task CL training took longer.\\
+In terms of performances, bug-fixing task is the only one who showed a significant improvement; code summarization task experiment
+instead reported quite similar results, as for the comparison between plain and curriculum training.
 
 \section{Document Structure}
-This document is organized as follows:
+This thesis is organized as follows:
 \begin{itemize}
-    \item In Chapter 2, 
-    \item In Chapter 3,
-    \item In Chapter 4,
-    \item In Chapter 5,
+    \item Chapter 2 - Deep Learning and Curriculum Learning: related works in the current state of the art;
+    \item Chapter 3 - Deep Learning and Software Engineering tasks: theoretical background and other works;
+    \item Chapter 4 - Evaluating CL in Software Engineering tasks: definition and development of CL approach considered;
+    \item Chapter 5 - Analysis of results: assessment for each of the task of the CL approach used;
+    \item Chapter 6 - Conclusion: summary and possible future developments.
 \end{itemize}

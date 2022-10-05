@@ -72,8 +72,11 @@ other improvements in the ability of such a model to exploit the knowledge acqui
 this specific task. 
 
 \section{Code summarization task}
-
-
+In the study taken as reference the authors used different neural networks to 
+assess the quality of their work. So, the comparison between our results and theirs
+is not really straigh - forward. However, as said before, we reproduced the experiment on a baseline model,
+where baseline means the model without any curriculum learning approach applied.
+The experiment on the baseline model totalized a bleu score of 13.70 that is ...
 \begin{table}[h!]
     \centering
     \begin{tabular}{l|r|r|r|r|r}
@@ -85,8 +88,13 @@ this specific task.
     \caption{BLEU values summary .}
     \label{table:1}
     \end{table}
-
-
+On the other hand, the bleu value after the experiment on the model together with the curriculum approach
+scored a value of 13.29, which is lower than the results achieved by the baseline.
+This means that in this case the curriculum approach does not work in the view of collect better results.
+However, it must be said that the models used are different; this might mean that the differences observed
+may depend on the models used and not on the technique applied.\\
+Also on perfect predictions we do not have better results, but we can observe - as showed in Table~\ref{table:2} - that the values are not 
+that much distant one from another.
 
 \begin{table}[h!]
     \centering
@@ -109,5 +117,4 @@ this specific task.
     \caption{Perfect predictions summary.}
     \label{table:2}
 \end{table}
-\newpage
 \section{Log generation task}
