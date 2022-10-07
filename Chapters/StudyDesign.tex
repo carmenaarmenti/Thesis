@@ -1,34 +1,5 @@
 \chapter{Evaluating Curriculum Learning in Software Engineering tasks}
-In a nutshell, curriculum learning means "training from easier data to harder data" \cite{Wang2020}. More specifically the
-core idea is to "start small" \cite{ELMAN199371}, train the machine learning model with easier subtasks, to then gradually increase
-the difficulty level of subtasks until the whole training dataset is used.\\
-Bearing in mind the strategy of training from easier to harder data, to design such a curriculum idea 
-(i), what kind of training data is supposed to be easier than other data, (ii) and when is appropriate to present more harder
-data for training - and how much more - must necessarily be decided.
-Technically, those 2 issues can be abstracted in the concepts of a Difficulty Measurer, that decides the "easiness"
-of each data instance to start the training process from, and a Training Scheduler, that rules the sequence of data subsets during 
-the whole training process \cite{Wang2020}.
-Therefore, Difficulty Measurer together with Training Scheduler constitute a general framework for curriculum design,
-as illustrated in Figure ~\ref{fig:CLdesign}.
-\begin{figure}[h]
-    \begin{center}
-        \includegraphics[width=0.55\textwidth]{/Users/carmenarmenti/Desktop/Thesis document/images/predefinedCL.png}
-        \caption{\label{fig:CLdesign}Predefined Curriculum Design.}
-    \end{center}
-\end{figure}
-First of all, the Difficulty Measurer sorts all the training examples from the easiest 
-to the hardest and passes them to the Training Scheduler. Then, at each training epoch \textit{t}, the Training Scheduler
-samples a batch of training instances from the easier subset and gives them to the Model Trainer for training.\\
-As training epochs increase, the Scheduler decide when to sample from more harder data, generally until uniform sampling
-from the whole training set. This schedule either depends on the training loss feedback from the Model Trainer, or on some other
-parameters that implies that the model would deverge, if left to training for more epochs.\\
-A distinction between \textbf{predefined CL} and \textbf{automatic CL} must be clarified. The first refers to the framework
-where both the Difficulty Measurer and Training Scheduler are defined by human prior knowledge, thus with no data-driven
-algorithms involved; the latter instead, if any - or both - of the components are designed by data-driven algorithms.\\
-Usually, the power of introducting Curriculum into Machine Learning depends on how the curriculum for specific
-applications and dataset is designed. Due to this, Difficulty Measurers often relie on the data
-characteristics of specific tasks, and most of them are defined by complexity, diversity, or noise estimation
-definitions.\\
+
 
 We adopted the most popular discrete scheduler, known as \textit{Baby Step}, where the complexity of the training
 data needs to be gradually increasing. Due to this, a reliable metric to split the initial dataset of each task needed to be defined.
@@ -134,11 +105,11 @@ evaluated over the test set of unseen functions to generate code summarizations 
 The scope of the training here 
 was to make the model able to learn how to summarize pieces of code, starting from a sequence of tokenized methods.
 
-\subsection{Log generation}
-As well as happened in both the previous task experimented, also in log generation we considered the well-known split between training set, test set, and evaluation set.
-The sets in question are - following the same order - of the amount of 106.382, 12.020, and 13.260. The model was trained for 45 epochs, i.e. 149.625 steps, and 
-it must be specified that it was evaluated every epoch. The best configuration in this case was guided on an early-stopping criterion based on BLEU values. 
-Once the model was trained, it was evaluated against the test set of unseen methods without log statements and messages in order to assess its ability to correctly inject log statements and messages within methods.
+%\subsection{Log generation}
+%As well as happened in both the previous task experimented, also in log generation we considered the well-known split between training set, test set, and evaluation set.
+%The sets in question are - following the same order - of the amount of 106.382, 12.020, and 13.260. The model was trained for 45 epochs, i.e. 149.625 steps, and 
+%it must be specified that it was evaluated every epoch. The best configuration in this case was guided on an early-stopping criterion based on BLEU values. 
+%Once the model was trained, it was evaluated against the test set of unseen methods without log statements and messages in order to assess its ability to correctly inject log statements and messages within methods.
 \section{Training with Curriculum Learning}
 
 As stated in the Curriculum Learning literature, the training instances need to be ordered based on the curriculum.
@@ -237,16 +208,16 @@ needs to be evaluated on instances with the same complexity, according to the cu
 previous easier bucket. The convergence is assessed after a fixed number of epochs, after which early stopping with patience of 5 epochs
 is run. Once the model converges on the first bucket, the training proceeds on the second and so forth. 
 
-\subsection{Log generation task}
-Inserting log messages is a practice broadly used and decide where to inject log statements, what information to report through it, 
-and at which log level is as hard as it is crucial \cite{Mastropaolo2022}. In the following section Curriculum Learning approach 
-is applied at log generation task. The dataset for this task is composed by couple of methods, where the source is the method without the log statement,
-the target instead has not only the log statement but also the log message.\\
-Those couples where used to train the model to generate and inject log statements in Java code.
-If the training set for the training on the baseline model was composed by 106.382, the training set for the experiment with curriculum learning 
-is of 105.985 instances. This was because of the Difficulty Measurer we choose to use: according to the latter, 397 instances had a null difficulty, hence
-were excluded from the set. The same happend in the case of the evaluation set, 13.197 instances were used instead of 13.260. 
-The test set ??? \newline
+%\subsection{Log generation task}
+%Inserting log messages is a practice broadly used and decide where to inject log statements, what information to report through it, 
+%and at which log level is as hard as it is crucial \cite{Mastropaolo2022}. In the following section Curriculum Learning approach 
+%is applied at log generation task. The dataset for this task is composed by couple of methods, where the source is the method without the log statement,
+%the target instead has not only the log statement but also the log message.\\
+%Those couples where used to train the model to generate and inject log statements in Java code.
+%If the training set for the training on the baseline model was composed by 106.382, the training set for the experiment with curriculum learning 
+%is of 105.985 instances. This was because of the Difficulty Measurer we choose to use: according to the latter, 397 instances had a null difficulty, hence
+%were excluded from the set. The same happend in the case of the evaluation set, 13.197 instances were used instead of 13.260. 
+%The test set ??? \newline
 
 
 %\noindent\begin{minipage}{.45\textwidth}
@@ -283,31 +254,31 @@ The test set ??? \newline
 % TODO: Insert instance ex.
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\noindent\textbf{Difficulty Measurer.} Given the dataset at our dispose we choose as difficulty measurer the 
-complexity of the instruction set in program execution tasks. More specifically we 
-computed \textbf{cyclomatic complexity} through Lizard tool \cite{lizard}. Cyclomatic complexity
-is a quantitative software metric developed by Thomas J. McCabe in 1976, used to indicate
-the complexity of a program.  
-It measures the number of linearly-independent paths through a program module. 
-The measure is computed using the control-flow graph of the program where
-the nodes of the graph correspond to sets of commands of a program, and
-a directed edge connects 2 nodes if the second command might be executed
-immediately after the first command. It can be applied to individual functions,
-modules, methods or classes within a program. We decided to compute it on each of
-the source methods.\\
-It must be said that from the initial dataset were removed 397 instances whose
-cyclomatic complexity was 0. Decided and computed the difficulty measure
-for each instance, the dataset was ready to be used by the training scheduler.\newline
+%\noindent\textbf{Difficulty Measurer.} Given the dataset at our dispose we choose as difficulty measurer the 
+%complexity of the instruction set in program execution tasks. More specifically we 
+%computed \textbf{cyclomatic complexity} through Lizard tool \cite{lizard}. Cyclomatic complexity
+%is a quantitative software metric developed by Thomas J. McCabe in 1976, used to indicate
+%the complexity of a program.  
+%It measures the number of linearly-independent paths through a program module. 
+%The measure is computed using the control-flow graph of the program where
+%the nodes of the graph correspond to sets of commands of a program, and
+%a directed edge connects 2 nodes if the second command might be executed
+%immediately after the first command. It can be applied to individual functions,
+%modules, methods or classes within a program. We decided to compute it on each of
+%the source methods.\\
+%It must be said that from the initial dataset were removed 397 instances whose
+%cyclomatic complexity was 0. Decided and computed the difficulty measure
+%for each instance, the dataset was ready to be used by the training scheduler.\newline
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % TODO: Insert data distribution figure
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\noindent\textbf{Training Scheduler.} Once again we observed the data distribution and considered the 3 quartiles
-to divide the whole dataset in 4 subsets. Each of those represented a different level of difficulty.\\
-As soon as the model converged on the current bucket, BLEU values after each epoch were assessed,
-and early stopping was applied. We took the best model before divergence to restart the training 
-from the following bucket. 
+%\noindent\textbf{Training Scheduler.} Once again we observed the data distribution and considered the 3 quartiles
+%to divide the whole dataset in 4 subsets. Each of those represented a different level of difficulty.\\
+%As soon as the model converged on the current bucket, BLEU values after each epoch were assessed,
+%and early stopping was applied. We took the best model before divergence to restart the training 
+%from the following bucket. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%

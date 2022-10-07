@@ -1,7 +1,45 @@
 \chapter{Deep Learning Applications to Software Engineering tasks}
+The advent of deep learning (DL) has fundamentally changed the landscape of modern software and in order to cope with 
+the increasing complexity of digital system programming, deep learning techniques have recently been proposed 
+to enhance software deployment by analysing source code for different purposes, ranging from performance improvement 
+to debugging and security assessment. Driven by the success of deep learning in data mining and pattern 
+recognition, recent years witnessed an increasing trend for researchers to integrate deep learning with software engineering (SE) 
+tasks. In the most typical SE tasks, deep learning helps to generate or summarize source code, predict defects in software, extract requirements from natural language text, 
+and many more tasks.
+Generally, a DL system is made of several interconnected computational atomic units that form \textit{layers}
+which perform mathematical transformations, according to sets of learnable parameters, on input data. These architectures
+can be trained for specific tasks updating the parameters according to model configuration on a specific set of training data. \\ Over the years, 
+deep learning has developed advancements in many complex tasks often associated with artificial intelligence, within software engineering 
+is now comprehended. DL is intertwined with SE, in fact, DL techniques allow to automate or improve existing software 
+development tasks nowadays. 
 
 \section{State of the art}
+Given the effectiveness by which DL systems are able to learn representations from large data corpora, there is 
+ample opportunity to leverage DL techniques to help automate or improve a wide range of code related tasks. 
+Software engineering research investigates questions related to the design, development, maintenance, testing and evolution 
+of software systems. Previously, the software engineering community has applied traditional machine learning 
+techniques to identify interesting patterns and unque relationships within the data to automate or enhance many tasks typically 
+performed by developers. Due to recent improvements in computational power and the amount of memory available 
+in modern computer architectures, the rise of deep learning has led to a new class of learning algorithms suited for large datasets.
+Deep learning represents a fundamental shift in the nammer by which machines learn patterns from data by automatically extracting salient features
+for a given computational task, as opposed to relyig upon human intuition. Given the immense amount of data in software repositories that 
+can serve as training data, deep learning techniques have ushered in advancements across a range of tasks in software engineering research, including
+automatic software fising, code suggestion, defect prediction, feature location among many others. This field of research shows clear potential for
+transforming the manner by which a variety of specific software development task are performed.
+
 \section{Software Engineering related works}
+Between 2013 and 2015, machine learning techniques were explored on high-level code, starting from a manual 
+definition of features to the first deep learning applicactions capable of extracting features from code on their own.
+The techniques used are strongly inspired by the background of natural language processing 
+- being \textit{most software natural} \cite{hindle2016naturalness} since it is created by human beings - and include n-grams, decision threes, 
+and recurrent neural networks (RNN). RNNs in particular have been extensively tested to assess their effectiveness
+Rayachev \textit{et al.} \cite{raychev2014code} proposed a code completion strategy that compares n-gram model and recurrent neural networks. 
+They implement a technique that firs extract sequences of API calls from the dataset, then apply n-gram to these sequences, and finally use the RNN 
+to take the last word in the sequence as input and uses one-hot-encoding to predict probabilies for the most likely next word.
+They argue that the n-gram technique can discover regularities between the last \textit{n} - 1 elements of fucntion-calls sequences, whereas RNN can discover
+relations at longer distances.
+
+
 \subsection{Bug fixing task}
 Each instance of the dataset is a pair $(m_b, m_f)$, where $m_b$ is a buggy code component and $m_f$ is the
 corresponding fixed code. These BFPs were used to train the NMT model, allowing it to learn the translation
@@ -11,5 +49,4 @@ Automatic source code summarization is the task of generating short natural lang
 for source code \cite{Leclair2020}. The idea is that a brief description allows programmers to understand
 what a chunk of code does and what is the purpose of the program by and large, without necessarily read the code 
 itself.\\
-\subsection{Log generation task}
-\section{}
+%\subsection{Log generation task}

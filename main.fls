@@ -746,6 +746,39 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/sauerj/parcolumns.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/sauerj/parcolumns.sty
@@ -1380,51 +1413,58 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
-INPUT /Users/carmenarmenti/Desktop/Thesis document/auxiliary/titlepage.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/auxiliary/titlepage.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/auxiliary/titlepage.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/auxiliary/titlepage.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/auxiliary/titlepage.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/auxiliary/titlepage.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/auxiliary/titlepage.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/auxiliary/titlepage.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/auxiliary/titlepage.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/auxiliary/titlepage.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/auxiliary/titlepage.tex
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplbc8t.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplrc8t.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplrc8t.tfm
+INPUT /Users/carmenarmenti/Downloads/LaTeXTemplates_masters-doctoral-thesis_v2/Figures/logo.png
+INPUT /Users/carmenarmenti/Downloads/LaTeXTemplates_masters-doctoral-thesis_v2/Figures/logo.png
+INPUT /Users/carmenarmenti/Downloads/LaTeXTemplates_masters-doctoral-thesis_v2/Figures/logo.png
+INPUT /Users/carmenarmenti/Downloads/LaTeXTemplates_masters-doctoral-thesis_v2/Figures/logo.png
+INPUT /Users/carmenarmenti/Downloads/LaTeXTemplates_masters-doctoral-thesis_v2/Figures/logo.png
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplrc8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplri8t.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplbc8t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplrc8t.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplrc8t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplrc8t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplri8t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplrc8t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplri8t.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplro8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplri8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.toc
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.toc
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.toc
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplro8t.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
@@ -1451,7 +1491,6 @@ INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Introduction.tex
 INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Introduction.tex
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplri8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
@@ -1475,11 +1514,17 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplri8t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
@@ -1488,6 +1533,8 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplro8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplro8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ppl.fd
@@ -1506,38 +1553,6 @@ INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLandCL.tex
 INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLandCL.tex
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr8c.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
 INPUT /Users/carmenarmenti/Desktop/Thesis document/images/predefinedCL.png
 INPUT /Users/carmenarmenti/Desktop/Thesis document/images/predefinedCL.png
 INPUT /Users/carmenarmenti/Desktop/Thesis document/images/predefinedCL.png
@@ -1545,20 +1560,55 @@ INPUT /Users/carmenarmenti/Desktop/Thesis document/images/predefinedCL.png
 INPUT /Users/carmenarmenti/Desktop/Thesis document/images/predefinedCL.png
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplrc8t.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplrc8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7v.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /Users/carmenarmenti/Desktop/Thesis document/images/boxplot-length.png
 INPUT /Users/carmenarmenti/Desktop/Thesis document/images/boxplot-length.png
 INPUT /Users/carmenarmenti/Desktop/Thesis document/images/boxplot-length.png
@@ -1605,6 +1655,7 @@ INPUT /Users/carmenarmenti/Desktop/Thesis document/main.aux
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.out
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.out
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb

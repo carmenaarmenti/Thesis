@@ -12,22 +12,48 @@ V.~Cirik, E.~H. Hovy, and L.-P. Morency.
   memory networks.
 \newblock {\em ArXiv}, abs/1611.06204, 2016.
 
-\bibitem{Elman1}
-J.~Elman.
-\newblock Learning and development in neural networks: the importance of
-  starting small.
-\newblock {\em Cognition}, 48:71--99, 08 1993.
-
 \bibitem{ELMAN199371}
 J.~L. Elman.
 \newblock Learning and development in neural networks: the importance of
   starting small.
 \newblock {\em Cognition}, 48(1):71--99, 1993.
 
+\bibitem{fan2018learning}
+Y.~Fan, F.~Tian, T.~Qin, X.-Y. Li, and T.-Y. Liu.
+\newblock Learning to teach.
+\newblock {\em arXiv preprint arXiv:1805.03643}, 2018.
+
+\bibitem{florensa2017reverse}
+C.~Florensa, D.~Held, M.~Wulfmeier, M.~Zhang, and P.~Abbeel.
+\newblock Reverse curriculum generation for reinforcement learning.
+\newblock In {\em Conference on robot learning}, pages 482--495. PMLR, 2017.
+
+\bibitem{graves2017automated}
+A.~Graves, M.~G. Bellemare, J.~Menick, R.~Munos, and K.~Kavukcuoglu.
+\newblock Automated curriculum learning for neural networks.
+\newblock In {\em international conference on machine learning}, pages
+  1311--1320. PMLR, 2017.
+
+\bibitem{hacohen2019power}
+G.~Hacohen and D.~Weinshall.
+\newblock On the power of curriculum learning in training deep networks.
+\newblock In {\em International Conference on Machine Learning}, pages
+  2535--2544. PMLR, 2019.
+
+\bibitem{hindle2016naturalness}
+A.~Hindle, E.~T. Barr, M.~Gabel, Z.~Su, and P.~Devanbu.
+\newblock On the naturalness of software.
+\newblock {\em Communications of the ACM}, 59(5):122--131, 2016.
+
 \bibitem{krueger2009}
 K.~A. Krueger and P.~Dayan.
 \newblock Flexible shaping: How learning in small steps helps.
 \newblock {\em Cognition}, 110(3):380--394, 2009.
+
+\bibitem{kumar2010self}
+M.~Kumar, B.~Packer, and D.~Koller.
+\newblock Self-paced learning for latent variable models.
+\newblock {\em Advances in neural information processing systems}, 23, 2010.
 
 \bibitem{Leclair2020}
 A.~LeClair, S.~Haque, L.~Wu, and C.~McMillan.
@@ -41,10 +67,16 @@ V.~I. Levenshtein.
 \newblock {\em Soviet Physics Doklady}, 10(8):707--710, feb 1966.
 \newblock Doklady Akademii Nauk SSSR, V163 No4 845-848 1965.
 
-\bibitem{Mastropaolo2022}
-A.~Mastropaolo, L.~Pascarella, and G.~Bavota.
-\newblock Using deep learning to generate complete log statements.
-\newblock {\em CoRR}, abs/2201.04837, 2022.
+\bibitem{platanios2019competence}
+E.~A. Platanios, O.~Stretcu, G.~Neubig, B.~Poczos, and T.~M. Mitchell.
+\newblock Competence-based curriculum learning for neural machine translation.
+\newblock {\em arXiv preprint arXiv:1903.09848}, 2019.
+
+\bibitem{raychev2014code}
+V.~Raychev, M.~Vechev, and E.~Yahav.
+\newblock Code completion with statistical language models.
+\newblock In {\em Proceedings of the 35th ACM SIGPLAN Conference on Programming
+  Language Design and Implementation}, pages 419--428, 2014.
 
 \bibitem{Tufano2019}
 M.~Tufano, C.~Watson, G.~Bavota, M.~D. Penta, M.~White, and D.~Poshyvanyk.
@@ -57,8 +89,9 @@ X.~Wang, Y.~Chen, and W.~Zhu.
 \newblock A comprehensive survey on curriculum learning.
 \newblock {\em CoRR}, abs/2010.13166, 2020.
 
-\bibitem{lizard}
-T.~Yin.
-\newblock \href{https://github.com/terryyin/lizard}{Lizard}.
+\bibitem{zaremba2014learning}
+W.~Zaremba and I.~Sutskever.
+\newblock Learning to execute.
+\newblock {\em arXiv preprint arXiv:1410.4615}, 2014.
 
 \end{thebibliography}

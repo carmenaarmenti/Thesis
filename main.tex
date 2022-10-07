@@ -22,10 +22,17 @@
 
 \usepackage{blindtext}
 \usepackage{listings}
+
+\usepackage{amsthm, amssymb}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
 \renewcommand\lstlistingname{Data}
 \renewcommand\lstlistlistingname{Data Sources}
 
 \usepackage{xcolor}
+%\usepackage[dvipsnames]{xcolor}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.57,0.36,0.51}
@@ -84,38 +91,63 @@ morecomment=[l]{//s},
 %%%	MARGIN SETTINGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\geometry{paper=a4paper, inner=2.5cm, outer=2.5cm, bindingoffset=0cm, top=1.5cm, bottom=2.7cm, 
+\geometry{paper=a4paper, inner=2.5cm, outer=2.5cm, bindingoffset=0cm, top=0.2cm, bottom=2cm, 
 	%showframe, % Uncomment to show how the type block is set on the page
 }
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%	THESIS INFORMATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thesistitle{Evaluating Curriculum Learning in \\ Code Related tasks} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\supervisor{Prof. Rocco \textsc{Oliveto}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
+\cosupervisor{Prof. Gabriele \textsc{Bavota}}
+\examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
+\degree{Masters} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
+\author{Carmen \textsc{Armenti}} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
+\addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
+
+\subject{Computer Science} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
+\keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
+\university{\href{http://www.university.com}{University of Molise}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
+\department{
+	\href{http://department.university.com}{Department of Bioscences and Territory}\\
+	\vspace{20pt}
+	\includegraphics[width=4.5cm, height=4.5cm]{/Users/carmenarmenti/Downloads/LaTeXTemplates_masters-doctoral-thesis_v2/Figures/logo.png}
+} % University/department logo - uncomment to place it} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
+
+\group{\href{http://researchgroup.university.com}{Research Group Name}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
+\faculty{\href{http://faculty.university.com}{Software Security Systems}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
+
+\AtBeginDocument{
+\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+}
 
 
-\thesistitle{Title \\ ... \\ ...}
-
-
+%\thesistitle{Evaluating \\ Curriculum Learning in \\ Software Engineering tasks}
 
 %comment to not have subtitle
-% \thesissubtitle{Coarse-grained, Fine-grained, and Evolutionary\\ Software Visualization} 
+%\thesissubtitle{Master thesis in Software Analytics} 
 
-\author{Carmen Armenti}
+%\author{Carmen Armenti}
 
-\monthyear{October 2022}
+%\monthyear{October 2022}
 
-\supervisor{Prof. Rocco Oliveto}
+%\supervisor{Prof. Rocco Oliveto}
 
 % if you need to add or remove co-supervisors go into titlepage.tex and comment correspondingly
 
-\cosupervisorone{}
-%\cosupervisortwo{Dr. Roberto Minelli}
+%\cosupervisorone{Prof. Gabriele Bavota}
+%\cosupervisortwo{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%	FRONT MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\onehalfspacing
+%\onehalfspacing
+\doublespacing
 
 \begin{document}
 
@@ -126,8 +158,64 @@ morecomment=[l]{//s},
 %%%	TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{auxiliary/titlepage}
+%\input{auxiliary/titlepage}
+\begin{titlepage}
+    \begin{center}
+    
+    \vspace*{.02\textheight}
+    {\scshape\LARGE \univname\par}\vspace{0.5cm} % University name
+    {\scshape\LARGE \deptname\par}\vspace{0.5cm} 
+    \textsc{\Large Masters Thesis}\\[0.5cm] % Thesis type
+    
+    \HRule \\[0.1cm] % Horizontal line
+    {\huge \bfseries \ttitle\par}\vspace{0.4cm} % Thesis title
+    \HRule \\[1.2cm] % Horizontal line
+     
+    \begin{minipage}[t]{0.4\textwidth}
+    \begin{flushleft} \large
+    \emph{Author:}\\
+    \authorname
+    %\href{http://www.johnsmith.com}{\authorname} % Author name - remove the \href bracket to remove the link
+    \end{flushleft}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+    \begin{flushright} \large
+    \emph{Supervisor:} \\
+    \href{https://dibt.unimol.it/staff/oliveto/}{\supname}\\[0.5cm] % Supervisor name - remove the \href bracket to remove the link 
+    \emph{{Co-supervisor:}} \\
+    \href{https://www.inf.usi.ch/faculty/bavota/#}{\cosupname}\\[0.5cm]
+    \end{flushright}
+    \end{minipage}\\[2cm]
+     
+    \vfill
+    
+    %\large \textit{A thesis submitted in fulfillment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
+    %\textit{in the}\\[0.4cm]
+    %\groupname\\\deptname\\[2cm] % Research group name and department name
+     
+    \vfill
+    
+    {\large Software Analytics}\\
+    {\large October 7, 2022}\\[4cm]
+    %{\large \today}\\[4cm] % Date
+    
+    \vfill
+    \end{center}
+\end{titlepage}
 
+
+
+%----------------------------------------------------------------------------------------
+%	QUOTATION PAGE
+%----------------------------------------------------------------------------------------
+\cleardoublepage
+\vspace*{0.2\textheight}
+
+\begin{flushright}
+	%\noindent\enquote{\itshape Everything is just a function of the amount of time put into it.}\bigbreak
+	\noindent\enquote{\itshape Everything is just a function of the amount of time put into it.}\bigbreak
+\end{flushright}
+    
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%	ABSTRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -149,6 +237,13 @@ morecomment=[l]{//s},
 \listoffigures 
 \listoftables
 
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+\vspace*{.03\textheight}
+\begin{flushright}
+	\dedicatory{To my family, \linebreak without whom I would not be who I am.} 
+\end{flushright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%	MAIN MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -159,7 +254,9 @@ morecomment=[l]{//s},
 \pagestyle{thesis} 
 
  \input{Chapters/Introduction}
+
  \input{Chapters/DLandCL}
+
  \input{Chapters/DLtoSEtasks}
  \input{Chapters/StudyDesign}
  \input{Chapters/Results}

@@ -217,27 +217,18 @@
  \def\@title{#2}%
  \def\ttitle{#2}%
 }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%	OPTIONAL SUBTITLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newbool{@subtitle}
-\NewDocumentCommand{\thesissubtitle} { o m }{%
- \IfValueTF{#1}{\def\subtitle{#1}}{\def\subtitle{#2} \setboolean{@subtitle}{true}}%
- \def\@sustitle{#2}%
- \def\subtitle{#2}%
-}
-
 \DeclareDocumentCommand{\author}{m}{\newcommand{\authorname}{#1}\renewcommand{\@author}{#1}}
 \NewDocumentCommand{\supervisor}{m}{\newcommand{\supname}{#1}}
-
-\NewDocumentCommand{\cosupervisorone}{m}{\newcommand{\cosupnameone}{#1}}
-\NewDocumentCommand{\cosupervisortwo}{m}{\newcommand{\cosupnametwo}{#1}}
-\NewDocumentCommand{\cosupervisorthree}{m}{\newcommand{\cosupnamethree}{#1}}
-
-
-\NewDocumentCommand{\monthyear}{m}{\newcommand{\moyear}{#1}}
+\NewDocumentCommand{\cosupervisor}{m}{\newcommand{\cosupname}{#1}}
+\NewDocumentCommand{\examiner}{m}{\newcommand{\examname}{#1}}
+\NewDocumentCommand{\degree}{m}{\newcommand{\degreename}{#1}}
+\NewDocumentCommand{\addresses}{m}{\newcommand{\addressname}{#1}}
+\NewDocumentCommand{\university}{m}{\newcommand{\univname}{#1}}
+\NewDocumentCommand{\department}{m}{\newcommand{\deptname}{#1}}
+\NewDocumentCommand{\group}{m}{\newcommand{\groupname}{#1}}
+\NewDocumentCommand{\faculty}{m}{\newcommand{\facname}{#1}}
+\NewDocumentCommand{\subject}{m}{\newcommand{\subjectname}{#1}}
+\NewDocumentCommand{\keywords}{m}{\newcommand{\keywordnames}{#1}}
 
 \newcommand{\checktoopen}{% New command to move content to the next page which prints to the next odd page if twosided mode is active  
 	\if@openright\cleardoublepage\else\clearpage\fi
@@ -255,18 +246,58 @@
 	\addcontentsline{toc}{chapter}{#1}%
 }
 
-\AtBeginDocument{
-\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
-\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%	OPTIONAL SUBTITLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newbool{@subtitle}
+%\NewDocumentCommand{\thesissubtitle} { o m }{%
+% \IfValueTF{#1}{\def\subtitle{#1}}{\def\subtitle{#2} \setboolean{@subtitle}{true}}%
+% \def\@sustitle{#2}%
+% \def\subtitle{#2}%
+%}
+
+%\DeclareDocumentCommand{\author}{m}{\newcommand{\authorname}{#1}\renewcommand{\@author}{#1}}
+%\NewDocumentCommand{\supervisor}{m}{\newcommand{\supname}{#1}}
+
+%\NewDocumentCommand{\cosupervisorone}{m}{\newcommand{\cosupnameone}{#1}}
+%\NewDocumentCommand{\cosupervisortwo}{m}{\newcommand{\cosupnametwo}{#1}}
+%\NewDocumentCommand{\cosupervisorthree}{m}{\newcommand{\cosupnamethree}{#1}}
+
+
+%\NewDocumentCommand{\monthyear}{m}{\newcommand{\moyear}{#1}}
+
+%\newcommand{\checktoopen}{% New command to move content to the next page which prints to the next odd page if twosided mode is active  
+%	\if@openright\cleardoublepage\else\clearpage\fi
+%	\ifdef{\phantomsection}{\phantomsection}{}% The \phantomsection command is necessary for hyperref to jump to the correct page
+%}
+
+%\NewDocumentCommand{\bhrule}{}{\typeout{--------------------}}
+%\NewDocumentCommand{\tttypeout}{m}{\bhrule\typeout{\space #1}\bhrule}
+
+%\newcommand{\HRule}{\rule{.9\linewidth}{.6pt}} % New command to make the lines in the title page
+%\newcommand{\decoRule}{\rule{.8\textwidth}{.4pt}} % New command for a rule to be used under figures
+
+%\setcounter{tocdepth}{3} % The depth to which the document sections are printed to the table of contents
+%\ProvideDocumentCommand{\addchaptertocentry}{ m }{%
+%	\addcontentsline{toc}{chapter}{#1}%
+%}
+
+%\AtBeginDocument{
+%\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+%\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+%}
 
 %----------------------------------------------------------------------------------------
 %	COLOURS
 %----------------------------------------------------------------------------------------
 
 \usepackage{xcolor} % Required for specifying custom colours
+%\usepackage[dvipsnames]{xcolor}
 
 \colorlet{mdtRed}{red!50!black}
+\definecolor{codebordeaux}{rgb}{0.65, 0, 0.18}
+\definecolor{codepurple}{rgb}{0.57,0.36,0.51}
 
 %----------------------------------------------------------------------------------------
 %	MARGINS
@@ -417,11 +448,11 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 \ifbool{consistentlayout}{
 	\DeclareDocumentCommand{\dedicatory}{
-		m O{\vspace*{.7\textheight} }  }{
+		m O{\vspace*{.2\textheight} }  }{
 			\checktoopen\tttypeout{Dedicatory}
 			\markboth{}{}
 			#2
-			{\hfill\parbox{.4\textwidth}{\flushright#1\par}}
+			{\hfill\parbox{.5\textwidth}{\flushright#1\par}}
 		}
 }{
 	\newcommand\dedicatory[1]{
@@ -443,9 +474,9 @@ bookmarksopen=true,
 bookmarksopenlevel=0,
 hypertexnames=false,
 colorlinks=true,% Set to false to disable coloring links
-citecolor=magenta,% The color of citations
-linkcolor=red,% The color of references to document elements (sections, figures, etc)
-urlcolor=mdtRed,% The color of hyperlinks (URLs)
+citecolor=codebordeaux,% The color of citations
+linkcolor=codebordeaux,% The color of references to document elements (sections, figures, etc)
+urlcolor=codebordeaux,% The color of hyperlinks (URLs)
 pdfstartview={FitV},
 unicode,
 breaklinks=true,
