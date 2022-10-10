@@ -208,16 +208,16 @@ needs to be evaluated on instances with the same complexity, according to the cu
 previous easier bucket. The convergence is assessed after a fixed number of epochs, after which early stopping with patience of 5 epochs
 is run. Once the model converges on the first bucket, the training proceeds on the second and so forth. 
 
-%\subsection{Log generation task}
-%Inserting log messages is a practice broadly used and decide where to inject log statements, what information to report through it, 
-%and at which log level is as hard as it is crucial \cite{Mastropaolo2022}. In the following section Curriculum Learning approach 
-%is applied at log generation task. The dataset for this task is composed by couple of methods, where the source is the method without the log statement,
-%the target instead has not only the log statement but also the log message.\\
-%Those couples where used to train the model to generate and inject log statements in Java code.
-%If the training set for the training on the baseline model was composed by 106.382, the training set for the experiment with curriculum learning 
-%is of 105.985 instances. This was because of the Difficulty Measurer we choose to use: according to the latter, 397 instances had a null difficulty, hence
-%were excluded from the set. The same happend in the case of the evaluation set, 13.197 instances were used instead of 13.260. 
-%The test set ??? \newline
+\subsection{Log generation task}
+Inserting log messages is a practice broadly used and decide where to inject log statements, what information to report through it, 
+and at which log level is as hard as it is crucial \cite{Mastropaolo2022}. In the following section Curriculum Learning approach 
+is applied at log generation task. The dataset for this task is composed by couple of methods, where the source is the method without the log statement,
+the target instead has not only the log statement but also the log message.\\
+Those couples where used to train the model to generate and inject log statements in Java code.
+If the training set for the training on the baseline model was composed by 106.382, the training set for the experiment with curriculum learning 
+is of 105.985 instances. This was because of the Difficulty Measurer we choose to use: according to the latter, 397 instances had a null difficulty, hence
+were excluded from the set. The same happend in the case of the evaluation set, 13.197 instances were used instead of 13.260. 
+The test set ??? \newline
 
 
 %\noindent\begin{minipage}{.45\textwidth}
@@ -254,31 +254,31 @@ is run. Once the model converges on the first bucket, the training proceeds on t
 % TODO: Insert instance ex.
 %%%%%%%%%%%%%%%%%%%%%%%
 
-%\noindent\textbf{Difficulty Measurer.} Given the dataset at our dispose we choose as difficulty measurer the 
-%complexity of the instruction set in program execution tasks. More specifically we 
-%computed \textbf{cyclomatic complexity} through Lizard tool \cite{lizard}. Cyclomatic complexity
-%is a quantitative software metric developed by Thomas J. McCabe in 1976, used to indicate
-%the complexity of a program.  
-%It measures the number of linearly-independent paths through a program module. 
-%The measure is computed using the control-flow graph of the program where
-%the nodes of the graph correspond to sets of commands of a program, and
-%a directed edge connects 2 nodes if the second command might be executed
-%immediately after the first command. It can be applied to individual functions,
-%modules, methods or classes within a program. We decided to compute it on each of
-%the source methods.\\
-%It must be said that from the initial dataset were removed 397 instances whose
-%cyclomatic complexity was 0. Decided and computed the difficulty measure
-%for each instance, the dataset was ready to be used by the training scheduler.\newline
+\noindent\textbf{Difficulty Measurer.} Given the dataset at our dispose we choose as difficulty measurer the 
+complexity of the instruction set in program execution tasks. More specifically we 
+computed \textbf{cyclomatic complexity} through Lizard tool \cite{lizard}. Cyclomatic complexity
+is a quantitative software metric developed by Thomas J. McCabe in 1976, used to indicate
+the complexity of a program.  
+It measures the number of linearly-independent paths through a program module. 
+The measure is computed using the control-flow graph of the program where
+the nodes of the graph correspond to sets of commands of a program, and
+a directed edge connects 2 nodes if the second command might be executed
+immediately after the first command. It can be applied to individual functions,
+modules, methods or classes within a program. We decided to compute it on each of
+the source methods.\\
+It must be said that from the initial dataset were removed 397 instances whose
+cyclomatic complexity was 0. Decided and computed the difficulty measure
+for each instance, the dataset was ready to be used by the training scheduler.\newline
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % TODO: Insert data distribution figure
 %%%%%%%%%%%%%%%%%%%%%%%
 
-%\noindent\textbf{Training Scheduler.} Once again we observed the data distribution and considered the 3 quartiles
-%to divide the whole dataset in 4 subsets. Each of those represented a different level of difficulty.\\
-%As soon as the model converged on the current bucket, BLEU values after each epoch were assessed,
-%and early stopping was applied. We took the best model before divergence to restart the training 
-%from the following bucket. 
+\noindent\textbf{Training Scheduler.} Once again we observed the data distribution and considered the 3 quartiles
+to divide the whole dataset in 4 subsets. Each of those represented a different level of difficulty.\\
+As soon as the model converged on the current bucket, BLEU values after each epoch were assessed,
+and early stopping was applied. We took the best model before divergence to restart the training 
+from the following bucket. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%

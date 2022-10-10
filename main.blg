@@ -3,46 +3,48 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: abbrv.bst
 Database file #1: biblio.bib
+Warning--entry type for "lizard" isn't style-file defined
+--line 69 of file biblio.bib
 Warning--I didn't find a database entry for "Elman1"
-You've used 17 entries,
+You've used 19 entries,
             2118 wiz_defined-function locations,
-            607 strings with 6844 characters,
-and the built_in function-call counts, 6388 in all, are:
-= -- 629
-> -- 344
+            616 strings with 7070 characters,
+and the built_in function-call counts, 6856 in all, are:
+= -- 671
+> -- 369
 < -- 5
-+ -- 137
-- -- 118
-* -- 448
-:= -- 1062
-add.period$ -- 55
-call.type$ -- 17
-change.case$ -- 110
++ -- 147
+- -- 126
+* -- 471
+:= -- 1145
+add.period$ -- 60
+call.type$ -- 19
+change.case$ -- 120
 chr.to.int$ -- 0
-cite$ -- 17
-duplicate$ -- 241
-empty$ -- 452
-format.name$ -- 118
-if$ -- 1337
+cite$ -- 19
+duplicate$ -- 258
+empty$ -- 491
+format.name$ -- 126
+if$ -- 1433
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 17
-newline$ -- 89
-num.names$ -- 34
-pop$ -- 106
+int.to.str$ -- 19
+missing$ -- 18
+newline$ -- 98
+num.names$ -- 38
+pop$ -- 118
 preamble$ -- 1
-purify$ -- 93
+purify$ -- 101
 quote$ -- 0
-skip$ -- 188
+skip$ -- 206
 stack$ -- 0
-substring$ -- 345
-swap$ -- 69
+substring$ -- 355
+swap$ -- 71
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
+type$ -- 76
 warning$ -- 0
-while$ -- 56
-width$ -- 19
-write$ -- 191
-(There was 1 warning)
+while$ -- 60
+width$ -- 21
+write$ -- 209
+(There were 2 warnings)

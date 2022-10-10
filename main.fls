@@ -1465,11 +1465,11 @@ INPUT /Users/carmenarmenti/Desktop/Thesis document/main.toc
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.toc
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.toc
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 OUTPUT /Users/carmenarmenti/Desktop/Thesis document/main.toc
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.lof
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.lof
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.lof
@@ -1527,14 +1527,14 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplro8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplro8r.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ppl.fd
@@ -1576,34 +1576,34 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplrc8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7v.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
@@ -1636,17 +1636,17 @@ INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Conclusion.tex
 INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Conclusion.tex
 INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Conclusion.tex
 INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Conclusion.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Appendix.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Appendix.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Appendix.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Appendix.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Appendix.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Appendix.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Appendix.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Appendix.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Appendix.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Appendix.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Appendix.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Awknowledgments.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Awknowledgments.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Awknowledgments.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Awknowledgments.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Awknowledgments.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Awknowledgments.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Awknowledgments.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Awknowledgments.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Awknowledgments.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Awknowledgments.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/Awknowledgments.tex
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.bbl
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.bbl
 INPUT /Users/carmenarmenti/Desktop/Thesis document/main.bbl

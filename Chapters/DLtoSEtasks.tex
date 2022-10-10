@@ -18,13 +18,13 @@ Given the effectiveness by which DL systems are able to learn representations fr
 ample opportunity to leverage DL techniques to help automate or improve a wide range of code related tasks. 
 Software engineering research investigates questions related to the design, development, maintenance, testing and evolution 
 of software systems. Previously, the software engineering community has applied traditional machine learning 
-techniques to identify interesting patterns and unque relationships within the data to automate or enhance many tasks typically 
+techniques to identify interesting patterns and unique relationships within the data to automate or enhance many tasks typically 
 performed by developers. Due to recent improvements in computational power and the amount of memory available 
 in modern computer architectures, the rise of deep learning has led to a new class of learning algorithms suited for large datasets.
-Deep learning represents a fundamental shift in the nammer by which machines learn patterns from data by automatically extracting salient features
+Deep learning represents a fundamental shift in the way by which machines learn patterns from data by automatically extracting salient features
 for a given computational task, as opposed to relyig upon human intuition. Given the immense amount of data in software repositories that 
 can serve as training data, deep learning techniques have ushered in advancements across a range of tasks in software engineering research, including
-automatic software fising, code suggestion, defect prediction, feature location among many others. This field of research shows clear potential for
+automatic software fixing, code suggestion, defect prediction, feature location, among many others. This field of research shows clear potential for
 transforming the manner by which a variety of specific software development task are performed.
 
 \section{Software Engineering related works}
@@ -32,21 +32,34 @@ Between 2013 and 2015, machine learning techniques were explored on high-level c
 definition of features to the first deep learning applicactions capable of extracting features from code on their own.
 The techniques used are strongly inspired by the background of natural language processing 
 - being \textit{most software natural} \cite{hindle2016naturalness} since it is created by human beings - and include n-grams, decision threes, 
-and recurrent neural networks (RNN). RNNs in particular have been extensively tested to assess their effectiveness
+and recurrent neural networks (RNN). RNNs in particular have been extensively tested to assess their effectiveness;
 Rayachev \textit{et al.} \cite{raychev2014code} proposed a code completion strategy that compares n-gram model and recurrent neural networks. 
-They implement a technique that firs extract sequences of API calls from the dataset, then apply n-gram to these sequences, and finally use the RNN 
-to take the last word in the sequence as input and uses one-hot-encoding to predict probabilies for the most likely next word.
+They implement a technique that first extract sequences of API calls from the dataset, then apply n-gram to these sequences, and finally use the RNN 
+to take the last word in the sequence as input and uses one-hot-encoding to predict probabilities for the most likely next word.
 They argue that the n-gram technique can discover regularities between the last \textit{n} - 1 elements of fucntion-calls sequences, whereas RNN can discover
 relations at longer distances.
 
 
 \subsection{Bug fixing task}
-Each instance of the dataset is a pair $(m_b, m_f)$, where $m_b$ is a buggy code component and $m_f$ is the
-corresponding fixed code. These BFPs were used to train the NMT model, allowing it to learn the translation
-from the buggy to the fixed method, thus being able to generate fixing patches.
+Currently, there are millions of open source projects with numerous bug fixes available in code repositories
+thanks to the proliferation of software development. This can be leveraged to learn how to fix common programming bugs. 
+Localizing and fixing bugs is known to be an effort-prone and time-consuming task for software developers.
+So, to support programmers in this common activity, researchers have proposed a number of approaches aimed to automatically repairing programs.
+The work we took as reference is motivated by three main considerations. First of all, automated repair approaches are based on a limited and hand-crafted
+set of transformations or fitting patterns. In the second place, the work done by \cite{} shows that the past history of 
+existing projects can be successfully leveraged to understand what a \textit{meaningful} program repair patch is. Finally, 
+several works have recently demonstrated the capability of advanced machine learning techniques, such as deep learning, to learn from relatively large software engineering
+datasets. In the work, the authors expanded upon the original idea of learning bug-fixes and evaluate the suitability of a Neural Machine Translation to automatically
+generate patches for buggy code.
+%Each instance of the dataset is a pair $(m_b, m_f)$, where $m_b$ is a buggy code component and $m_f$ is the
+%corresponding fixed code. These BFPs were used to train the NMT model, allowing it to learn the translation
+%from the buggy to the fixed method, thus being able to generate fixing patches.
+
+
 \subsection{Code summarization task}
 Automatic source code summarization is the task of generating short natural language description 
 for source code \cite{Leclair2020}. The idea is that a brief description allows programmers to understand
 what a chunk of code does and what is the purpose of the program by and large, without necessarily read the code 
 itself.\\
+
 %\subsection{Log generation task}

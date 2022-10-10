@@ -67,6 +67,11 @@ V.~I. Levenshtein.
 \newblock {\em Soviet Physics Doklady}, 10(8):707--710, feb 1966.
 \newblock Doklady Akademii Nauk SSSR, V163 No4 845-848 1965.
 
+\bibitem{Mastropaolo2022}
+A.~Mastropaolo, L.~Pascarella, and G.~Bavota.
+\newblock Using deep learning to generate complete log statements.
+\newblock {\em CoRR}, abs/2201.04837, 2022.
+
 \bibitem{platanios2019competence}
 E.~A. Platanios, O.~Stretcu, G.~Neubig, B.~Poczos, and T.~M. Mitchell.
 \newblock Competence-based curriculum learning for neural machine translation.
@@ -88,6 +93,10 @@ M.~Tufano, C.~Watson, G.~Bavota, M.~D. Penta, M.~White, and D.~Poshyvanyk.
 X.~Wang, Y.~Chen, and W.~Zhu.
 \newblock A comprehensive survey on curriculum learning.
 \newblock {\em CoRR}, abs/2010.13166, 2020.
+
+\bibitem{lizard}
+T.~Yin.
+\newblock \href{https://github.com/terryyin/lizard}{Lizard}.
 
 \bibitem{zaremba2014learning}
 W.~Zaremba and I.~Sutskever.
