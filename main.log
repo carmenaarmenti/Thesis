@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.22)  8 OCT 2022 22:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.22)  10 OCT 2022 18:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -823,11 +823,11 @@ Package caption Info: End \AtBeginDocument code.
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=455.24411pt
-* \textheight=686.70134pt
+* \textheight=684.48242pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
 * \topmargin=-66.57953pt
-* \headheight=11.38109pt
+* \headheight=13.6pt
 * \headsep=56.9055pt
 * \topskip=11.0pt
 * \footskip=27.46295pt
@@ -846,16 +846,6 @@ Package caption Info: End \AtBeginDocument code.
 
 Package scrlayer Info: Setting magic \footheight to \baselineskip while
 (scrlayer)             \begin{document} on input line 152.
-
-Package scrlayer-scrpage Warning: Very small head height detected!
-(scrlayer-scrpage)                Using scrlayer-scrpage the head height
-(scrlayer-scrpage)                should be at least \baselineskip, which is
-(scrlayer-scrpage)                13.6pt currently.
-(scrlayer-scrpage)                But head height is currently 11.38109pt only.
-(scrlayer-scrpage)                You may use
-(scrlayer-scrpage)                geometry option `head=13.6pt'
-(scrlayer-scrpage)                to avoid this warning.
-
 Package scrbase Info: activating english \byname on input line 152.
 \big@size=\dimen306
 \c@lstlisting=\count376
@@ -911,7 +901,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 152.
 
 1: section
-</Users/carmenarmenti/Downloads/LaTeXTemplates_masters-doctoral-thesis_v2/Figures/logo.png, id=133, 903.375pt x 903.375pt>
+</Users/carmenarmenti/Downloads/LaTeXTemplates_masters-doctoral-thesis_v2/Figures/logo.png, id=137, 903.375pt x 903.375pt>
 File: /Users/carmenarmenti/Downloads/LaTeXTemplates_masters-doctoral-thesis_v2/Figures/logo.png Graphic file (type png)
 <use /Users/carmenarmenti/Downloads/LaTeXTemplates_masters-doctoral-thesis_v2/Figures/logo.png>
 Package pdftex.def Info: /Users/carmenarmenti/Downloads/LaTeXTemplates_masters-doctoral-thesis_v2/Figures/logo.png  used on input line 167.
@@ -922,37 +912,23 @@ Package pdftex.def Info: /Users/carmenarmenti/Downloads/LaTeXTemplates_masters-d
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/carmenarmenti/Downloads/LaTeXTemplates_masters-doctoral-thesis_v2/Figures/logo.png>] [2
 
-]
+] [3] [4
 
-Package scrlayer-scrpage Warning: \headheight to low.
-(scrlayer-scrpage)                At least 13.59999pt needed,
-(scrlayer-scrpage)                but only 11.38109pt found.
-(scrlayer-scrpage)                I'll enlarge \headheight, for further
-(scrlayer-scrpage)                processing, but you should do this yourself,
-(scrlayer-scrpage)                e.g., setting geometry's option
-(scrlayer-scrpage)                `head=13.59999pt'.
-(scrlayer-scrpage)                I'll also decrease \topmargin on input line 236.
-
-
-Overfull \vbox (2.2189pt too high) has occurred while \output is active []
-
- [3] [4
-
-] (/Users/carmenarmenti/Desktop/Thesis document/main.toc)
+] (/Users/carmenarmenti/Desktop/Thesis document/main.toc
+1: section
+[5])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-
-1: section
-[5] [6
-
-] (/Users/carmenarmenti/Desktop/Thesis document/main.lof)
+ [6] (/Users/carmenarmenti/Desktop/Thesis document/main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
 
 1: section
-[7] [8
+[7
+
+] [8
 
 ] (/Users/carmenarmenti/Desktop/Thesis document/main.lot)
 \tf@lot=\write7
@@ -1030,7 +1006,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--107
  []
 
 [7]
-</Users/carmenarmenti/Desktop/Thesis document/images/predefinedCL.png, id=307, 614.295pt x 152.57pt>
+</Users/carmenarmenti/Desktop/Thesis document/images/predefinedCL.png, id=312, 614.295pt x 152.57pt>
 File: /Users/carmenarmenti/Desktop/Thesis document/images/predefinedCL.png Graphic file (type png)
 <use /Users/carmenarmenti/Desktop/Thesis document/images/predefinedCL.png>
 Package pdftex.def Info: /Users/carmenarmenti/Desktop/Thesis document/images/predefinedCL.png  used on input line 145.
@@ -1081,7 +1057,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--172
  []
 
 [18]
-</Users/carmenarmenti/Desktop/Thesis document/images/boxplot-length.png, id=370, 630.355pt x 499.8675pt>
+</Users/carmenarmenti/Desktop/Thesis document/images/boxplot-length.png, id=375, 630.355pt x 499.8675pt>
 File: /Users/carmenarmenti/Desktop/Thesis document/images/boxplot-length.png Graphic file (type png)
 <use /Users/carmenarmenti/Desktop/Thesis document/images/boxplot-length.png>
 Package pdftex.def Info: /Users/carmenarmenti/Desktop/Thesis document/images/boxplot-length.png  used on input line 197.
@@ -1114,7 +1090,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ]
 Chapter 6.
-) (/Users/carmenarmenti/Desktop/Thesis document/Chapters/Awknowledgments.tex
+) (/Users/carmenarmenti/Desktop/Thesis document/Chapters/Acknowledgements.tex
 --------------------
  Acknowledgements
 --------------------
@@ -1151,21 +1127,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--39
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5C271ABDF0D9C64568517394307EE562;5573.
+(rerunfilecheck)             Checksum: 1A455D7F276E0C917D32063BE6E042BC;5732.
  ) 
 Here is how much of TeX's memory you used:
- 32553 strings out of 478994
- 676761 string characters out of 5858184
+ 32559 strings out of 478994
+ 676975 string characters out of 5858184
  1252551 words of memory out of 5000000
- 49294 multiletter control sequences out of 15000+600000
+ 49299 multiletter control sequences out of 15000+600000
  463671 words of font info for 142 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,21n,102p,568b,909s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,21n,102p,568b,947s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on "/Users/carmenarmenti/Desktop/Thesis document/main.pdf" (42 pages, 345206 bytes).
+Output written on "/Users/carmenarmenti/Desktop/Thesis document/main.pdf" (42 pages, 345361 bytes).
 PDF statistics:
- 492 PDF objects out of 1000 (max. 8388607)
- 429 compressed objects within 5 object streams
- 106 named destinations out of 1000 (max. 500000)
- 276 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 497 PDF objects out of 1000 (max. 8388607)
+ 434 compressed objects within 5 object streams
+ 107 named destinations out of 1000 (max. 500000)
+ 284 words of extra memory for PDF output out of 10000 (max. 10000000)
 

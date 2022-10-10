@@ -15,18 +15,19 @@
 \contentsline {section}{\numberline {3.2}Software Engineering related works}{12}{section.21}%
 \contentsline {subsection}{\numberline {3.2.1}Bug fixing task}{12}{subsection.22}%
 \contentsline {subsection}{\numberline {3.2.2}Code summarization task}{13}{subsection.23}%
-\contentsline {chapter}{\numberline {4}Evaluating Curriculum Learning in Software Engineering tasks}{15}{chapter.24}%
-\contentsline {section}{\numberline {4.1}Neural Machine Translation}{16}{section.25}%
-\contentsline {section}{\numberline {4.2}Canonical Training}{16}{section.26}%
-\contentsline {subsection}{\numberline {4.2.1}Bug-fixing}{17}{subsection.27}%
-\contentsline {subsection}{\numberline {4.2.2}Code summarization}{17}{subsection.28}%
-\contentsline {section}{\numberline {4.3}Training with Curriculum Learning}{18}{section.29}%
-\contentsline {subsection}{\numberline {4.3.1}Bug fixing task}{18}{subsection.30}%
-\contentsline {subsection}{\numberline {4.3.2}Code summarization task}{19}{subsection.31}%
-\contentsline {subsection}{\numberline {4.3.3}Log generation task}{19}{subsection.33}%
-\contentsline {chapter}{\numberline {5}Analysis of results}{21}{chapter.34}%
-\contentsline {section}{\numberline {5.1}Bug fixing task}{21}{section.35}%
-\contentsline {section}{\numberline {5.2}Code summarization task}{22}{section.38}%
-\contentsline {section}{\numberline {5.3}Log generation task}{23}{section.41}%
-\contentsline {chapter}{\numberline {6}Conclusion}{25}{chapter.42}%
-\contentsline {chapter}{Acknowledgements}{27}{chapter*.43}%
+\contentsline {subsection}{\numberline {3.2.3}Log generation task}{13}{subsection.24}%
+\contentsline {chapter}{\numberline {4}Evaluating Curriculum Learning in Software Engineering tasks}{15}{chapter.25}%
+\contentsline {section}{\numberline {4.1}Neural Machine Translation}{16}{section.26}%
+\contentsline {section}{\numberline {4.2}Canonical Training}{16}{section.27}%
+\contentsline {subsection}{\numberline {4.2.1}Bug-fixing}{17}{subsection.28}%
+\contentsline {subsection}{\numberline {4.2.2}Code summarization}{17}{subsection.29}%
+\contentsline {section}{\numberline {4.3}Training with Curriculum Learning}{18}{section.30}%
+\contentsline {subsection}{\numberline {4.3.1}Bug fixing task}{18}{subsection.31}%
+\contentsline {subsection}{\numberline {4.3.2}Code summarization task}{19}{subsection.32}%
+\contentsline {subsection}{\numberline {4.3.3}Log generation task}{19}{subsection.34}%
+\contentsline {chapter}{\numberline {5}Analysis of results}{21}{chapter.35}%
+\contentsline {section}{\numberline {5.1}Bug fixing task}{21}{section.36}%
+\contentsline {section}{\numberline {5.2}Code summarization task}{22}{section.39}%
+\contentsline {section}{\numberline {5.3}Log generation task}{23}{section.42}%
+\contentsline {chapter}{\numberline {6}Conclusion}{25}{chapter.43}%
+\contentsline {chapter}{Acknowledgements}{27}{chapter*.44}%
