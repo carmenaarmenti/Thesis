@@ -12,9 +12,9 @@ with other traits - such as the ability to learn - may need to be considered. Th
 when they are undergoing major changes, during childhood indeed.\\
 
 \section{State of the art}
-In humans, learning and development interact in a way as important as non-obvious; maturational changes might provide the enabling 
-conditions which allow learning to be most effective. It is a matter of fact that humans need about two decades to be trained as fully functional 
-adults, and the higher the training is organized, the better the knowledge of the person. Humans in fact learn much better when the examples are not randomly presented, but organized in such a way 
+In humans, learning and development interact in a way that is as important as non-obvious; maturational changes might provide the enabling 
+conditions which allow learning to be most effective.
+It is a matter of fact that the higher the training is organized, the better the knowledge of the person. Humans in fact learn much better when the examples are not randomly presented, but organized in such a way 
 where the amount of concepts is incremented gradually, and where the complexity of them increases over time. The majority of education systems are organized in order to illustrate 
 different concepts at different times, exploiting previously learned notions to ease the learning of new abstractions. By choosing which examples to present and in which order to explain them to the learning system, one can guide
 training and consequently increase the speed at which learning can happen. This is the same idea exploited in \textit{animal training} by psychologists Skinner (1958), Peterson (2004) and Krueger \& Dayan (2009)
@@ -46,19 +46,19 @@ tasks, its power have been exploited in considerably wide application scopes, in
 tasks within computer vision, natural language processing (NLP), healthcare prediction, various
 reinforcement learning (RL) tasks, as well as other applications such
 as graph learning, and neural architecture search (NAS). As already mentioned in \ref{chapter:MAO}, the advantages of applying CL
-training strategies to miscellaneous real-world scenarios can be mainly summarized as (i) improving the model perfomrance on 
+training strategies to miscellaneous real-world scenarios can be mainly summarized as (i) improving the model performance on 
 target tasks, and (ii) accelerating the training process, which cover the two most significant 
 requirements in most of the machine learning research. 
 To provide an illustration,
 Platanios \textit{et al.} \cite{platanios2019competence} present 
 a personal framework that consists of a way of deciding which training instances
-are shown to the model ad different times during training, based on 
+are shown to the model at different times during training, based on 
 an estimated difficulty of a sample and on the current competence
 of the model. Thus, filtering training samples prevents the model from 
 getting stuck in bad local optima, making it converge faster and reach
 a better solution than the common approach of uniformly 
 sampling training examples. Their experiment shows that CL helps the 
-neural machine translation model reduce training time by up to 70\%, whie at the 
+neural machine translation model reduce training time by up to 70\%, while at the 
 same time obtaining accuracy improvements of up to 2.2 BLEU points, compared
 to plain training without any curricula. In \cite{florensa2017reverse} Florensa 
 \textit{et al.} talk about curriculum learning as a reverse curriculum technique. 
@@ -82,7 +82,7 @@ contribute to the question introducing a hypothesis which might help to explain
 some of the advantages of a curriculum strategy. They argue that a well chosen curriculum 
 strategy can act as a continuation method. Intuitively, continuation methods are optimization
 strategies for non-convex criteria which first optimize a smoother and easier version of the problem to 
-reveal the "global picture", and then gradually consider less smoothing versions, until the tarhet objective of 
+reveal the "global picture", and then gradually consider less smoothing versions, until the target objective of 
 interest. Therefore, continuation methods provide a sequence of optimization objectives, starting with an objective for which
 it is easy to find a global minimum, and tracking the local minima throughout the training. In this way, continuation methods
 guide the training towards better regions  and the local minima learned from easier objectives have better
@@ -115,7 +115,7 @@ criterion \(Q_t\) is a reweighting of the target training distribution \(P(z)\):
 each instance in the training set. In the definition the following three conditions were considered:
 \begin{itemize}
     \item the entropy of distributions gradually increases, \(H(Q_t) < H(Q_{t+1})\);
-    \item the weight for any example increases, \(W_t(z) \leq W_{t+1}(z) \forall z \in D\);
+    \item the weight for any example increases, \(W_t(z) \leq W_{t+1}(z),  \forall z \in D\);
     \item \(Q_T(z) = P(z)\).
 \end{itemize}
 So, curriculum learning is the training strategy that trains a machine learning model
