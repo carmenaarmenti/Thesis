@@ -105,7 +105,7 @@ Not long after, strategies for building deep architectures from related variants
 and these works showed the advantage of those frameworks over shallow ones, and of the unsupervised 
 pre-training strategy in a variety of settings.\\
 
-\section{Definition of Curriculum Learning}
+\section{Definition of Curriculum Learning}\label{chapter:defCL}
 Based on all the previous works in the first place provided in behavior and 
 cognitive science literature, the concept of CL was first proposed in \cite{bengio2009curriculum} with 
 experiments on supervised visual and language learning tasks, exploring when and why curriculum could benefit machine learning.
@@ -291,13 +291,103 @@ CL approaches.
 
 \subsection{Automatic Curriculum Learning}
 The automatic curriculum learning approaches try to break the limits of predefined curriculum learning approaches.
-Takeing as reference the issues mentioned before, i.e., (i) applicability, (ii) difficulty measurer definition, and (iii) training scheduler definition, 
+Taking as reference the issues mentioned before, i.e., (i) applicability, (ii) difficulty measurer definition, and (iii) training scheduler definition, 
 by and large it can be said that: (i) in terms of \textit{applicability} automatic CL strategies 
 tend to be general and domain agnostic; (ii) \textit{difficulty measurers} are model decided thus dynamic; (iii) \textit{training schedulers}
-are dynamically defined and redefined by model feedbacks.
+are dynamically defined and redefined by model feedbacks.\\
+In predefined CL who designs the curriculum is a human expert, whereas the entity that is trained
+by the curriculum is the machine learning model, metaphorically the two parties can be referred as 
+a \textit{teacher} and a \textit{student}. So, automatic CL is meant
+to reduce the need for \textit{human} teachers, and in \cite{wang2021survey} the authors summarize 
+four methodologies of predefined CL that take different ideas, among all the ideas.
 
+Firstly, \textbf{Self-paced Learning} (SPL) is a primary branch of CL that automates the Difficulty Measurer
+by taking the example-wise training loss of the current model as criteria. The SPL methods let the students themselves
+act as the teacher and measure the difficulty of training examples according to its losses on them. 
+This concept is analogous to the self-study human approach, in fact
+originates from human education, where the student can control the learning curriculum , including what, how, when, and how long 
+to study. In machine learning context, SPL refers to a training strategy - initially proposed by Kumar \textit{et al.} \cite{kumar2010self} -
+which trains the model at each iteration with the proportion of data with the lowest training losses.
+Such a proportion of easiest examples gradually increase until the whole training set is considered, so using a predefined Training Scheduler.
+Even if in the literature of SPL, CL and SPL are usually mentioned as two different strategies, where the CL 
+refers to the predefined CL, in the piece of work aforemetioned SPL is considered as a branch of automatic CL, since it shares 
+the spirit with CL and fits with the general framework as explained by Kumar \textit{et al.} in \cite{kumar2010self} and shown in Figure~\ref{fig:SPL-CL}.
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=0.55\textwidth]{/Users/carmenarmenti/Desktop/Thesis document/images/SPL-CL.png}
+        \caption{\label{fig:SPL-CL}Automatic CL: Self-paced Learning Design.}
+    \end{center}
+\end{figure}
+The most valuable advantages of SPL over predefined CL are twofold: (i) SPL is semi-automatic CL 
+with a loss-based automatic Difficulty Measurer and dynamic curriculum, which makes the strategy more flexible and adaptive for various tasks; (ii) SPL includes the curriculum
+design into the learning objective of the original machine learning tasks, thus making it applicable as a tool.\\
+The authors in \cite{wang2021survey} also specify that other than the original version of SPL, there also exist not only theories for the 
+convergence, robustnessm and essence of SPl to support applications, but also enhanaced versions from different 
+perspectives. Moreover, they argue that as a student-driven weighting strategy on the learning objective, the core 
+design of SPL is the Self Paced regularizer, which directly determines the optimal weights at each training epoch. Therefore,
+most of the existing improvements on SPL have been focused on SPL regularizers. Without going into details, they differentiate (i) Soft SP-regularizers, 
+comparing them to Hard Regularizers; (ii) Prior-embedded SPL; (iii) other enhancements of SPL.
 
+Secondly, there exists a reliable teacher-driven difficulty strategy, that is the \textbf{Transfer Teachers} approach.
+SPL takes the current student model as an automatic Difficulty Measurer, however, this strategy has a risk of uncertainty at the beginning of the training, when the student model
+is not sufficiently trained. As happens in human education in fact, if students understand 
+little about - or misunderstand - the learning materials, it would be hard for them to measure the difficulty of the materials 
+and find out the easy ones. So, an idea is to ask a mature tacher for help: an educated person can assess
+the materials and form an easy-to-hard curriculum. This idea leads the CL approaches to the Transfer Teachers strategy (see Figure~\ref{fig:TT-CL}).
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=0.55\textwidth]{/Users/carmenarmenti/Desktop/Thesis document/images/TT-CL.png}
+        \caption{\label{fig:TT-CL}Automatic CL: Transfer Teacher Learning Design.}
+    \end{center}
+\end{figure}
+The latter is a semi-automatic method that first pretrains a teacher model on the training datasat or an external dataset, ad then transfers its knowledge
+to compute the example-wise difficulty, based on which a predefined Training Scheduler can be applied to finish the CL design. 
+Transfer Teachers can be helpful to the tasks where the example-wise eaasiness is hard to define.
+The most general Transfer Teachers are loss-based, thus they do not need any domain knowledge and are closely related 
+to SPL. Concretely, these methods take the example-wise losses calculated by a teacher model as the example difficulty 
+and assume that the lower the loss, the easier the example. The teacher model can either be different 
+from the student model \cite{weinshall2018curriculum} - so being more complex, or share the same structure with it \cite{hacohen2019power}, \cite{xu2020curriculum}.
 
+Then, \textbf{Reinforcement Learning (RL) Teacher} methods are exposed, which involve a student model and a reinforcement-learning-based 
+teacher model. The SPL and Transfer Teacher only automate the Difficulty Measurer and still use predefined
+Training Scheduler, thus they only consider one side of the \textit{curriculum} or \textit{teaching} scenario. On one hand
+SPl taked the student feedback, i.e., the losses to adjust the curriculum, whereas Transfer Teacher leverages the teacher's knowledge
+to determine the order of presenting learning materials. However, in a common and ideal human-based education a teaching strategy
+usually involve both the teacher and the student, where the student can interactively provide feedback to the teacher, and the teacher 
+can adjust the teaching action accordingly. By doing so, the teacher and the student make progress together.
+Even if this strategy costs more than SPL and Transfer Teacher, is the most flexible and completely automatic.
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=0.55\textwidth]{/Users/carmenarmenti/Desktop/Thesis document/images/RLteacher-CL.png}
+        \caption{\label{fig:RLteacher-CL}Automatic CL: Reinforcement Learning teacher Design.}
+    \end{center}
+\end{figure}
+As can be seen in Figure~\ref{fig:RLteacher-CL}, it is clear that with the teacher-student interactive
+stratey, RL Teacher achieves the fully-automated CL design. At each training epoch, the RL teacher
+will dinamically select examples for training according to the student feedback. The RL Teacher 
+sets the teacher model as both the Difficulty Measurer and Training Scheduler by dynamically considering 
+the student feedback.\\
+On top of that, RL Teacher methods make it possible to set different student feedback according 
+to different goals, in fact, they are also suitable for multi-tasking learning, where the teacher model 
+selects the most valuable tasks for the student training. Some examples are AutoCL \cite{graves2017automated} and TSCL \cite{matiisen2019teacher}, and for both of them the goal is 
+to learn a student model that achieves high performance on all the tasks.
+
+Finally, the scholars report \textbf{other Automatic CL} approaches. In fact, besides RL Teacher,
+there exist some other fully-automatic CL designs. These designs should require the generation of the 
+curriculum to rely only on the dataset, the student model, and the goal of the task.
+Thus, accordingly to this idea and recalling the CL definition in Section~\ref{chapter:defCL}, from the optimization
+perspective the authors summarize that the objective is optimize the mapping between \{the data, the current state 
+of the student model, the task goal\} and the training goal. To this end, RL Teacher methods typically adopt a RL framework to learn 
+the policy for data selection, but as the authors report, there are more optimization methods 
+such as Bayesian Optimization, Stochastic Gradient Descent, Meta-learning, and Hypernetwork, which also demonstrated to have great potential to learn 
+this mapping.\\
+\newline
+To sum up, even though there are a lot of different CL methodologies, there is no systematic conclusion 
+with regard to howo to choose amon them in real-world applications. One useful principle for selecting 
+a proper CL category is to consider how much prior knowledge one have about the dataset and the task goal.
+If sufficient expert domain knowledge is available, then predefined CL methods are more preferable to design a \textit{knowledge-driven} curriculum 
+specifically suitable to the exact scenario. On the other hand, if there is no prior assumptions on the data, then 
+automatic CL methods are more prefereable to learn a \textit{data-driven} curriculum adaptive to the underlying dataset and task goal.
 %%%%%%%%%%%%%%%%%%%%
 % NOTES
 % As mentioned previously, this is the first work studying LSTM networks

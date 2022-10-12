@@ -6,45 +6,45 @@ Database file #1: biblio.bib
 Warning--entry type for "lizard" isn't style-file defined
 --line 69 of file biblio.bib
 Warning--I didn't find a database entry for "Elman1"
-You've used 31 entries,
+You've used 34 entries,
             2118 wiz_defined-function locations,
-            676 strings with 9604 characters,
-and the built_in function-call counts, 12053 in all, are:
-= -- 1182
-> -- 645
-< -- 11
-+ -- 256
-- -- 222
-* -- 827
-:= -- 1956
-add.period$ -- 97
-call.type$ -- 31
-change.case$ -- 204
+            691 strings with 10171 characters,
+and the built_in function-call counts, 13613 in all, are:
+= -- 1342
+> -- 719
+< -- 13
++ -- 285
+- -- 248
+* -- 939
+:= -- 2186
+add.period$ -- 107
+call.type$ -- 34
+change.case$ -- 226
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 464
-empty$ -- 867
-format.name$ -- 222
-if$ -- 2550
+cite$ -- 34
+duplicate$ -- 525
+empty$ -- 984
+format.name$ -- 248
+if$ -- 2894
 int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 30
-newline$ -- 158
-num.names$ -- 62
-pop$ -- 216
+int.to.str$ -- 34
+missing$ -- 33
+newline$ -- 173
+num.names$ -- 68
+pop$ -- 242
 preamble$ -- 1
-purify$ -- 173
+purify$ -- 192
 quote$ -- 0
-skip$ -- 377
+skip$ -- 428
 stack$ -- 0
-substring$ -- 679
-swap$ -- 149
-text.length$ -- 11
+substring$ -- 805
+swap$ -- 176
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 124
+type$ -- 136
 warning$ -- 0
-while$ -- 106
-width$ -- 33
-write$ -- 338
+while$ -- 120
+width$ -- 36
+write$ -- 372
 (There were 2 warnings)

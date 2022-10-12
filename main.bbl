@@ -117,6 +117,12 @@ A.~Mastropaolo, L.~Pascarella, and G.~Bavota.
 \newblock Using deep learning to generate complete log statements.
 \newblock {\em CoRR}, abs/2201.04837, 2022.
 
+\bibitem{matiisen2019teacher}
+T.~Matiisen, A.~Oliver, T.~Cohen, and J.~Schulman.
+\newblock Teacher--student curriculum learning.
+\newblock {\em IEEE transactions on neural networks and learning systems},
+  31(9):3732--3740, 2019.
+
 \bibitem{narvekar2017autonomous}
 S.~Narvekar, J.~Sinapov, and P.~Stone.
 \newblock Autonomous task sequencing for customized curriculum design in
@@ -171,6 +177,19 @@ X.~Wang, Y.~Chen, and W.~Zhu.
 \newblock A survey on curriculum learning.
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
   2021.
+
+\bibitem{weinshall2018curriculum}
+D.~Weinshall, G.~Cohen, and D.~Amir.
+\newblock Curriculum learning by transfer learning: Theory and experiments with
+  deep networks.
+\newblock In {\em International Conference on Machine Learning}, pages
+  5238--5246. PMLR, 2018.
+
+\bibitem{xu2020curriculum}
+B.~Xu, L.~Zhang, Z.~Mao, Q.~Wang, H.~Xie, and Y.~Zhang.
+\newblock Curriculum learning for natural language understanding.
+\newblock In {\em Proceedings of the 58th Annual Meeting of the Association for
+  Computational Linguistics}, pages 6095--6104, 2020.
 
 \bibitem{lizard}
 T.~Yin.
