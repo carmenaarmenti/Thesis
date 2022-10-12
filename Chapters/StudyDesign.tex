@@ -1,6 +1,5 @@
 \chapter{Evaluating Curriculum Learning in Software Engineering tasks}
-
-
+\label{chapter:chap4}
 We adopted the most popular discrete scheduler, known as \textit{Baby Step}, where the complexity of the training
 data needs to be gradually increasing. Due to this, a reliable metric to split the initial dataset of each task needed to be defined.
 This approach distributes the sorted data into buckets, from easy to hard according to the metric, and starts training with the easiest bucket. 
@@ -23,6 +22,8 @@ For each of the tasks considered, the following aspects are described thoroughly
     \item \textbf{Difficulty Measurer}: a measure to sort the datasets' instances is needed, each task was experimented with a different metric; 
     \item \textbf{Training Scheduler}: sequence of data subsets are presented to the model following a training schedule.
 \end{itemize}
+
+TODO: add connection with LSTM forgetting referring to the experiment on one pass
 
 %\item \textbf{Dataset characteristics}: the datasets used are composed by a couple, where the first element is the source of the training, while the second is the target;
 

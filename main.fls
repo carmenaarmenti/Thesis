@@ -1576,23 +1576,31 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
-INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplrc8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/zplmb7t.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/zplmb7t.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/zplmb7t.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmb7t.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/fplmb.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
+INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/DLtoSEtasks.tex
 INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
 INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex
 INPUT /Users/carmenarmenti/Desktop/Thesis document/Chapters/StudyDesign.tex

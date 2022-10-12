@@ -7,19 +7,20 @@ accelerate the evolution of our species. Infancy and childhood are times of grea
 must care for and protect their own young go through a severe restriction of their range of activities. Then, why would evolutionary process not prune a long period of 
 immaturity from our species? Previous research carried out by Elman \textit{et al} \cite{ELMAN199371} at the intersection of cognitive science
 and machine learning underline that it is important to remember that the evolution looks at the whole individuals rather than at the value of isolated traits; the adaptive success of individuals therefore is 
-determined by the joint interaction of all their traits. Thus, it might be that to understand the persistence of one trait with apparently negative consequences - such as the lenghty period of immaturity, possible interactions
+determined by the joint interaction of all their traits. Thus, it might be that to understand the persistence of one trait with apparently negative consequences - such as the lenghty period of immaturity - possible interactions
 with other traits - such as the ability to learn - may need to be considered. The perfect example of such an interaction, is that in human beings the greatest learning occurs precisely in the period of time
 when they are undergoing major changes, during childhood indeed.\\
-
-\section{State of the art}
 In humans, learning and development interact in a way that is as important as non-obvious; maturational changes might provide the enabling 
 conditions which allow learning to be most effective.
 It is a matter of fact that the higher the training is organized, the better the knowledge of the person. Humans in fact learn much better when the examples are not randomly presented, but organized in such a way 
 where the amount of concepts is incremented gradually, and where the complexity of them increases over time. The majority of education systems are organized in order to illustrate 
 different concepts at different times, exploiting previously learned notions to ease the learning of new abstractions. By choosing which examples to present and in which order to explain them to the learning system, one can guide
 training and consequently increase the speed at which learning can happen. This is the same idea exploited in \textit{animal training} by psychologists Skinner (1958), Peterson (2004) and Krueger \& Dayan (2009)
-where it is called \textit{shaping}. \\
-In the context of machine learning, such a meaningful learning process is known as \textit{curriculum learning}, whose basic idea - traced back to Elman - is to start small, learn easier aspects
+where it is called \textit{shaping}.
+In the context of machine learning, such a meaningful learning process is known as \textit{curriculum learning}.
+
+\section{State of the art}
+The basic idea of \textit{curriculum learning} - traced back to Elman - is to start small, learn easier aspects
 of the task, and then gradually increase the difficulty level.
 Inspired by human learning in fact, curriculum learning (CL) is a training strategy that emphasizes
 the order of training instances in a computational learning setup.
@@ -32,8 +33,7 @@ during the first steps as building blocks, to then learn more complex ones. Seve
 analysis task and tasks similar to sequence prediction tasks in NLP carried on by Cirick \textit{et al} \cite{Cirik2016VisualizingAU} prove that
 curriculum learning has positive effects on LSTM's internal states, by biasing the model through building constructive representations. 
 Specifically, the internal representation at the previous timestep is used as building block for the next one, thus
-contributing at the final prediction.
-
+contributing at the final prediction.\\
 In traditional machine learning algorithms all the training examples are randomly presented to the model,
 thus ignoring the different complexities of data instances and the learning status of the current model. 
 Owning to this, it is fairily intuitive wondering if the curriculum training strategy could ever benefit machine learning.
@@ -43,13 +43,13 @@ because of that the power of introducing the curriculum-like strategy depends on
 \section{Curriculum Learning related works}
 As the idea of CL provide a general training strategy beyond specific machine learning
 tasks, its power have been exploited in considerably wide application scopes, including supervised learning
-tasks within computer vision, natural language processing (NLP), healthcare prediction, various
-reinforcement learning (RL) tasks, as well as other applications such
-as graph learning, and neural architecture search (NAS). As already mentioned in \ref{chapter:MAO}, the advantages of applying CL
+tasks within computer vision \cite{guo2018curriculumnet}, \cite{jiang2014easy}, natural language processing (NLP) \cite{platanios2019competence}, \cite{tay2019simple}, healthcare prediction \cite{el2020student}, various
+reinforcement learning (RL) tasks \cite{florensa2017reverse}, \cite{narvekar2017autonomous}, \cite{ren2018self} as well as other applications such
+as graph learning \cite{gong2019multi}, \cite{qu2018curriculum} and neural architecture search (NAS) \cite{guo2018curriculumnet}. As already mentioned in \ref{chapter:MAO}, the advantages of applying CL
 training strategies to miscellaneous real-world scenarios can be mainly summarized as (i) improving the model performance on 
 target tasks, and (ii) accelerating the training process, which cover the two most significant 
-requirements in most of the machine learning research. 
-To provide an illustration,
+requirements in most of the machine learning research. \\
+For instance,
 Platanios \textit{et al.} \cite{platanios2019competence} present 
 a personal framework that consists of a way of deciding which training instances
 are shown to the model at different times during training, based on 
@@ -60,7 +60,7 @@ a better solution than the common approach of uniformly
 sampling training examples. Their experiment shows that CL helps the 
 neural machine translation model reduce training time by up to 70\%, while at the 
 same time obtaining accuracy improvements of up to 2.2 BLEU points, compared
-to plain training without any curricula. In \cite{florensa2017reverse} Florensa 
+to plain training without any curricula. \\ To further illustrate, in \cite{florensa2017reverse} Florensa 
 \textit{et al.} talk about curriculum learning as a reverse curriculum technique. 
 They propose a method to learn goal-oriented tasks without requiring
 any prior knowledge, other than obtaining a single state in which
@@ -112,7 +112,7 @@ experiments on supervised visual and language learning tasks, exploring when and
 The original definition of CL refers to a curriculum as a sequence of training criteria 
 over \(T\) training steps \( C = \left \langle Q_1, ..., Q_t, ..., Q_T \right \rangle\), where each  
 criterion \(Q_t\) is a reweighting of the target training distribution \(P(z)\): \(Q_t(z) \propto W_t(z)P(z)\), for 
-each instance in the training set. In the definition the following three conditions were considered:
+each instance in the training set.\\ In the definition the following three conditions were considered:
 \begin{itemize}
     \item the entropy of distributions gradually increases, \(H(Q_t) < H(Q_{t+1})\);
     \item the weight for any example increases, \(W_t(z) \leq W_{t+1}(z),  \forall z \in D\);
@@ -157,8 +157,146 @@ where both the Difficulty Measurer and Training Scheduler are defined by human p
 algorithms involved; the latter instead, if any - or both - of the components are designed by data-driven algorithms.\\
 Usually, the power of introducting Curriculum into Machine Learning depends on how the curriculum for specific
 applications and dataset is designed. Due to this, Difficulty Measurers often relies on the data
-characteristics of specific tasks, and most of them are defined by complexity, diversity, or noise estimation
-definitions.\\
+characteristics of specific tasks, and most of them are defined by a definition of complexity, diversity, or noise estimation.
+
+\subsection{Predefined Curriculum Learning}
+To begin with, the \textit{difficulty measurer} depends on the data characteristics, and consequently
+on the specific task. 
+By and large, common types of difficulty measurers are designed for image and text data, as usually happens in computer vision and natural language processing tasks, 
+but also for other data types such as audio data and programs. 
+As we mentioned before, difficulty measurers can rely on data complexity, diversity, or noiseness.
+In the first place, \textit{complexity} refers to the structural complexity of a data example, in a way that the higher the complexity, 
+the harder for the model is to capture the samples. 
+Some of the most popular difficulty measurers are: the \textit{sentence length} - the most used in NLP tasks;
+the \textit{parse tree depth} - where the complexity is based on the grammar; the \textit{nesting operations} in a program - that computes the complexity based on the number of instructions in
+program execution tasks. 
+As for \textit{diversity}, the distributional diversity of elements in a group data is meant to define a type of difficulty measurer.
+The more various the data, the harder the learning process is.
+When more - or rare - types of data is included in the training data set, training is more difficult for the model. 
+One of the most used measure of diversity is information entropy, which in text data is exploited as the Part-Of-Speech (POS) entropy. One other measure is the word rarity.
+Last but not least, another definition of difficulty is the \textit{noise extimation}, which estimates
+the noise level of data examples and classifies cleaner data as easier. To provide an illustration, in \cite{chen2015webly}
+the authors present an approach to train a webly supervised convolutional neural networks (CNN), inspired by curriculum learning.
+They suppose that images retrieved by a search engine like Google are supposed to be cleaner, thus easier, while images
+posted on photo-sharing website like Flickr are more realistic, therefore noiser and consequently harder. 
+So, examples with lower local density are considered to be harder to predict. 
+On top of that, there are also other difficulty measurers that rely on 
+characteristics such as signal intensity or humanly-annotated image difficulty scores.
+
+If predefined difficulty measurers vary over different data types and tasks, on the other hand
+the existing predefined \textit{training scheduler} are usually independent from the data - and then from the task.
+However, training schedulers can be differentiated as well; they are usually divided into \textit{discrete} and \textit{continuous} schedulers.
+Discrete schedulers adjust the training data subset following a specific criterion - 
+be it a fixed number of epochs or the convergence on the current data subset - whereas continuous schedulers adjust 
+the training data subset at every epoch.
+Thanks to their semplicity and effectiveness \textit{discrete schedulers} are widely adopted and the most popular
+discrete scheduler is named as \textit{Baby Step}. 
+
+\begin{algorithm}
+    \caption{Baby Steps Curriculum \cite{cirik2016visualizing}, \cite{wang2021survey}}\label{alg:bbstep}
+    \hspace*{\algorithmicindent} \textbf{Input}: \text{\(\mathbf{C}\): training dataset; \(\mathbf{D}\): Difficulty Measurer;}\\
+        %\mathit{D:} the Training Dataset; \mathit{C:} the Difficulty Measurer;\\
+    \hspace*{\algorithmicindent} \textbf{Output}: \text{\(\mathbf{M^*}\): optimal model.}
+        %\mathbold{M^*:} the optimal model. 
+    \begin{algorithmic}[1]
+    %\Require \mathit{D: the Training Dataset;} \mathit{C: the Difficulty Measurer;}
+    %\Ensure \mathbold{M^*}
+    \State $D'= sort(D,C);$
+    \State $\lbrace D^1, D^2,...,D^k \rbrace = D'$ where $C(d_a) < C(d_b)$, $d_a\in D^i$, $d_b\in D^j$, $\forall i<j;$
+    %$d_a\inD^i$, $d_b\inD^j$, \forall $i<j$
+    \State $D^{train} = \emptyset$
+    \For{$s = 1$ to $k$}
+        \State $D^{train} = D^{train} \cup D^s;$
+        \While{not converged for \textit{p} epochs}
+        \State train$(M, D^{train});$
+        \EndWhile
+    \EndFor
+    \end{algorithmic}
+\end{algorithm}
+Algorithm~\ref{alg:bbstep} first distributes the sorted data into buckets - from easy to hard - and starts training with the easiest one, 
+shuffling the current buckets and the data in each bucket and sampling mini-batches for training.
+Then, when convergence is reached or after a defined number of epochs, the next bucket is merged in the current one. 
+This process continues until all the buckets are merged in one unique training set; at this point the training process either stops or continues 
+several extra epochs. \\
+Another discrete scheduler is called \textit{One-Pass} which uses a similar strategy for data bucketing and for starting the training from the easiest one;
+however, if Baby Step merges the buckets as soon as the model converged on the previous bucket, One-Pass scheduler when updating the training data discards the current bucket
+and switches to the next harder one. 
+
+\begin{algorithm}
+    \caption{One-Pass Curriculum \cite{cirik2016visualizing}}\label{alg:onepass}
+    \hspace*{\algorithmicindent} \textbf{Input}: \text{\(\mathbf{C}\): training dataset; \(\mathbf{D}\): Difficulty Measurer;}\\
+        %\mathit{D:} the Training Dataset; \mathit{C:} the Difficulty Measurer;\\
+    \hspace*{\algorithmicindent} \textbf{Output}: \text{\(\mathbf{M^*}\): optimal model.}
+        %\mathbold{M^*:} the optimal model. 
+    \begin{algorithmic}[1]
+    %\Require \mathit{D: the Training Dataset;} \mathit{C: the Difficulty Measurer;}
+    %\Ensure \mathbold{M^*}
+    \State $D'= sort(D,C);$
+    \State $\lbrace D^1, D^2,...,D^k \rbrace = D'$ where $C(d_a) < C(d_b)$, $d_a\in D^i$, $d_b\in D^j$, $\forall i<j;$
+    %$d_a\inD^i$, $d_b\inD^j$, \forall $i<j$
+    \For{$s = 1$ to $k$}
+        \While{not converged for \textit{p} epochs}
+        \State train$(M, D^{train});$
+        \EndWhile
+    \EndFor
+    \end{algorithmic}
+\end{algorithm}
+
+One-Pass is less used than Baby Step in curriculum learning literature due to the lower performance in many tasks.
+In fact, the complexity or diversity of the training data if gradually increasing
+helps improve generalization - as happens in Baby Step scheduler; on the other hand,
+One-Pass scheduler (see Algorithm~\ref{alg:onepass}) is like training on a sequence of independent tasks as in 
+continual learning - which faces the problem of forgetting even though the early tasks are easier 
+(we also faced this issue as we explain in Chapter~\ref{chapter:chap4}).
+Other discrete schedulers are also based on data bucketing, but take 
+different sampling strategies. For example, some \cite{kocmi2017curriculum} modify the Baby Step to unevenly divide 
+the examples into buckets such that easier buckets have more data examples; then they sample instances
+without replacement from the easiest bucket only until there remain the same number of 
+examples as in the second easiest bucket. Afterward, they uniformely sample 
+from the first two buckets until the size is the same as that of the third bucket.\\
+In \cite{zaremba2014learning} instead, the researchers base their experiments on 2 measures to 
+define a difficulty measurer: \textit{length} and \textit{nesting} of a dataset of programs.
+They evaluate 4 different curriculum learning strategies, two of which proved to be better than using no curriculum strategy or the 
+naive curriculum strategy - the latter was tested in \cite{bengio2009curriculum} as well.
+The first of the two approach - both successful in the context of evaluating 
+short computer programs - is a \textit{mixed strategy} where the training samples
+are picked randomly over a set of random lengths \([1, a]\) and random nestings \([1, b]\),
+thus using a balanced mixture of easy and difficult examples at every point during training.
+The second one instead is a \textit{combined strategy} between the naive curriculum strategy 
+and the mixed strategy. In this approach, every training case is obtained 
+either by the naive method or by the mixed one. 
+Thence, the combined strategy always exposes the network at least to some difficult examples, which is the key element 
+in which it differs from the naive curriculum strategy. As explained in their 
+piece of work, both their curriculum strategies outperform the naive curriculum strategy, especially 
+the combined one, in a matter of hidden state allocation.\\
+\textbf{Predefined CL limitations.} Even if predefined curriculum learning is simple and effective, there are 
+some limitations in terms of (i) applicability, (ii) difficulty measurer definition, (iii) training scheduler definition.
+First of all, an expert domain knowledge is needed not only to find the most suitable
+combination of difficulty measurer and training scheduler for a specific task and its dataset, 
+but also for designing both of them in such a way that are predefined before the training starts.
+Moreover, defining a predefined difficulty measurer means humanly decide what should be the difficulty boundaries of a model - which are
+different from those of humans. Finally, when a training scheduler remains fixed 
+it is not flexible enough, since it ignores the feedback of the current model to some extent.
+On top of the previous, the best hyperparameters of training scheduler are hard to find and there are no 
+other methodologies other than exhaustive trials. In addition, taking Baby step as example, 
+a basic problem in its scheduler is the decision of the number of buckets and how to divide them. In fact, 
+deciding by thresholds on difficulty scores makes it hard to assign each bucket with roughly the same number of instances; on 
+the other hand, division by size might result in fluctuations in difficulty within a bucket or not enough difference between different 
+buckets.\\
+
+These limitations of predefined curriculum learning has led to the development 
+of more data-and-model-driven approaches rather than human-driven, in such a way 
+that they can be more dynamically adaptive to the training in process: automatic 
+CL approaches.
+
+\subsection{Automatic Curriculum Learning}
+The automatic curriculum learning approaches try to break the limits of predefined curriculum learning approaches.
+Takeing as reference the issues mentioned before, i.e., (i) applicability, (ii) difficulty measurer definition, and (iii) training scheduler definition, 
+by and large it can be said that: (i) in terms of \textit{applicability} automatic CL strategies 
+tend to be general and domain agnostic; (ii) \textit{difficulty measurers} are model decided thus dynamic; (iii) \textit{training schedulers}
+are dynamically defined and redefined by model feedbacks.
+
+
 
 %%%%%%%%%%%%%%%%%%%%
 % NOTES

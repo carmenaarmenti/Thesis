@@ -6,11 +6,30 @@ Y.~Bengio, J.~Louradour, R.~Collobert, and J.~Weston.
 \newblock In {\em Proceedings of the 26th annual international conference on
   machine learning}, pages 41--48, 2009.
 
+\bibitem{chen2015webly}
+X.~Chen and A.~Gupta.
+\newblock Webly supervised learning of convolutional networks.
+\newblock In {\em Proceedings of the IEEE international conference on computer
+  vision}, pages 1431--1439, 2015.
+
+\bibitem{cirik2016visualizing}
+V.~Cirik, E.~Hovy, and L.-P. Morency.
+\newblock Visualizing and understanding curriculum learning for long short-term
+  memory networks.
+\newblock {\em arXiv preprint arXiv:1611.06204}, 2016.
+
 \bibitem{Cirik2016VisualizingAU}
 V.~Cirik, E.~H. Hovy, and L.-P. Morency.
 \newblock Visualizing and understanding curriculum learning for long short-term
   memory networks.
 \newblock {\em ArXiv}, abs/1611.06204, 2016.
+
+\bibitem{el2020student}
+R.~El-Bouri, D.~Eyre, P.~Watkinson, T.~Zhu, and D.~Clifton.
+\newblock Student-teacher curriculum learning via reinforcement learning:
+  predicting hospital inpatient admission location.
+\newblock In {\em International Conference on Machine Learning}, pages
+  2848--2857. PMLR, 2020.
 
 \bibitem{ELMAN199371}
 J.~L. Elman.
@@ -28,11 +47,24 @@ C.~Florensa, D.~Held, M.~Wulfmeier, M.~Zhang, and P.~Abbeel.
 \newblock Reverse curriculum generation for reinforcement learning.
 \newblock In {\em Conference on robot learning}, pages 482--495. PMLR, 2017.
 
+\bibitem{gong2019multi}
+C.~Gong, J.~Yang, and D.~Tao.
+\newblock Multi-modal curriculum learning over graphs.
+\newblock {\em ACM Transactions on Intelligent Systems and Technology (TIST)},
+  10(4):1--25, 2019.
+
 \bibitem{graves2017automated}
 A.~Graves, M.~G. Bellemare, J.~Menick, R.~Munos, and K.~Kavukcuoglu.
 \newblock Automated curriculum learning for neural networks.
 \newblock In {\em international conference on machine learning}, pages
   1311--1320. PMLR, 2017.
+
+\bibitem{guo2018curriculumnet}
+S.~Guo, W.~Huang, H.~Zhang, C.~Zhuang, D.~Dong, M.~R. Scott, and D.~Huang.
+\newblock Curriculumnet: Weakly supervised learning from large-scale web
+  images.
+\newblock In {\em Proceedings of the European conference on computer vision
+  (ECCV)}, pages 135--150, 2018.
 
 \bibitem{hacohen2019power}
 G.~Hacohen and D.~Weinshall.
@@ -44,6 +76,19 @@ G.~Hacohen and D.~Weinshall.
 A.~Hindle, E.~T. Barr, M.~Gabel, Z.~Su, and P.~Devanbu.
 \newblock On the naturalness of software.
 \newblock {\em Communications of the ACM}, 59(5):122--131, 2016.
+
+\bibitem{jiang2014easy}
+L.~Jiang, D.~Meng, T.~Mitamura, and A.~G. Hauptmann.
+\newblock Easy samples first: Self-paced reranking for zero-example multimedia
+  search.
+\newblock In {\em Proceedings of the 22nd ACM international conference on
+  Multimedia}, pages 547--556, 2014.
+
+\bibitem{kocmi2017curriculum}
+T.~Kocmi and O.~Bojar.
+\newblock Curriculum learning and minibatch bucketing in neural machine
+  translation.
+\newblock {\em arXiv preprint arXiv:1707.09533}, 2017.
 
 \bibitem{krueger2009}
 K.~A. Krueger and P.~Dayan.
@@ -72,16 +117,43 @@ A.~Mastropaolo, L.~Pascarella, and G.~Bavota.
 \newblock Using deep learning to generate complete log statements.
 \newblock {\em CoRR}, abs/2201.04837, 2022.
 
+\bibitem{narvekar2017autonomous}
+S.~Narvekar, J.~Sinapov, and P.~Stone.
+\newblock Autonomous task sequencing for customized curriculum design in
+  reinforcement learning.
+\newblock In {\em IJCAI}, pages 2536--2542, 2017.
+
 \bibitem{platanios2019competence}
 E.~A. Platanios, O.~Stretcu, G.~Neubig, B.~Poczos, and T.~M. Mitchell.
 \newblock Competence-based curriculum learning for neural machine translation.
 \newblock {\em arXiv preprint arXiv:1903.09848}, 2019.
+
+\bibitem{qu2018curriculum}
+M.~Qu, J.~Tang, and J.~Han.
+\newblock Curriculum learning for heterogeneous star network embedding via deep
+  reinforcement learning.
+\newblock In {\em Proceedings of the Eleventh ACM International Conference on
+  Web Search and Data Mining}, pages 468--476, 2018.
 
 \bibitem{raychev2014code}
 V.~Raychev, M.~Vechev, and E.~Yahav.
 \newblock Code completion with statistical language models.
 \newblock In {\em Proceedings of the 35th ACM SIGPLAN Conference on Programming
   Language Design and Implementation}, pages 419--428, 2014.
+
+\bibitem{ren2018self}
+Z.~Ren, D.~Dong, H.~Li, and C.~Chen.
+\newblock Self-paced prioritized curriculum learning with coverage penalty in
+  deep reinforcement learning.
+\newblock {\em IEEE transactions on neural networks and learning systems},
+  29(6):2216--2226, 2018.
+
+\bibitem{tay2019simple}
+Y.~Tay, S.~Wang, L.~A. Tuan, J.~Fu, M.~C. Phan, X.~Yuan, J.~Rao, S.~C. Hui, and
+  A.~Zhang.
+\newblock Simple and effective curriculum pointer-generator networks for
+  reading comprehension over long narratives.
+\newblock {\em arXiv preprint arXiv:1905.10847}, 2019.
 
 \bibitem{Tufano2019}
 M.~Tufano, C.~Watson, G.~Bavota, M.~D. Penta, M.~White, and D.~Poshyvanyk.
@@ -93,6 +165,12 @@ M.~Tufano, C.~Watson, G.~Bavota, M.~D. Penta, M.~White, and D.~Poshyvanyk.
 X.~Wang, Y.~Chen, and W.~Zhu.
 \newblock A comprehensive survey on curriculum learning.
 \newblock {\em CoRR}, abs/2010.13166, 2020.
+
+\bibitem{wang2021survey}
+X.~Wang, Y.~Chen, and W.~Zhu.
+\newblock A survey on curriculum learning.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  2021.
 
 \bibitem{lizard}
 T.~Yin.
