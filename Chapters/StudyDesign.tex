@@ -8,12 +8,12 @@ into the current training subset - main characteristic of \textit{Baby Step} app
 Finally, once all the buckets are merged and used, the
 training process either stops or continues several extra epochs.\\
 Note that, at each epoch the scheduler shuffles the current bucket and samples mini-batches for training.\\
-
+\newline
 However, before testing curriculum learning approach, we thougth it was strictly necessary reproducing - in the case 
 of bug-fixing task - or conducting -  within the framework of the other 2 tasks - the experiment on the modelbase.\\
 We worked with a neural network whose configuration is composed by 1-layer bidirectional Encoder, 2-layer Attention 
 Decoder both with 256 units, embedding size of 512, and LSTM RNN cells.\\
-
+\newline
 In this chapter, we present how we applied Curriculum Learning to some of Software
 Engineering tasks, i.e. \textit{bug-fixing}, \textit{code summarization}, and \textit{log generation}
 tasks. \\
@@ -22,11 +22,9 @@ For each of the tasks considered, the following aspects are described thoroughly
     \item \textbf{Difficulty Measurer}: a measure to sort the datasets' instances is needed, each task was experimented with a different metric; 
     \item \textbf{Training Scheduler}: sequence of data subsets are presented to the model following a training schedule.
 \end{itemize}
-
-TODO: add connection with LSTM forgetting referring to the experiment on one pass
-
+TODO: add connection with LSTM forgetting referring to the experiment on one pass\\
 %\item \textbf{Dataset characteristics}: the datasets used are composed by a couple, where the first element is the source of the training, while the second is the target;
-
+\newline
 The goal of this study is to asses whether Neural Machine Translation, combined with the Curriculum Learning approach, 
 can be used for the tasks experimented. In the following section, the design of our study is described in detail.
 
@@ -43,7 +41,6 @@ dominant components:
     \item a RNN Encoder, which encodes a sequence of terms \textbf{x} into a vector representation;
     \item a RNN Decoder, which decodes the vector representation into another sequence of terms \textbf{y}.
 \end{itemize}
-
 The model learning is based on a conditional distribution, where the output sequence of terms is conditioned
 by the input sequence: \(P(y_1,...,y_m|x_1,...,x_n)\), where \(m\) and \(n\) not necessarly have to have the same length.
 The Encoder takes as input a sequence \textbf{x}\(= (x_1,...,x_n)\) and produces

@@ -182,7 +182,7 @@ posted on photo-sharing website like Flickr are more realistic, therefore noiser
 So, examples with lower local density are considered to be harder to predict. 
 On top of that, there are also other difficulty measurers that rely on 
 characteristics such as signal intensity or humanly-annotated image difficulty scores.
-
+\newline
 If predefined difficulty measurers vary over different data types and tasks, on the other hand
 the existing predefined \textit{training scheduler} are usually independent from the data - and then from the task.
 However, training schedulers can be differentiated as well; they are usually divided into \textit{discrete} and \textit{continuous} schedulers.
@@ -191,7 +191,6 @@ be it a fixed number of epochs or the convergence on the current data subset - w
 the training data subset at every epoch.
 Thanks to their semplicity and effectiveness \textit{discrete schedulers} are widely adopted and the most popular
 discrete scheduler is named as \textit{Baby Step}. 
-
 \begin{algorithm}
     \caption{Baby Steps Curriculum \cite{cirik2016visualizing}, \cite{wang2021survey}}\label{alg:bbstep}
     \hspace*{\algorithmicindent} \textbf{Input}: \text{\(\mathbf{C}\): training dataset; \(\mathbf{D}\): Difficulty Measurer;}\\
@@ -213,6 +212,7 @@ discrete scheduler is named as \textit{Baby Step}.
     \EndFor
     \end{algorithmic}
 \end{algorithm}
+\newline
 Algorithm~\ref{alg:bbstep} first distributes the sorted data into buckets - from easy to hard - and starts training with the easiest one, 
 shuffling the current buckets and the data in each bucket and sampling mini-batches for training.
 Then, when convergence is reached or after a defined number of epochs, the next bucket is merged in the current one. 
@@ -221,7 +221,6 @@ several extra epochs. \\
 Another discrete scheduler is called \textit{One-Pass} which uses a similar strategy for data bucketing and for starting the training from the easiest one;
 however, if Baby Step merges the buckets as soon as the model converged on the previous bucket, One-Pass scheduler when updating the training data discards the current bucket
 and switches to the next harder one. 
-
 \begin{algorithm}
     \caption{One-Pass Curriculum \cite{cirik2016visualizing}}\label{alg:onepass}
     \hspace*{\algorithmicindent} \textbf{Input}: \text{\(\mathbf{C}\): training dataset; \(\mathbf{D}\): Difficulty Measurer;}\\
@@ -241,7 +240,7 @@ and switches to the next harder one.
     \EndFor
     \end{algorithmic}
 \end{algorithm}
-
+\newline
 One-Pass is less used than Baby Step in curriculum learning literature due to the lower performance in many tasks.
 In fact, the complexity or diversity of the training data if gradually increasing
 helps improve generalization - as happens in Baby Step scheduler; on the other hand,

@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {3.2.3}Log generation task}{19}{subsection.31}%
 \contentsline {chapter}{\numberline {4}Evaluating Curriculum Learning in Software Engineering tasks}{21}{chapter.32}%
 \contentsline {section}{\numberline {4.1}Neural Machine Translation}{22}{section.33}%
-\contentsline {section}{\numberline {4.2}Canonical Training}{22}{section.34}%
+\contentsline {section}{\numberline {4.2}Canonical Training}{23}{section.34}%
 \contentsline {subsection}{\numberline {4.2.1}Bug-fixing}{23}{subsection.35}%
 \contentsline {subsection}{\numberline {4.2.2}Code summarization}{23}{subsection.36}%
 \contentsline {section}{\numberline {4.3}Training with Curriculum Learning}{24}{section.37}%
