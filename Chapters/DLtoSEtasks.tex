@@ -28,6 +28,9 @@ automatic software fixing, code suggestion, defect prediction, feature location,
 transforming the manner by which a variety of specific software development task are performed.
 
 \section{Software Engineering related works}
+Taking as reference the piece of work published by \cite{barchi2022deep}, in this section some of the ML and
+DL techniques to ssource code analysis are presented, briefly described in chronological order by 
+year of publication.\\ 
 Between 2013 and 2015, machine learning techniques were explored on high-level code, starting from a manual 
 definition of features to the first deep learning applicactions capable of extracting features from code on their own.
 The techniques used are strongly inspired by the background of natural language processing 
@@ -37,8 +40,31 @@ Rayachev \textit{et al.} \cite{raychev2014code} proposed a code completion strat
 They implement a technique that first extract sequences of API calls from the dataset, then apply n-gram to these sequences, and finally use the RNN 
 to take the last word in the sequence as input and uses one-hot-encoding to predict probabilities for the most likely next word.
 They argue that the n-gram technique can discover regularities between the last \textit{n} - 1 elements of fucntion-calls sequences, whereas RNN can discover
-relations at longer distances.
-
+relations at longer distances.\\
+Zaremba \textit{et al.} in \cite{zaremba2014learning} try instead to test the limits of Long Short Term Memory (LSTM) based networl with a task 
+considered difficult. Specifically, given a code fragment, inferring the result as if one was running the code. They 
+defined a simple class of programs and used a LSTM cell in a sequence-to-sequence model to obtain the result of the code execution. 
+They reached 99\% of accuracy. The LSTM network receives direct input of the characters, thus it was not necessary for them to develop a complex 
+embedding layer.\\
+\newline
+Shortly after, between 2016 and 2018, ML techniques for code started to be explored more in depth. Together with the RNNs and their variants,
+such as LSTM and GRU - Gated Recurrent Units - cells, complex model based on a sequence-to-sequence structure emerged \cite{iyer2016summarizing},
+\cite{bhatia2016automated},
+alongside an adaptation of CNN on tree structures \cite{mou2016convolutional}, \cite{bui2018cross}
+and  the introduction of a new neural network structure: the Graph Neural Network (GNN) \cite{allamanis2017learning}, \cite{scarselli2008graph}. The techniques were applied on 
+Sequences of Tokens extracted from the source code, Abstract Syntax Tree \cite{mou2016convolutional} and API call sequences. 
+The problems addressed span from code description and code comprehension, to syntax error recognition \cite{santos2018syntax}
+and code fixing as well.\\
+\newline
+Recently, the topic has become more mature and more works have tried to exploit the 
+Encoder-Decoder structure \cite{alon2018code2seq}, the GNN models \cite{allamanis2021self}, \cite{brauckmann2020compiler}, or other models 
+based on hierarchical structures. The problems addressed are, for instance: function and 
+type inferring \cite{alon2019code2vec}, \cite{pradel2020typewriter}, performance prediction \cite{mendis2019ithemal}, and loop-optimization \cite{haj2020neurovectorizer}, \cite{brauckmann2020compiler}.\\
+\newline
+The topic described approaches code analysis with machine learning and deep learning. However, 
+the spectrum of problems in these areas is actually very broad and the works mentioned lead to the 
+necessity to apply ML techniques to approach code related tasks. In the following sections, tree code related
+tasks are described thoroughly.
 
 \subsection{Bug fixing task}
 Currently, there are millions of open source projects with numerous bug fixes available in code repositories

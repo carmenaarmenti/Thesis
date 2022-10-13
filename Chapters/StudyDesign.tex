@@ -103,11 +103,12 @@ evaluated over the test set of unseen functions to generate code summarizations 
 The scope of the training here 
 was to make the model able to learn how to summarize pieces of code, starting from a sequence of tokenized methods.
 
-%\subsection{Log generation}
-%As well as happened in both the previous task experimented, also in log generation we considered the well-known split between training set, test set, and evaluation set.
-%The sets in question are - following the same order - of the amount of 106.382, 12.020, and 13.260. The model was trained for 45 epochs, i.e. 149.625 steps, and 
-%it must be specified that it was evaluated every epoch. The best configuration in this case was guided on an early-stopping criterion based on BLEU values. 
-%Once the model was trained, it was evaluated against the test set of unseen methods without log statements and messages in order to assess its ability to correctly inject log statements and messages within methods.
+\subsection{Log generation}
+As well as happened in both the previous task experimented, also in log generation we considered the well-known split between training set, test set, and evaluation set.
+The sets in question are - following the same order - of the amount of 106.382, 12.020, and 13.260. The model was trained for 45 epochs, i.e. 149.625 steps, and 
+it must be specified that it was evaluated every epoch. The best configuration in this case was guided on an early-stopping criterion based on BLEU values. 
+Once the model was trained, it was evaluated against the test set of unseen methods without log statements and messages in order to assess its ability to correctly inject log statements and messages within methods.
+
 \section{Training with Curriculum Learning}
 
 As stated in the Curriculum Learning literature, the training instances need to be ordered based on the curriculum.

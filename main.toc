@@ -15,7 +15,7 @@
 \contentsline {chapter}{\numberline {3}Deep Learning Applications to Software Engineering tasks}{17}{chapter.26}%
 \contentsline {section}{\numberline {3.1}State of the art}{17}{section.27}%
 \contentsline {section}{\numberline {3.2}Software Engineering related works}{18}{section.28}%
-\contentsline {subsection}{\numberline {3.2.1}Bug fixing task}{18}{subsection.29}%
+\contentsline {subsection}{\numberline {3.2.1}Bug fixing task}{19}{subsection.29}%
 \contentsline {subsection}{\numberline {3.2.2}Code summarization task}{19}{subsection.30}%
 \contentsline {subsection}{\numberline {3.2.3}Log generation task}{19}{subsection.31}%
 \contentsline {chapter}{\numberline {4}Evaluating Curriculum Learning in Software Engineering tasks}{21}{chapter.32}%
@@ -23,13 +23,14 @@
 \contentsline {section}{\numberline {4.2}Canonical Training}{23}{section.34}%
 \contentsline {subsection}{\numberline {4.2.1}Bug-fixing}{23}{subsection.35}%
 \contentsline {subsection}{\numberline {4.2.2}Code summarization}{23}{subsection.36}%
-\contentsline {section}{\numberline {4.3}Training with Curriculum Learning}{24}{section.37}%
-\contentsline {subsection}{\numberline {4.3.1}Bug fixing task}{24}{subsection.38}%
-\contentsline {subsection}{\numberline {4.3.2}Code summarization task}{25}{subsection.39}%
-\contentsline {subsection}{\numberline {4.3.3}Log generation task}{25}{subsection.41}%
-\contentsline {chapter}{\numberline {5}Analysis of results}{27}{chapter.42}%
-\contentsline {section}{\numberline {5.1}Bug fixing task}{27}{section.43}%
-\contentsline {section}{\numberline {5.2}Code summarization task}{28}{section.46}%
-\contentsline {section}{\numberline {5.3}Log generation task}{29}{section.49}%
-\contentsline {chapter}{\numberline {6}Conclusion}{31}{chapter.50}%
-\contentsline {chapter}{Acknowledgements}{33}{chapter*.51}%
+\contentsline {subsection}{\numberline {4.2.3}Log generation}{24}{subsection.37}%
+\contentsline {section}{\numberline {4.3}Training with Curriculum Learning}{24}{section.38}%
+\contentsline {subsection}{\numberline {4.3.1}Bug fixing task}{24}{subsection.39}%
+\contentsline {subsection}{\numberline {4.3.2}Code summarization task}{25}{subsection.40}%
+\contentsline {subsection}{\numberline {4.3.3}Log generation task}{26}{subsection.42}%
+\contentsline {chapter}{\numberline {5}Analysis of results}{27}{chapter.43}%
+\contentsline {section}{\numberline {5.1}Bug fixing task}{27}{section.44}%
+\contentsline {section}{\numberline {5.2}Code summarization task}{28}{section.47}%
+\contentsline {section}{\numberline {5.3}Log generation task}{29}{section.50}%
+\contentsline {chapter}{\numberline {6}Conclusion}{31}{chapter.51}%
+\contentsline {chapter}{Acknowledgements}{33}{chapter*.52}%

@@ -1,10 +1,60 @@
 \begin{thebibliography}{10}
 
+\bibitem{allamanis2017learning}
+M.~Allamanis, M.~Brockschmidt, and M.~Khademi.
+\newblock Learning to represent programs with graphs.
+\newblock {\em arXiv preprint arXiv:1711.00740}, 2017.
+
+\bibitem{allamanis2021self}
+M.~Allamanis, H.~Jackson-Flux, and M.~Brockschmidt.
+\newblock Self-supervised bug detection and repair.
+\newblock {\em Advances in Neural Information Processing Systems},
+  34:27865--27876, 2021.
+
+\bibitem{alon2018code2seq}
+U.~Alon, S.~Brody, O.~Levy, and E.~Yahav.
+\newblock code2seq: Generating sequences from structured representations of
+  code.
+\newblock {\em arXiv preprint arXiv:1808.01400}, 2018.
+
+\bibitem{alon2019code2vec}
+U.~Alon, M.~Zilberstein, O.~Levy, and E.~Yahav.
+\newblock code2vec: Learning distributed representations of code.
+\newblock {\em Proceedings of the ACM on Programming Languages}, 3(POPL):1--29,
+  2019.
+
+\bibitem{barchi2022deep}
+F.~Barchi, E.~Parisi, A.~Bartolini, and A.~Acquaviva.
+\newblock Deep learning approaches to source code analysis for optimization of
+  heterogeneous systems: Recent results, challenges and opportunities.
+\newblock {\em Journal of Low Power Electronics and Applications}, 12(3):37,
+  2022.
+
 \bibitem{bengio2009curriculum}
 Y.~Bengio, J.~Louradour, R.~Collobert, and J.~Weston.
 \newblock Curriculum learning.
 \newblock In {\em Proceedings of the 26th annual international conference on
   machine learning}, pages 41--48, 2009.
+
+\bibitem{bhatia2016automated}
+S.~Bhatia and R.~Singh.
+\newblock Automated correction for syntax errors in programming assignments
+  using recurrent neural networks.
+\newblock {\em arXiv preprint arXiv:1603.06129}, 2016.
+
+\bibitem{brauckmann2020compiler}
+A.~Brauckmann, A.~Goens, S.~Ertel, and J.~Castrillon.
+\newblock Compiler-based graph representations for deep learning models of
+  code.
+\newblock In {\em Proceedings of the 29th International Conference on Compiler
+  Construction}, pages 201--211, 2020.
+
+\bibitem{bui2018cross}
+N.~D. Bui, L.~Jiang, and Y.~Yu.
+\newblock Cross-language learning for program classification using bilateral
+  tree-based convolutional neural networks.
+\newblock In {\em Workshops at the Thirty-Second AAAI Conference on Artificial
+  Intelligence}, 2018.
 
 \bibitem{chen2015webly}
 X.~Chen and A.~Gupta.
@@ -72,10 +122,23 @@ G.~Hacohen and D.~Weinshall.
 \newblock In {\em International Conference on Machine Learning}, pages
   2535--2544. PMLR, 2019.
 
+\bibitem{haj2020neurovectorizer}
+A.~Haj-Ali, N.~K. Ahmed, T.~Willke, Y.~S. Shao, K.~Asanovic, and I.~Stoica.
+\newblock Neurovectorizer: End-to-end vectorization with deep reinforcement
+  learning.
+\newblock In {\em Proceedings of the 18th ACM/IEEE International Symposium on
+  Code Generation and Optimization}, pages 242--255, 2020.
+
 \bibitem{hindle2016naturalness}
 A.~Hindle, E.~T. Barr, M.~Gabel, Z.~Su, and P.~Devanbu.
 \newblock On the naturalness of software.
 \newblock {\em Communications of the ACM}, 59(5):122--131, 2016.
+
+\bibitem{iyer2016summarizing}
+S.~Iyer, I.~Konstas, A.~Cheung, and L.~Zettlemoyer.
+\newblock Summarizing source code using a neural attention model.
+\newblock In {\em Proceedings of the 54th Annual Meeting of the Association for
+  Computational Linguistics (Volume 1: Long Papers)}, pages 2073--2083, 2016.
 
 \bibitem{jiang2014easy}
 L.~Jiang, D.~Meng, T.~Mitamura, and A.~G. Hauptmann.
@@ -123,6 +186,19 @@ T.~Matiisen, A.~Oliver, T.~Cohen, and J.~Schulman.
 \newblock {\em IEEE transactions on neural networks and learning systems},
   31(9):3732--3740, 2019.
 
+\bibitem{mendis2019ithemal}
+C.~Mendis, A.~Renda, S.~Amarasinghe, and M.~Carbin.
+\newblock Ithemal: Accurate, portable and fast basic block throughput
+  estimation using deep neural networks.
+\newblock In {\em International Conference on machine learning}, pages
+  4505--4515. PMLR, 2019.
+
+\bibitem{mou2016convolutional}
+L.~Mou, G.~Li, L.~Zhang, T.~Wang, and Z.~Jin.
+\newblock Convolutional neural networks over tree structures for programming
+  language processing.
+\newblock In {\em Thirtieth AAAI conference on artificial intelligence}, 2016.
+
 \bibitem{narvekar2017autonomous}
 S.~Narvekar, J.~Sinapov, and P.~Stone.
 \newblock Autonomous task sequencing for customized curriculum design in
@@ -133,6 +209,13 @@ S.~Narvekar, J.~Sinapov, and P.~Stone.
 E.~A. Platanios, O.~Stretcu, G.~Neubig, B.~Poczos, and T.~M. Mitchell.
 \newblock Competence-based curriculum learning for neural machine translation.
 \newblock {\em arXiv preprint arXiv:1903.09848}, 2019.
+
+\bibitem{pradel2020typewriter}
+M.~Pradel, G.~Gousios, J.~Liu, and S.~Chandra.
+\newblock Typewriter: Neural type prediction with search-based validation.
+\newblock In {\em Proceedings of the 28th ACM Joint Meeting on European
+  Software Engineering Conference and Symposium on the Foundations of Software
+  Engineering}, pages 209--220, 2020.
 
 \bibitem{qu2018curriculum}
 M.~Qu, J.~Tang, and J.~Han.
@@ -153,6 +236,18 @@ Z.~Ren, D.~Dong, H.~Li, and C.~Chen.
   deep reinforcement learning.
 \newblock {\em IEEE transactions on neural networks and learning systems},
   29(6):2216--2226, 2018.
+
+\bibitem{santos2018syntax}
+E.~A. Santos, J.~C. Campbell, D.~Patel, A.~Hindle, and J.~N. Amaral.
+\newblock Syntax and sensibility: Using language models to detect and correct
+  syntax errors.
+\newblock In {\em 2018 IEEE 25th International Conference on Software Analysis,
+  Evolution and Reengineering (SANER)}, pages 311--322. IEEE, 2018.
+
+\bibitem{scarselli2008graph}
+F.~Scarselli, M.~Gori, A.~C. Tsoi, M.~Hagenbuchner, and G.~Monfardini.
+\newblock The graph neural network model.
+\newblock {\em IEEE transactions on neural networks}, 20(1):61--80, 2008.
 
 \bibitem{tay2019simple}
 Y.~Tay, S.~Wang, L.~A. Tuan, J.~Fu, M.~C. Phan, X.~Yuan, J.~Rao, S.~C. Hui, and
