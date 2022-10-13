@@ -89,10 +89,10 @@ Moreover, the scholars harness the power of NMT - originally meant for translati
 to attempt indeed the \textit{translation} of buggy code into fixed code emulating 
 the combination of Abstract Syntax Tree (AST) operations performed in developers written patches.\\
 \newline
-\textbf{The Approach.} They mined from GitHub Archive \cite{} bug-fixing commits 
+\textbf{The Approach.} They mined from GitHub Archive \cite{grigorik2012github} bug-fixing commits 
 from thousands of repositories, considering every public GitHub event between March 2011 and 
 October 2017. For each bug-fixing commit, the authors extracted the source code before and 
-after the bug-fix using GitHub Compare API \cite{}, discarding commits related to non-Java files.
+after the bug-fix, discarding commits related to non-Java files.
 In this way, they 
 collected method-level bug-fixing pairs (BFPs), that is the pre and post commit code, 
 ending having ~ 2.3\(M\) bug-fixing commits.

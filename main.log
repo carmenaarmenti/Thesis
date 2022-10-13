@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.22)  13 OCT 2022 11:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.22)  13 OCT 2022 11:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1111,7 +1111,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--141
 
  []
 
-</Users/carmenarmenti/Desktop/Thesis document/images/boxplot-length.png, id=516, 630.355pt x 499.8675pt>
+</Users/carmenarmenti/Desktop/Thesis document/images/boxplot-length.png, id=518, 630.355pt x 499.8675pt>
 File: /Users/carmenarmenti/Desktop/Thesis document/images/boxplot-length.png Graphic file (type png)
 <use /Users/carmenarmenti/Desktop/Thesis document/images/boxplot-length.png>
 Package pdftex.def Info: /Users/carmenarmenti/Desktop/Thesis document/images/boxplot-length.png  used on input line 166.
@@ -1197,18 +1197,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: F8A8CC1178C81783990BF48D3E0421E3;6095.
  ) 
 Here is how much of TeX's memory you used:
- 32697 strings out of 478994
- 680080 string characters out of 5858184
+ 32699 strings out of 478994
+ 680123 string characters out of 5858184
  1262551 words of memory out of 5000000
- 49382 multiletter control sequences out of 15000+600000
+ 49383 multiletter control sequences out of 15000+600000
  465623 words of font info for 148 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,21n,102p,568b,947s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on "/Users/carmenarmenti/Desktop/Thesis document/main.pdf" (52 pages, 455863 bytes).
+Output written on "/Users/carmenarmenti/Desktop/Thesis document/main.pdf" (52 pages, 456330 bytes).
 PDF statistics:
- 661 PDF objects out of 1000 (max. 8388607)
- 578 compressed objects within 6 object streams
- 155 named destinations out of 1000 (max. 500000)
+ 663 PDF objects out of 1000 (max. 8388607)
+ 580 compressed objects within 6 object streams
+ 156 named destinations out of 1000 (max. 500000)
  315 words of extra memory for PDF output out of 10000 (max. 10000000)
 
