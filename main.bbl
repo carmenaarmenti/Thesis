@@ -163,6 +163,12 @@ M.~Kumar, B.~Packer, and D.~Koller.
 \newblock Self-paced learning for latent variable models.
 \newblock {\em Advances in neural information processing systems}, 23, 2010.
 
+\bibitem{le2016history}
+X.~B.~D. Le, D.~Lo, and C.~Le~Goues.
+\newblock History driven program repair.
+\newblock In {\em 2016 IEEE 23rd international conference on software analysis,
+  evolution, and reengineering (SANER)}, volume~1, pages 213--224. IEEE, 2016.
+
 \bibitem{Leclair2020}
 A.~LeClair, S.~Haque, L.~Wu, and C.~McMillan.
 \newblock Improved code summarization via a graph neural network.

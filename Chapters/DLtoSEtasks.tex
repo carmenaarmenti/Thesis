@@ -69,18 +69,103 @@ tasks are described thoroughly.
 \subsection{Bug fixing task}
 Currently, there are millions of open source projects with numerous bug fixes available in code repositories
 thanks to the proliferation of software development. This can be leveraged to learn how to fix common programming bugs. 
-Localizing and fixing bugs is known to be an effort-prone and time-consuming task for software developers.
-So, to support programmers in this common activity, researchers have proposed a number of approaches aimed to automatically repairing programs.
-The work we took as reference is motivated by three main considerations. First of all, automated repair approaches are based on a limited and hand-crafted
-set of transformations or fitting patterns. In the second place, the work done by \cite{} shows that the past history of 
-existing projects can be successfully leveraged to understand what a \textit{meaningful} program repair patch is. Finally, 
-several works have recently demonstrated the capability of advanced machine learning techniques, such as deep learning, to learn from relatively large software engineering
-datasets. In the work, the authors expanded upon the original idea of learning bug-fixes and evaluate the suitability of a Neural Machine Translation to automatically
+Localizing and fixing bugs is an effort-prone and time-consuming task for software developers;
+thus, to support programmers in this common activity, researchers have proposed a number of approaches aimed to automatically repaire programs.
+The work we took as reference is motivated by three main considerations. 
+First of all, automated repair approaches are based on a limited and hand-crafted
+set of transformations or fitting patterns. 
+In the second place, the work done by \cite{le2016history} shows that the past history of 
+existing projects can be successfully leveraged to understand what a \textit{meaningful} program repair patch is. 
+Finally, several works have recently demonstrated the capability of advanced machine learning techniques, such as deep learning, to learn from relatively large software engineering
+datasets. 
+In the work, the authors expanded upon the original idea of learning bug-fixes and evaluate the suitability of a NMT network to automatically
 generate patches for buggy code.
-%Each instance of the dataset is a pair $(m_b, m_f)$, where $m_b$ is a buggy code component and $m_f$ is the
-%corresponding fixed code. These BFPs were used to train the NMT model, allowing it to learn the translation
-%from the buggy to the fixed method, thus being able to generate fixing patches.
+Actually, software developers can access to plenty of change history and 
+bug-fixing commits from a large number if software projects, from GitHub for example, and
+a machine-learning based approach can use this data to learn about 
+bug-fixing activities. In fact, automatically learning from bug-fixes provides the 
+chance to emulate real patches written by developers. 
+Moreover, the scholars harness the power of NMT - originally meant for translation purposes -
+to attempt indeed the \textit{translation} of buggy code into fixed code emulating 
+the combination of Abstract Syntax Tree (AST) operations performed in developers written patches.\\
+\newline
+\textbf{The Approach.} They mined from GitHub Archive \cite{} bug-fixing commits 
+from thousands of repositories, considering every public GitHub event between March 2011 and 
+October 2017. For each bug-fixing commit, the authors extracted the source code before and 
+after the bug-fix using GitHub Compare API \cite{}, discarding commits related to non-Java files.
+In this way, they 
+collected method-level bug-fixing pairs (BFPs), that is the pre and post commit code, 
+ending having ~ 2.3\(M\) bug-fixing commits.
+Each instance of the dataset is a pair $(m_b, m_f)$, where $m_b$ is a buggy code component and $m_f$ is the
+corresponding fixed code. These BFPs were used to train the NMT model, allowing it to learn the translation
+from the buggy to the fixed method, thus being able to generate fixing patches. Since learning bug-fixing
+patterns is highly challengin by working at the level of raw source code, they abstracted 
+each BFP in isolation using a Java lexer, a parser and a list of idioms to represent each buggy and fixed method 
+within a BFP as a stream of tokens. After that, they filtered out: (i) BFPs that contained lexical or syntactic 
+errors - either because of lexer or parser failure in processing them; (ii) the pairs whose buggy 
+and fixed abstracted code resulted in equal strings; (iii) BFPs that performed more than 100 AST actions between the buggy 
+and fixed version - so to eliminate outliers of the distribution which could have hindered
+the learning process. Subsequently, they considered BFPs based on their size measured
+in the number of tokens and disregarded methods longer than 100 tokens and focused on two sizes thus creating 
+two datasets: \(BFP_small\) composed by BFPs with maximum 50 tokens and \(BFP_medium\)
+composed by BFPs made up of a token number between 50 and 100.
+Then, given those datasets they used their instances to train an Encoder-Decoder
+model, where the instances were randomly partitioned into: training (80\%), validation (10\%) and 
+test (10\%) sets. They also made sure to discard any possible duplicate.\\
+The experimented models are based on an Recurrent Neural Network (RNN) Encoder-Decoder
+architecture with attention mechanism, frequently used in Neural Machine Translation. 
+This kind of model is composed by two
+dominant components:
 
+\begin{itemize}
+    \item a RNN Encoder, which encodes a sequence of terms \textbf{x} into a vector representation;
+    \item a RNN Decoder, which decodes the vector representation into another sequence of terms \textbf{y}.
+\end{itemize}
+The model learning is based on a conditional distribution, where the output sequence of terms is conditioned
+by the input sequence: \(P(y_1,...,y_m|x_1,...,x_n)\), and where \(m\) and \(n\) not necessarly have to have the same length.
+The Encoder takes as input a sequence \textbf{x}\(= (x_1,...,x_n)\) and produces
+a sequence of states \textbf{h}\(= (h_1,...,h_n)\). The framework relies on a bi-directional
+RNN Encoder, which is composed by a backward and a forward RNN, where both are able to create representations taking into account
+past and future inputs. Specifically, each state \(h_i\) is the concatenation of the states produced by 
+the two RNNs when reading the sequence not only in a forward but also in a backward manner.\\
+The RNN Decoder computes the probability of a target sequence \textbf{y}\(= (y_1,...,y_n)\) given \textbf{h}. 
+The probability
+of each output term \(h_i\) is computed based on:
+\begin{itemize}
+    \item the recurrent state \(s_i\) in the Decoder;
+    \item the previous \(i - 1\) terms \((y_1,...,y_i-1)\);
+    \item a context vector \(c_i\), which constitutes the attention mechanism.
+\end{itemize}
+The vector \(c_i\) is a weighted average of the states in \textbf{h}, where the weights associated 
+to each state allow the model to pay more attention to some parts of the input sequence than to others:
+\[c_i = \sum_{t=1}^n a_{it} h_t\]
+Precisely, the weigth \(a_{it}\) defines how much the model should take into consideration the term of the sequence in input \(x_i\)
+when predicting the target term \(y_t\). Encoder and Decoder are simultaneously trained - instead of sequentially - by minimizing
+the negative log likelihood of the target terms, using stochastic gradient descent.\\
+In terms of hyperparameter search, for both models build on the \(BFP_small\) and \(BFP_medium\) datasets,
+the scholars tested 10 encoder-decoder architecture configurations. The configurations 
+tested different combinations of RNN cells - LSTM and GRU; number of layers - 1, 2,3; units for both the encoder
+and the decoder - 256, 512; embedding size - 256, 512.
+Bucketing and padding was used to deal with the variable length of the sequences.
+They trained their models for a maximum of 60k epochs and selected the model checkpoint before 
+overfitting the training data. Moreover, to guide the selection of the best configuration, they 
+used the loss function computed on the validation set; the results were computed on the test set.
+Once the model was trained, it was evaluated against the test set of unseen buggy code and apart from using the classic
+greedy decoding approach that selects at each timestep the output with highest probability, they also used Beam Search decoding
+in order to generate up to 50 potential patches for a given buggy code.\\
+\newline
+The scope of their work was to answer to 3 research questions: (i) if the NMT was a viable approach 
+to learn how to fix code; (ii) what kind of operations were perfomed by the models; (iii) what was the training 
+and inference time of the models. The results obtained showed that: (i) training a model both on small BFPs and medium
+BFPs, NMT showed to be a viable approach to learn how to fix code; (ii) the models exhibited a very high syntactic 
+correctness of the generate patches ranging between 99\% and 82\% and the learned operation are the most representative ones 
+giving the chance to theoretically fix a large percentage of bugs; (iii) after training for less than 15 hours,
+the models were able to generate 50 candidate patches for a single bug in less than a second.\\
+\newline
+In the end, they empirically investigated the potential of NMT to generate
+candidate patches that are identical to those implemented by developers. Their results indicate 
+that the trained NMT model can successfully predict the fixed code - given the buggy code - in 9\% of the cases (as for the small dataset) and in 
+3\% of the cases (as for the medium dataset).
 
 \subsection{Code summarization task}
 Automatic source code summarization is the task of generating short natural language description 

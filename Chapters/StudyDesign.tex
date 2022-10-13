@@ -32,39 +32,9 @@ can be used for the tasks experimented. In the following section, the design of 
 % need to add information about training on baseline, i.e. in the introduction you must explain that before trying
 % to test the CL approach 
 
-\section{Neural Machine Translation}
-The experimented models are based on an Recurrent Neural Network (RNN) Encoder-Decoder
-architecture with attention mechanism, frequently used in Neural Machine Translation. This kind of model is composed by two
-dominant components:
-
-\begin{itemize}
-    \item a RNN Encoder, which encodes a sequence of terms \textbf{x} into a vector representation;
-    \item a RNN Decoder, which decodes the vector representation into another sequence of terms \textbf{y}.
-\end{itemize}
-The model learning is based on a conditional distribution, where the output sequence of terms is conditioned
-by the input sequence: \(P(y_1,...,y_m|x_1,...,x_n)\), where \(m\) and \(n\) not necessarly have to have the same length.
-The Encoder takes as input a sequence \textbf{x}\(= (x_1,...,x_n)\) and produces
-a sequence of states \textbf{h}\(= (h_1,...,h_n)\). The framework relies on a bi-directional
-RNN Encoder, which is composed by a backward and a forward RNN, where both are able to create representations taking into account
-past and future inputs. Specifically, each state \(h_i\) is the concatenation of the states produced by 
-the two RNNs when reading the sequence not only in a forward but also in a backward manner.\\
-The RNN Decoder computes the probability of a target sequence \textbf{y}\(= (y_1,...,y_n)\) given \textbf{h}. The probability
-of each output term \(h_i\) is computed based on:
-\begin{itemize}
-    \item the recurrent state \(s_i\) in the Decoder;
-    \item the previous \(i - 1\) terms \((y_1,...,y_i-1)\);
-    \item a context vector \(c_i\), which constitutes the attention mechanism.
-\end{itemize}
-The vector \(c_i\) is a weighted average of the states in \textbf{h}, where the weights associated 
-to each state allow the model to pay more attention to some parts of the input sequence than to others:
-\[c_i = \sum_{t=1}^n a_{it} h_t\]
-Precisely, the weigth \(a_{it}\) defines how much the model should take into consideration the term of the sequence in input \(x_i\)
-when predicting the target term \(y_t\). Encoder and Decoder are simultaneously trained - instead of sequentially - by minimizing
-the negative log likelihood of the target terms, using stochastic gradient descent.
 The configuration used by the neural network is composed by 1-layer bidirectional Encoder, 
 2-layer Attention Decoder both with 256 units, embedding size of 512, 
-and LSTM RNN cells. Bucketing and padding was used to deal with the variable length of the sequences.
-
+and LSTM RNN cells. 
 
 \section{Canonical Training}
 Before experiment the curriculum learning approach, we reproduced the baseline approaches for each task experimented
