@@ -5,6 +5,11 @@ M.~Allamanis, M.~Brockschmidt, and M.~Khademi.
 \newblock Learning to represent programs with graphs.
 \newblock {\em arXiv preprint arXiv:1711.00740}, 2017.
 
+\bibitem{allamanis2018learning}
+M.~Allamanis, M.~Brockschmidt, and M.~Khademi.
+\newblock Learning to represent programs with graphs.(2018).
+\newblock 2018.
+
 \bibitem{allamanis2021self}
 M.~Allamanis, H.~Jackson-Flux, and M.~Brockschmidt.
 \newblock Self-supervised bug detection and repair.
@@ -55,6 +60,15 @@ N.~D. Bui, L.~Jiang, and Y.~Yu.
   tree-based convolutional neural networks.
 \newblock In {\em Workshops at the Thirty-Second AAAI Conference on Artificial
   Intelligence}, 2018.
+
+\bibitem{burstein2019proceedings}
+J.~Burstein, C.~Doran, and T.~Solorio.
+\newblock Proceedings of the 2019 conference of the north american chapter of
+  the association for computational linguistics: Human language technologies,
+  volume 1 (long and short papers).
+\newblock In {\em Proceedings of the 2019 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long and Short Papers)}, 2019.
 
 \bibitem{chen2015webly}
 X.~Chen and A.~Gupta.
@@ -139,6 +153,12 @@ A.~Hindle, E.~T. Barr, M.~Gabel, Z.~Su, and P.~Devanbu.
 \newblock On the naturalness of software.
 \newblock {\em Communications of the ACM}, 59(5):122--131, 2016.
 
+\bibitem{hu2018deep}
+X.~Hu, G.~Li, X.~Xia, D.~Lo, and Z.~Jin.
+\newblock Deep code comment generation. in 2018 ieee/acm 26th international
+  conference on program comprehension (icpc).
+\newblock {\em IEEE, 200{\'s}20010}, 2018.
+
 \bibitem{iyer2016summarizing}
 S.~Iyer, I.~Konstas, A.~Cheung, and L.~Zettlemoyer.
 \newblock Summarizing source code using a neural attention model.
@@ -178,6 +198,13 @@ X.~B.~D. Le, D.~Lo, and C.~Le~Goues.
 A.~LeClair, S.~Haque, L.~Wu, and C.~McMillan.
 \newblock Improved code summarization via a graph neural network.
 \newblock {\em CoRR}, abs/2004.02843, 2020.
+
+\bibitem{leclair2019neural}
+A.~LeClair, S.~Jiang, and C.~McMillan.
+\newblock A neural model for generating natural language summaries of program
+  subroutines.
+\newblock In {\em 2019 IEEE/ACM 41st International Conference on Software
+  Engineering (ICSE)}, pages 795--806. IEEE, 2019.
 
 \bibitem{Levenshtein_SPD66}
 V.~I. Levenshtein.
@@ -296,6 +323,12 @@ B.~Xu, L.~Zhang, Z.~Mao, Q.~Wang, H.~Xie, and Y.~Zhang.
 \newblock Curriculum learning for natural language understanding.
 \newblock In {\em Proceedings of the 58th Annual Meeting of the Association for
   Computational Linguistics}, pages 6095--6104, 2020.
+
+\bibitem{xu2018graph2seq}
+K.~Xu, L.~Wu, Z.~Wang, Y.~Feng, M.~Witbrock, and V.~Sheinin.
+\newblock Graph2seq: Graph to sequence learning with attention-based neural
+  networks.
+\newblock {\em arXiv preprint arXiv:1804.00823}, 2018.
 
 \bibitem{lizard}
 T.~Yin.
