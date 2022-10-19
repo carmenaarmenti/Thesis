@@ -66,9 +66,13 @@ aforementioned.
 \section{Results}
 By and large, the CL training times for the bug-fixing 
 and code summarization tasks were not that much different from
-the plain-training process times without curricula; quite the opposite, as for the log generation task, CL training took longer.\\
-In terms of performances, bug-fixing task is the only one who showed a significant improvement; code summarization task experiment
-instead reported quite similar results, as for the comparison between plain and curriculum training.
+the plain-training process times without curricula; quite the opposite, as for the log generation task, CL training took slightly longer.\\
+In terms of performances, bug-fixing task is the only one who showed a significant improvement; code summarization and log generation 
+task experiments instead reported quite similar results, as for the comparison between plain and curriculum training.
+However, it is necessary saying that if as to the bug-fixing task the neural architecture was the one 
+used to originally test and evaluate such task, as regards to the other two tasks 
+the curriculum approach was tested on the very same NMT framework - instead of being 
+tested on the neural networks used in the original pieces of work.
 
 \section{Document Structure}
 This thesis is organized as follows:

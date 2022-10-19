@@ -4,8 +4,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Models' performances\relax }}{31}{table.caption.43}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Bug fixing: perfect predictions.\relax }}{31}{table.caption.43}%
 \contentsline {table}{\numberline {5.2}{\ignorespaces Overlapping metrics: baseline and curriculum learning models.\relax }}{32}{table.caption.44}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces BLEU values summary .\relax }}{32}{table.caption.46}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Perfect predictions summary.\relax }}{33}{table.caption.47}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Code summarization: BLEU values summary.\relax }}{32}{table.caption.46}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Code summarization: perfect predictions.\relax }}{33}{table.caption.47}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Log generation: perfect predictions.\relax }}{34}{table.caption.49}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Log generation: BLEU values summary.\relax }}{34}{table.caption.50}%
 \addvspace {10\p@ }

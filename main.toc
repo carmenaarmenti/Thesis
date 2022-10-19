@@ -31,5 +31,5 @@
 \contentsline {section}{\numberline {5.1}Bug fixing task}{31}{section.42}%
 \contentsline {section}{\numberline {5.2}Code summarization task}{32}{section.45}%
 \contentsline {section}{\numberline {5.3}Log generation task}{33}{section.48}%
-\contentsline {chapter}{\numberline {6}Conclusion and Future Works}{35}{chapter.49}%
-\contentsline {chapter}{Acknowledgements}{37}{chapter*.50}%
+\contentsline {chapter}{\numberline {6}Conclusion and Future Works}{35}{chapter.51}%
+\contentsline {chapter}{Acknowledgements}{37}{chapter*.52}%

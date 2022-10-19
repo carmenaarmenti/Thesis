@@ -3,7 +3,8 @@ In the following section the results
 achieved by NMT Encoder-Decoder with curriculum learning and
 by the baselines for the 3 tasks we considered are reported.
 We used different evaluation metrics for each of the tasks, depending on the metric considered to 
-assess the results in the pieces of work we considered as main references. 
+assess the results in the pieces of work we considered as main references - perfect predictions on the first, 
+BLEU metric for the second and third tasks. 
 
 \section{Bug fixing task}
 To begin with, as assessed by Tufano \textit{et al.} \cite{Tufano2019} we used 
@@ -34,7 +35,7 @@ by the models for different beam sizes.
     45 & 22.73 \% & 36.47 \%\\
     50 & 23.02 \% & 37.39 \%\\ [1ex]
     \end{tabular}
-    \caption{Models' performances}
+    \caption{Bug fixing: perfect predictions.}
     \label{table:pp_bugfixing}
 \end{table}
 Increasing the beam size, and generating more candidate patches accordingly,
@@ -70,7 +71,7 @@ those results recall the need to better tuning the approach with the aim of
 other improvements in the ability of such a model to exploit the knowledge acquired on 
 this specific task. 
 
-\section{Code summarization task}
+\section{Code summarization task}\label{section:cdtask}
 In the study took as reference for the code summarization task, the authors used different neural networks to 
 assess the quality of their work. So, we could not compare appropriately our results to theirs.
 However, as said before, we reproduced the experiment on a baseline model,
@@ -85,9 +86,16 @@ each of the scores obtained by the authors of \cite{Leclair2020} of about 6 BLEU
      Baseline & 13.70 & 38.8 & 18.4 & 10.6 & 7.1\\  
      Baby Steps & 13.29 & 38.0 & 17.8 & 10.2 & 7.0\\ [1ex]
      \end{tabular}
-    \caption{BLEU values summary .}
+    \caption{Code summarization: BLEU values summary.}
     \label{table:1}
-    \end{table}
+\end{table}
+BLEU, that stands for Bilingual Evaluation Understudy, is used to assess the quality of an automatically 
+generated text and it is a text similarity metric that compares
+overlapping n-grams between two given texts. It can be considered as a precision score, indicating how much 
+of the generated text appears in the reference text. 
+As the authors did in their work to pursue their quantitative analysis, we also reported a composite BLEU score, $BLEU_1$ to 
+$BLEU_4$ - that computes 
+n-grams from length 1 to 4 - as shown in table~\ref{table:1}.\\
 In addition to that, the BLEU value after the experiment on the model together with the curriculum approach
 scored a value of 13.29, which is lower than the results achieved by the baseline, then lower than the BLEU values in the 
 reference work \cite{Leclair2020}.
@@ -116,7 +124,7 @@ percentages of the baseline experiment are quite close to those obtained by the 
     BEAM 45 & 10.06 \%& 9.67\%\\
     BEAM 50 & 10.24 \%& 9.83\%\\ [1ex]
     \end{tabular}
-    \caption{Perfect predictions summary.}
+    \caption{Code summarization: perfect predictions.}
     \label{table:2}
 \end{table}
 This evidence could support the hypothesis teorized downstream of the BLEU values obtained 
@@ -124,4 +132,54 @@ that the negative results - in terms of curriculum learning
 expectations missed - may depend on the type of neural network used. 
 In fact, if the network had been sufficiently 
 fit, the BLEU values should have been similar to those obtained by LeClair \cite{Leclair2020} at the very least.
+
 \section{Log generation task}
+In the paper from which we started to test curriculum learning on a log generation task the authors used
+correct predictions to assess four experimented models output of different pre-training strategies. 
+By analogy, as discussed in section~\ref{section:cdtask}, we cannot properly compare our results to those 
+obtained by Mastropaolo \textit{et al.} in \cite{Mastropaolo2022}, because the neural networks used are different.
+However, accordingly to the metric used by the scholars to evaluate their results, we report perfect prediction percentages as well.
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l|r|r} 
+    %\multicolumn{3}{c}{Perfect predictions} \\
+    & Baseline & Baby Step\\ [0.5ex] 
+    \hline
+    BEAM 1 & \% &  \%\\  
+    BEAM 5 &  \% &  \% \\ 
+    BEAM 10 &  \% &  \%\\
+    BEAM 15 &  \% &  \%\\
+    BEAM 20 &  \% &  \%\\
+    BEAM 25 &  \% &  \%\\
+    BEAM 30 &  \% &  \%\\
+    BEAM 35 &  \% &  \%\\
+    BEAM 40 &  \% &  \%\\
+    BEAM 45 &  \%& \%\\
+    BEAM 50 &  \%& \%\\ [1ex]
+    \end{tabular}
+    \caption{Log generation: perfect predictions.}
+    \label{table:3}
+\end{table}
+As showed in table~\ref{table:3} the model did not perform well. The low percentages even on the baseline
+leads to thinking that the neural network used was not suitable enough for the task considered. 
+As explained in the previous section~\ref{section:cdtask}, the baseline metrics leaked from the model we used
+should have been similar to those obtained in the paper took as reference. Since this did not happen,
+one might think that the negative results obtained from the curriculum learning experiment do not directly 
+depend on the curriculum approach, rather from the architecture used.
+The authors did not rely on BLEU values they obtained. They state that such a number is difficult to 
+interpret since there is no accepted threshold above which an automatically generated text is considered of 
+good quality. Thus, they took into account a qualitative analysis based on correct predictions.\\
+However, we report also BLEU results.
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l|r|r|r|r|r}
+     & BLEU-A & BLEU-1 & BLEU-2 & BLEU-3 & BLEU-4\\ [0.5ex] 
+     \hline
+     Baseline & 21.76 & 86.4 & 75.0 & 66.1 & 58.3\\  
+     Baby Steps & 21.63 & 86.6 & 75.0 & 66.0 & 58.1\\ [1ex]
+     \end{tabular}
+    \caption{Log generation: BLEU values summary.}
+    \label{table:4}
+\end{table}
+As revealed by the percentages in table~\ref{table:3}, the Baby Steps algorithm did not perform well
+on log generation task and the BLEU results confirm such finding.
