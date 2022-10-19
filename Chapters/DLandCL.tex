@@ -38,7 +38,7 @@ In traditional machine learning algorithms all the training examples are randoml
 thus ignoring the different complexities of data instances and the learning status of the current model. 
 Owning to this, it is fairily intuitive wondering if the curriculum training strategy could ever benefit machine learning.
 Extensive experiments from early \cite{bengio2009curriculum}, \cite{kumar2010self}, \cite{zaremba2014learning} to recent works \cite{fan2018learning}, \cite{graves2017automated}, \cite{hacohen2019power}, \cite{platanios2019competence} in various applications of machine learning show that such strategy is of benefit to this field, but not always, and 
-because of that the power of introducing the curriculum-like strategy depends on how the curriculum for specific applications and datasets is designed.
+because of that the power of introducing the curriculum-like strategy depends on how the curriculum for specific applications and datasets are designed.
 
 \section{Curriculum Learning related works}
 As the idea of CL provide a general training strategy beyond specific machine learning
@@ -87,7 +87,7 @@ interest. Therefore, continuation methods provide a sequence of optimization obj
 it is easy to find a global minimum, and tracking the local minima throughout the training. In this way, continuation methods
 guide the training towards better regions  and the local minima learned from easier objectives have better
 generalization ability and are more likely to approximate global minima.
-To test this hypothesis, they turn the attention to training of deep
+To test this hypothesis, they turn the attention to the training of deep
 architectures, which have been shown to involve good solutions in local minima that are almost impossible to find 
 by \textit{random initialization}. Generally, deep learning methods try 
 to learn feature hierarchies, i.e., features at higher levels are formed by the composition of lower level features.
@@ -133,9 +133,9 @@ In a nutshell, curriculum learning means "training from easier data to harder da
 core idea is to "start small" \cite{ELMAN199371}, train the machine learning model with easier subtasks, to then gradually increase
 the difficulty level of subtasks until the whole training dataset is used.\\
 Bearing in mind the strategy of training from easier to harder data, to design such a curriculum idea 
-(i), what kind of training data is supposed to be easier than other data, (ii) and when is appropriate to present more harder
+(i) what kind of training data is supposed to be easier than other data, (ii) and when is appropriate to present more harder
 data for training - and how much more - must necessarily be decided.
-Technically, those 2 issues can be abstracted in the concepts of a Difficulty Measurer, that decides the "easiness"
+Technically, those two issues can be abstracted as the concepts of a Difficulty Measurer, that decides the "easiness"
 of each data instance to start the training process from, and a Training Scheduler, that rules the sequence of data subsets during 
 the whole training process \cite{Wang2020}.
 Therefore, Difficulty Measurer together with Training Scheduler constitute a general framework for curriculum design,
@@ -254,11 +254,11 @@ the examples into buckets such that easier buckets have more data examples; then
 without replacement from the easiest bucket only until there remain the same number of 
 examples as in the second easiest bucket. Afterward, they uniformely sample 
 from the first two buckets until the size is the same as that of the third bucket.\\
-In \cite{zaremba2014learning} instead, the researchers base their experiments on 2 measures to 
+In \cite{zaremba2014learning} instead, the researchers base their experiments on two measures to 
 define a difficulty measurer: \textit{length} and \textit{nesting} of a dataset of programs.
-They evaluate 4 different curriculum learning strategies, two of which proved to be better than using no curriculum strategy or the 
+They evaluate four different curriculum learning strategies, two of which proved to be better than using no curriculum strategy or the 
 naive curriculum strategy - the latter was tested in \cite{bengio2009curriculum} as well.
-The first of the two approach - both successful in the context of evaluating 
+The first of the two approaches - both successful in the context of evaluating 
 short computer programs - is a \textit{mixed strategy} where the training samples
 are picked randomly over a set of random lengths \([1, a]\) and random nestings \([1, b]\),
 thus using a balanced mixture of easy and difficult examples at every point during training.
@@ -283,7 +283,7 @@ a basic problem in its scheduler is the decision of the number of buckets and ho
 deciding by thresholds on difficulty scores makes it hard to assign each bucket with roughly the same number of instances; on 
 the other hand, division by size might result in fluctuations in difficulty within a bucket or not enough difference between different 
 buckets.\\
-
+\newline
 These limitations of predefined curriculum learning has led to the development 
 of more data-and-model-driven approaches rather than human-driven, in such a way 
 that they can be more dynamically adaptive to the training in process: automatic 
@@ -305,12 +305,12 @@ Firstly, \textbf{Self-paced Learning} (SPL) is a primary branch of CL that autom
 by taking the example-wise training loss of the current model as criteria. The SPL methods let the students themselves
 act as the teacher and measure the difficulty of training examples according to its losses on them. 
 This concept is analogous to the self-study human approach, in fact
-originates from human education, where the student can control the learning curriculum , including what, how, when, and how long 
+originates from human education, where the student can control the learning curriculum, including what, how, when, and how long 
 to study. In machine learning context, SPL refers to a training strategy - initially proposed by Kumar \textit{et al.} \cite{kumar2010self} -
 which trains the model at each iteration with the proportion of data with the lowest training losses.
 Such a proportion of easiest examples gradually increase until the whole training set is considered, so using a predefined Training Scheduler.
-Even if in the literature of SPL, CL and SPL are usually mentioned as two different strategies, where the CL 
-refers to the predefined CL, in the piece of work aforemetioned SPL is considered as a branch of automatic CL, since it shares 
+Even if in the literature of SPL CL and SPL are usually mentioned as two different strategies - where the CL 
+refers to the predefined CL - in the piece of work aforemetioned SPL is considered as a branch of automatic CL, since it shares 
 the spirit with CL and fits with the general framework as explained by Kumar \textit{et al.} in \cite{kumar2010self} and shown in Figure~\ref{fig:SPL-CL}.
 \begin{figure}[h]
     \begin{center}
@@ -322,11 +322,11 @@ The most valuable advantages of SPL over predefined CL are twofold: (i) SPL is s
 with a loss-based automatic Difficulty Measurer and dynamic curriculum, which makes the strategy more flexible and adaptive for various tasks; (ii) SPL includes the curriculum
 design into the learning objective of the original machine learning tasks, thus making it applicable as a tool.\\
 The authors in \cite{wang2021survey} also specify that other than the original version of SPL, there also exist not only theories for the 
-convergence, robustnessm and essence of SPl to support applications, but also enhanaced versions from different 
+convergence, robustness and essence of SPL to support applications, but also enhanaced versions from different 
 perspectives. Moreover, they argue that as a student-driven weighting strategy on the learning objective, the core 
 design of SPL is the Self Paced regularizer, which directly determines the optimal weights at each training epoch. Therefore,
 most of the existing improvements on SPL have been focused on SPL regularizers. Without going into details, they differentiate (i) Soft SP-regularizers, 
-comparing them to Hard Regularizers; (ii) Prior-embedded SPL; (iii) other enhancements of SPL.
+comparing them to Hard Regularizers; (ii) Prior-embedded SPL, and (iii) other enhancements of SPL.
 
 Secondly, there exists a reliable teacher-driven difficulty strategy, that is the \textbf{Transfer Teachers} approach.
 SPL takes the current student model as an automatic Difficulty Measurer, however, this strategy has a risk of uncertainty at the beginning of the training, when the student model
@@ -351,7 +351,7 @@ from the student model \cite{weinshall2018curriculum} - so being more complex, o
 Then, \textbf{Reinforcement Learning (RL) Teacher} methods are exposed, which involve a student model and a reinforcement-learning-based 
 teacher model. The SPL and Transfer Teacher only automate the Difficulty Measurer and still use predefined
 Training Scheduler, thus they only consider one side of the \textit{curriculum} or \textit{teaching} scenario. On one hand
-SPl taked the student feedback, i.e., the losses to adjust the curriculum, whereas Transfer Teacher leverages the teacher's knowledge
+SPL taked the student feedback, i.e., the losses to adjust the curriculum, whereas Transfer Teacher leverages the teacher's knowledge
 to determine the order of presenting learning materials. However, in a common and ideal human-based education a teaching strategy
 usually involve both the teacher and the student, where the student can interactively provide feedback to the teacher, and the teacher 
 can adjust the teaching action accordingly. By doing so, the teacher and the student make progress together.
@@ -376,14 +376,14 @@ Finally, the scholars report \textbf{other Automatic CL} approaches. In fact, be
 there exist some other fully-automatic CL designs. These designs should require the generation of the 
 curriculum to rely only on the dataset, the student model, and the goal of the task.
 Thus, accordingly to this idea and recalling the CL definition in Section~\ref{chapter:defCL}, from the optimization
-perspective the authors summarize that the objective is optimize the mapping between \{the data, the current state 
-of the student model, the task goal\} and the training goal. To this end, RL Teacher methods typically adopt a RL framework to learn 
+perspective the authors summarize that the objective is optimize the mapping between the data, the current state 
+of the student model, the task goal, and the training goal. To this end, RL Teacher methods typically adopt a RL framework to learn 
 the policy for data selection, but as the authors report, there are more optimization methods 
 such as Bayesian Optimization, Stochastic Gradient Descent, Meta-learning, and Hypernetwork, which also demonstrated to have great potential to learn 
 this mapping.\\
 \newline
 To sum up, even though there are a lot of different CL methodologies, there is no systematic conclusion 
-with regard to howo to choose amon them in real-world applications. One useful principle for selecting 
+with regard to how to choose among them in real-world applications. One useful principle for selecting 
 a proper CL category is to consider how much prior knowledge one have about the dataset and the task goal.
 If sufficient expert domain knowledge is available, then predefined CL methods are more preferable to design a \textit{knowledge-driven} curriculum 
 specifically suitable to the exact scenario. On the other hand, if there is no prior assumptions on the data, then 

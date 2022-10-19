@@ -25,11 +25,11 @@ Deep learning represents a fundamental shift in the way by which machines learn 
 for a given computational task, as opposed to relying upon human intuition. Given the immense amount of data in software repositories that 
 can serve as training data, deep learning techniques have ushered in advancements across a range of tasks in software engineering research, including
 automatic software fixing, code suggestion, defect prediction, feature location, among many others. This field of research shows clear potential for
-transforming the manner by which a variety of specific software development task are performed.
+transforming the manner by which a variety of specific software development tasks are performed.
 
 \section{Software Engineering related works}
 Taking as reference the piece of work published by \cite{barchi2022deep}, in this section some of the ML and
-DL techniques to ssource code analysis are presented, briefly described in chronological order by 
+DL techniques to source code analysis are presented, briefly described in chronological order by 
 year of publication.\\ 
 Between 2013 and 2015, machine learning techniques were explored on high-level code, starting from a manual 
 definition of features to the first deep learning applicactions capable of extracting features from code on their own.
@@ -39,13 +39,13 @@ and recurrent neural networks (RNN). RNNs in particular have been extensively te
 Rayachev \textit{et al.} \cite{raychev2014code} proposed a code completion strategy that compares n-gram model and recurrent neural networks. 
 They implement a technique that first extract sequences of API calls from the dataset, then apply n-gram to these sequences, and finally use the RNN 
 to take the last word in the sequence as input and uses one-hot-encoding to predict probabilities for the most likely next word.
-They argue that the n-gram technique can discover regularities between the last \textit{n} - 1 elements of fucntion-calls sequences, whereas RNN can discover
+They argue that the n-gram technique can discover regularities between the last \textit{n} - 1 elements of function-calls sequences, whereas RNN can discover
 relations at longer distances.\\
-Zaremba \textit{et al.} in \cite{zaremba2014learning} try instead to test the limits of Long Short Term Memory (LSTM) based networl with a task 
+Zaremba \textit{et al.} in \cite{zaremba2014learning} try instead to test the limits of Long Short Term Memory (LSTM) based network with a task 
 considered difficult. Specifically, given a code fragment, inferring the result as if one was running the code. They 
 defined a simple class of programs and used a LSTM cell in a sequence-to-sequence model to obtain the result of the code execution. 
-They reached 99\% of accuracy. The LSTM network receives direct input of the characters, thus it was not necessary for them to develop a complex 
-embedding layer.\\
+The LSTM network receives direct input of the characters, thus it was not necessary for them to develop a complex 
+embedding layer. They reached 99\% of accuracy. \\
 \newline
 Shortly after, between 2016 and 2018, ML techniques for code started to be explored more in depth. Together with the RNNs and their variants,
 such as LSTM and GRU - Gated Recurrent Units - cells, complex model based on a sequence-to-sequence structure emerged \cite{iyer2016summarizing},
@@ -67,6 +67,7 @@ necessity to apply ML techniques to approach code related tasks. In the followin
 tasks are described thoroughly.
 
 \subsection{Bug fixing task}
+The first task considered was \textit{bug-fixing}.
 Currently, there are millions of open source projects with numerous bug fixes available in code repositories
 thanks to the proliferation of software development. This can be leveraged to learn how to fix common programming bugs. 
 Localizing and fixing bugs is an effort-prone and time-consuming task for software developers;
@@ -86,20 +87,19 @@ a machine-learning based approach can use this data to learn about
 bug-fixing activities. In fact, automatically learning from bug-fixes provides the 
 chance to emulate real patches written by developers. 
 Moreover, the scholars harness the power of NMT - originally meant for translation purposes -
-to attempt indeed the \textit{translation} of buggy code into fixed code emulating 
+to attempt indeed the \textit{translation} of buggy code into fixed code, emulating 
 the combination of Abstract Syntax Tree (AST) operations performed in developers written patches.\\
 \newline
 \textbf{The Approach.} They mined from GitHub Archive \cite{grigorik2012github} bug-fixing commits 
 from thousands of repositories, considering every public GitHub event between March 2011 and 
 October 2017. For each bug-fixing commit, the authors extracted the source code before and 
-after the bug-fix, discarding commits related to non-Java files.
-In this way, they 
+after the bug-fix, discarding commits related to non-Java files. In this way, they 
 collected method-level bug-fixing pairs (BFPs), that is the pre and post commit code, 
-ending having ~ 2.3\(M\) bug-fixing commits.
+ending having approximately 2.3\(M\) bug-fixing commits.
 Each instance of the dataset is a pair $(m_b, m_f)$, where $m_b$ is a buggy code component and $m_f$ is the
 corresponding fixed code. These BFPs were used to train the NMT model, allowing it to learn the translation
 from the buggy to the fixed method, thus being able to generate fixing patches. Since learning bug-fixing
-patterns is highly challengin by working at the level of raw source code, they abstracted 
+patterns is highly challenging by working at the level of raw source code, they abstracted 
 each BFP in isolation using a Java lexer, a parser and a list of idioms to represent each buggy and fixed method 
 within a BFP as a stream of tokens. After that, they filtered out: (i) BFPs that contained lexical or syntactic 
 errors - either because of lexer or parser failure in processing them; (ii) the pairs whose buggy 
@@ -107,7 +107,7 @@ and fixed abstracted code resulted in equal strings; (iii) BFPs that performed m
 and fixed version - so to eliminate outliers of the distribution which could have hindered
 the learning process. Subsequently, they considered BFPs based on their size measured
 in the number of tokens and disregarded methods longer than 100 tokens and focused on two sizes thus creating 
-two datasets: \(BFP_small\) composed by BFPs with maximum 50 tokens and \(BFP_medium\)
+two datasets: \(BFP_{small}\) composed by BFPs with maximum 50 tokens and \(BFP_{medium}\)
 composed by BFPs made up of a token number between 50 and 100.
 Then, given those datasets they used their instances to train an Encoder-Decoder
 model, where the instances were randomly partitioned into: training (80\%), validation (10\%) and 
@@ -143,10 +143,10 @@ to each state allow the model to pay more attention to some parts of the input s
 Precisely, the weigth \(a_{it}\) defines how much the model should take into consideration the term of the sequence in input \(x_i\)
 when predicting the target term \(y_t\). Encoder and Decoder are simultaneously trained - instead of sequentially - by minimizing
 the negative log likelihood of the target terms, using stochastic gradient descent.\\
-In terms of hyperparameter search, for both models build on the \(BFP_small\) and \(BFP_medium\) datasets,
+In terms of hyperparameter search, for both models built on the \(BFP_{small}\) and \(BFP_{medium}\) datasets,
 the scholars tested 10 encoder-decoder architecture configurations. The configurations 
-tested different combinations of RNN cells - LSTM and GRU; number of layers - 1, 2,3; units for both the encoder
-and the decoder - 256, 512; embedding size - 256, 512.
+tested different combinations of RNN cells - LSTM and GRU; number of layers - 1, 2, 3; units for both the encoder
+and the decoder - 256, 512; embedding sizes - 256, 512.
 Bucketing and padding was used to deal with the variable length of the sequences.
 They trained their models for a maximum of 60k epochs and selected the model checkpoint before 
 overfitting the training data. Moreover, to guide the selection of the best configuration, they 
@@ -155,11 +155,11 @@ Once the model was trained, it was evaluated against the test set of unseen bugg
 greedy decoding approach that selects at each timestep the output with highest probability, they also used Beam Search decoding
 in order to generate up to 50 potential patches for a given buggy code.\\
 \newline
-The scope of their work was to answer to 3 research questions: (i) if the NMT was a viable approach 
+The scope of their work was to answer to three research questions: (i) if the NMT was a viable approach 
 to learn how to fix code; (ii) what kind of operations were perfomed by the models; (iii) what was the training 
 and inference time of the models. The results obtained showed that: (i) training a model both on small BFPs and medium
 BFPs, NMT showed to be a viable approach to learn how to fix code; (ii) the models exhibited a very high syntactic 
-correctness of the generate patches ranging between 99\% and 82\% and the learned operation are the most representative ones 
+correctness of the generate patches ranging between 99\% and 82\% and the learned operations are the most representative ones 
 giving the chance to theoretically fix a large percentage of bugs; (iii) after training for less than 15 hours,
 the models were able to generate 50 candidate patches for a single bug in less than a second.\\
 \newline
@@ -169,15 +169,16 @@ that the trained NMT model can successfully predict the fixed code - given the b
 3\% of the cases (as for the medium dataset).
 
 \subsection{Code summarization task}
-Automatic source code summarization is the task of generating short natural language description 
+The second task we took into consideration was \textit{code summarization}. Automatic source code summarization is the task of generating short natural language description 
 for source code and is a rapidly expanding research area \cite{Leclair2020}. 
 Automation has been desired as an effective alternative for the manual effort of writing summaries. 
 Since the term \textit{code summarization} was coined the field has proliferated and at first, the predominant strategy was based on sentence templates 
 and heuristics derived from empirical studies. Then, around 2016, data-driven strategies based on neural networks began to rise, leveraging 
-gains from both the Artificial Intelligence (AI)/Neural Language processing and mining 
+gains from both the Artificial Intelligence (AI)/Neural Language Processing (NLP) and mining 
 software repositories research communities. 
-The data-driven approaches were inspired by neural machine translation from NLP, where originally a sentence in one language is translated into another language.
-As well as a neural architecture is used to learn the mapping betweek words and even the correct grammatical structure from one language to the other, 
+The data-driven approaches were inspired by neural machine translation from NLP, where the original scope is to translate a sentence in 
+one language into another language.
+As well as a neural architecture is used to learn the mapping between words and even the correct grammatical structure from one language to the other, 
 in code summarization the analogy consists in treating source code as one language input and summaries as another. Thus, code is the input to the same 
 models encoder, and summaries to the decoder. 
 Unfortunately though, the metaphor to NMT has some major limits. 
@@ -188,10 +189,10 @@ classes, routines, statements, and identifiers connected through different relat
 During the year, software engineering have recognized that code is more suited to graph or tree representations, yet the typical application of 
 NMT to code summarization treats code as a sequence to be fed into a RNN designed for sequential information.
 Around 2020 the literature begun to recognize the limits to sequential representation of code 
-for code summarization and some scholars \cite{hu2018deep}, \cite{leclair2019neural}, \cite{alon2018code2seq} showed how neural networks can be effective in extracting information from source code 
+for code summarization, and some scholars \cite{hu2018deep}, \cite{leclair2019neural}, \cite{alon2018code2seq} showed how neural networks can be effective in extracting information from source code 
 better in a graph or tree form than in a sequence of tokens. 
-What is missing though is \textit{how} graph neural networks - first proposed by \cite{allamanis2018learning} to learn representations of code 
-for the problem of code generation - improve representations of code based on the AST.
+What is missing though is \textit{how} graph neural networks - first proposed by Allamanis in \cite{allamanis2018learning} to learn representations of code 
+for the problem of code generation - improve representations of code based on the AST.\\
 GNN-based representations improve performance indeed, but the degree of that improvement 
 for code summarization has not been exploited thoroughly. 
 LeClair \textit{et al.} \cite{Leclair2020} then presented an approach for improving source code summarization using 
@@ -200,14 +201,14 @@ GNNs.\\
 \textbf{The approach.}
 The idea of code summarization tasks is that a brief description allows programmers to understand
 what a chunk of code does and what is the purpose of the program by and large, without necessarily read the code 
-itself, the authors targetted the problem of summarizing program subroutines.
-The approach of the authors is based on the \texttt{graph2seq} model presented by Xu \textit{et al.}\cite{xu2018graph2seq}, to which they applied few modifications 
+itself. The authors targetted the problem of summarizing program subroutines.
+The approach of the authors is based on the \texttt{graph2seq} model presented by Xu \textit{et al.} \cite{xu2018graph2seq}, to which they applied few modifications 
 to customize the model to a software engineering context.\\
 Their model is based on Convolutional GNNs (ConvGNNs). ConvGNNs take graph data and learn representations 
 of nodes based on the initial node vector and its neighbors in the graph. 
 The process of combining the information from the neighboring nodes is called \textit{aggregation}. By aggregating
-infomration from neighboring nodes, a model can learn representations based on arbitrary relationships which can be structures of a sentence, parts of speech, dependency parsing 
-trees, or sequence of tokens. ConvGNNs also allow nodes to get information from other nodes 
+information from neighboring nodes, a model can learn representations based on arbitrary relationships which can be structures of a sentence, parts of speech, dependency parsing 
+trees, or sequences of tokens. ConvGNNs also allows nodes to get information from other nodes 
 that are further than just a single edge - called also hop - away. Each time a hop is performed, 
 the node gets information from its neighboring nodes, accordingly to that hop.\\
 The neural model used by LeClair \textit{et al.} in \cite{Leclair2020}, is based on the model proposed in
@@ -223,38 +224,39 @@ The dataset they used was provided by LeClair \textit{et al.} in \cite{burstein2
 is composed by 2.1 million Java method-comment pair. The authors used its tokenized version.\\
 \newline
 Their research objective is to determine if their proposed approach of using 
-the source code sequence together with a graph based AST and a ConvGNN outperform
-the current baselines and the reason why that happens if that is the case 
-As for their resulting quantitative evaluation, they tested 3 model configurations and they found that the model 
-that uses an encoder for the source code tokens, a ConvGNN encoder for te AST and a Bilateral-LSTM on the output 
+the source code sequence together with a graph based AST and a ConvGNN outperforms
+the current baselines and the reason why that happens, if that is the case.
+As for their resulting quantitative evaluation, they tested three model configurations and they found that the model 
+that uses an encoder for the source code tokens, a ConvGNN encoder for the AST and a Bilateral-LSTM on the output 
 of the ConvGNN resulted in having the highest performing approach obtaining a BLEU-A score of 19.93 
 and ROUGE-LCS score of 56.98. This model outperformed the nearest graph-based baseline 
 by 4.6\% BLEU-A and 0.06\% ROUGE-LCS and the flattened AST baseline by 5.7\% as for BLEU-A and 12.72\%
 as for ROUGE-LCS. They attribute this increase in performance to the use of the 
-ConvGNN as an encoding for the AST, this allows the model to learn better AST node representations than it can with 
-onlly a sequence model \cite{Leclair2020}.
+ConvGNN as an encoding for the AST. This allows the model to learn better AST node representations than it can with 
+only a sequence model \cite{Leclair2020}.
 
 \subsection{Log generation task}
+The third task we choose is \textit{log generation}.
 Inserting log messages is a practice broadly used and decide where to inject log statements, what information to report through it, 
 and at which log level is as hard as it is crucial \cite{Mastropaolo2022}. 
 This is a practice that helps developers in several software maintaninance activities in several 
 phases of the software lifecyle. Usually developers use log statements to expose and register information 
 regarding the internal behavior of a software tool in a human-comprehensible way and most importantly they insert those
 in strategic positions, specifying appropriate log levels, and defining 
-compact but also compregensible text messages. Yet deciding where, what and at which level to log is
+compact but also comprehensible text messages. Yet deciding where, what and at which level to log is
 hard and demanding.\\ 
 \newline
-\textbf{The approach.}The piece of work carried on by Mastropaolo \textit{et al.} presents the first 
+\textbf{The approach.} The piece of work carried on by Mastropaolo \textit{et al.} \cite{Mastropaolo2022} presents the first 
 approach supporting developers in the aforementioned decisions, called LANCE. This tool uses 
 a Text-To-Text-Transfer-Transformer (T5) model that was trained on 6,832,859 Java methods.
 LANCE takes in input a Java method and injects in it a full log statement, including 
 a logging message, properly choosing the needed log level and the statement location.
-The approach presented by the authors was aimed at exploiting the T5 model \cite{} to automatically
+The approach presented by the authors was aimed at exploiting the T5 model to automatically
 generate and inject complete logging statements in Java code. 
 They started with a double-goal pre-training of the model on the entire dataset: (i) the first is the classic 
-"masked token objective, where they masked 15\% of the code tokens in the Java methods asking the model 
-to guess them; (ii) the second provides as input to the model  Java method grom which log statements 
-originally present in it have been removed, in this case the T5 had to guess
+"masked token" objective, where they masked 15\% of the code tokens in the Java methods asking the model 
+to guess them; (ii) the second provides as input to the model  Java method from which log statements 
+originally present in it have been removed; in this case the T5 had to guess
 where the log statement was needed. Once pre-trained, the model was fine-tuned 
 to generate complete log-statements. LANCE automatically generated 12.020 log statements
 and compared them to the ones manually written by developers. The results 

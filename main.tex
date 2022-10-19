@@ -99,7 +99,7 @@ morecomment=[l]{//s},
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%	THESIS INFORMATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\thesistitle{Evaluating Curriculum Learning in \\ Code Related tasks} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\thesistitle{Evaluating Curriculum Learning in \\ Code Related Tasks} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
 \supervisor{Prof. Rocco \textsc{Oliveto}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
 \cosupervisor{Prof. Gabriele \textsc{Bavota}}
 \examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
@@ -111,9 +111,13 @@ morecomment=[l]{//s},
 \keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
 \university{\href{http://www.university.com}{University of Molise}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
 \department{
-	\href{http://department.university.com}{Department of Bioscences and Territory}\\
+	\href{http://department.university.com}{Department of Bioscience and Territory}\\
 	\vspace{20pt}
-	\includegraphics[width=4.5cm, height=4.5cm]{/Users/carmenarmenti/Downloads/LaTeXTemplates_masters-doctoral-thesis_v2/Figures/logo.png}
+    \includegraphics[scale=0.1]{images/logo.png}\hspace{0.5cm}
+    \includegraphics[scale=0.1]{images/logo-usi.png}
+    %\includegraphics[scale=0.1]{images/logo.png}
+    %\includegraphics[scale=0.3]{images/usilogo.png}
+    \vspace{7pt}
 } % University/department logo - uncomment to place it} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
 
 \group{\href{http://researchgroup.university.com}{Research Group Name}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
@@ -162,10 +166,16 @@ morecomment=[l]{//s},
 \begin{titlepage}
     \begin{center}
     
-    \vspace*{.02\textheight}
-    {\scshape\LARGE \univname\par}\vspace{0.5cm} % University name
+    \vspace*{.01\textheight}
+    {\scshape\LARGE \textbf \univname\par} % University name
     {\scshape\LARGE \deptname\par}\vspace{0.5cm} 
-    \textsc{\Large Masters Thesis}\\[0.5cm] % Thesis type
+    \textsc{\LARGE \textbf{Double Master's Degree}}\\[0.1cm] % Thesis type
+    \footnotesize{\textsl{jointly organized by UNIMOL and USI}}\\[0.5cm]
+    %\textsl{in}\\[0.3cm]
+    {\textsc{in}}\\[0.5cm]
+    %\textup{jointly organized by UNIMOL and USI}\\
+    %\textup{in}\\[0.3cm]
+    \textsc{\LARGE Secure Software and Data Engineering}\\[0.5cm]
     
     \HRule \\[0.1cm] % Horizontal line
     {\huge \bfseries \ttitle\par}\vspace{0.4cm} % Thesis title
@@ -192,12 +202,19 @@ morecomment=[l]{//s},
     %\large \textit{A thesis submitted in fulfillment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
     %\textit{in the}\\[0.4cm]
     %\groupname\\\deptname\\[2cm] % Research group name and department name
-     
+    
     \vfill
     
-    {\large Software Analytics}\\
-    {\large October 27, 2022}\\[4cm]
+    %{\large Software Analytics}\\
+    %{\large October 27, 2022}\\[0.9cm]
+
+    {\footnotesize{\textsl{The double degree programme involves the Master's degree programme “Software System Security” (M.Sc.) \\ 
+    at UNIMOL and “Software and Data Engineering” (M.Sc.) at USI.}}}\\[0.9cm]
+    
     %{\large \today}\\[4cm] % Date
+
+    {\large Software Analytics}\\[0.1cm]
+    {\large October 27, 2022}
     
     \vfill
     \end{center}

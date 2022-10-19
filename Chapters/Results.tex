@@ -1,9 +1,9 @@
 \chapter{Analysis of results}
 In the following section the results 
 achieved by NMT Encoder-Decoder with curriculum learning and
-by the baselines for the three tasks we considered are reported.
-We used different metrics for each of the tasks, depending on the metric used in the works
-that introduced the baseline models.
+by the baselines for the 3 tasks we considered are reported.
+We used different evaluation metrics for each of the tasks, depending on the metric considered to 
+assess the results in the pieces of work we considered as main references. 
 
 \section{Bug fixing task}
 To begin with, as assessed by Tufano \textit{et al.} \cite{Tufano2019} we used 
@@ -14,7 +14,7 @@ However, as stated in the previous sections
 we considered the merge of the two datasets, 
 therefore firstly we reproduced the canonical learning with the merged dataset and then we tested curriculum learning
 approach.
-Table~\ref{table:pp_bugfixing} reports the percentage %and numbers (?)
+Table~\ref{table:pp_bugfixing} reports the percentages %and numbers (?)
 of bug fixing pairs correctly predicted
 by the models for different beam sizes.
 \begin{table}[h!]
@@ -41,9 +41,8 @@ Increasing the beam size, and generating more candidate patches accordingly,
 the percentages of BFPs for which the models can perfectly generate the corresponding
 fixed code - starting from the input buggy code - increases. If the baseline model can predict
 the fixed code of 5.22\% of the BFPs with only one attempt, the same model together with 
-curriculum learning approach performs predicting 5.34\% of the same BFPs. It is a 
-better result,
-but looking at bigger beam sizes, the model with curriculum learning performs 
+curriculum learning approach predicts 5.34\% of the same BFPs. It is a 
+better result, moreover, looking at bigger beam sizes, the model with curriculum learning performs 
 even better, almost triplicating the percentage of perfect predictions of beam size 1 when 5 patches are generated,
 reaching 37.39\% when 50 candidate patches are considered. Overall, it can be seen that
 the improvement margin is constant.\\
@@ -52,8 +51,8 @@ obtained when the model generated 10 candidate patches for each prediction.
 As can be seen 
 in Table~\ref{table:pp_bugfixing_overlap}, the combination between the two models 
 leads to a reasonable percentage of perfect predictions, i.e. 42.38\%. However, the model 
-with curriculum learning approach performs even better and on its own. Indeed, 44.63\% of BFPs are correctly predicted
-only by the model with baby-step. On the other hand, only 12.97\% of perfect predictions are from the baseline.
+with curriculum learning approach performs better than the canonical learning approach. Indeed, 44.63\% of BFPs are correctly predicted
+only by the model with Baby Steps. On the other hand, only 12.97\% of perfect predictions are from the baseline.
 \begin{table}[h!]
     \centering
     \begin{tabular}{l|r|r|r}
@@ -66,42 +65,44 @@ only by the model with baby-step. On the other hand, only 12.97\% of perfect pre
 \end{table}
 This result not only indicates that the two approaches are complementary for
 the bug-fixing task, but also that the model with curriculum learning reports even 
-better outcomes. Considering that the curriculum approach implemented is one of the easiest one,
+better outcomes. Considering that the curriculum approach implemented is one of the easiest ones,
 those results recall the need to better tuning the approach with the aim of 
 other improvements in the ability of such a model to exploit the knowledge acquired on 
 this specific task. 
 
 \section{Code summarization task}
-In the study took as reference, the authors used different neural networks to 
-assess the quality of their work. So, the comparison between our results and theirs
-is not really straigh-forward. However, as said before, we reproduced the experiment on a baseline model,
-i.e. on the model without any curriculum learning approach applied.
-The experiment on the baseline model totalized a BLEU-A score of 13.70 that is way lower than 
-each of the scores obtained by the authors of LeClair \cite{Leclair2020}. 
+In the study took as reference for the code summarization task, the authors used different neural networks to 
+assess the quality of their work. So, we could not compare appropriately our results to theirs.
+However, as said before, we reproduced the experiment on a baseline model,
+i.e. on the model without any curriculum learning approach applied - using the NMT Encoder-Decoder architecture.
+The experiment on the baseline model totalized a BLEU-A score of 13.70 that is lower than 
+each of the scores obtained by the authors of \cite{Leclair2020} of about 6 BLEU points. 
 \begin{table}[h!]
     \centering
     \begin{tabular}{l|r|r|r|r|r}
      & BLEU-A & BLEU-1 & BLEU-2 & BLEU-3 & BLEU-4\\ [0.5ex] 
      \hline
      Baseline & 13.70 & 38.8 & 18.4 & 10.6 & 7.1\\  
-     Baby-step & 13.29 & 38.0 & 17.8 & 10.2 & 7.0\\ [1ex]
+     Baby Steps & 13.29 & 38.0 & 17.8 & 10.2 & 7.0\\ [1ex]
      \end{tabular}
     \caption{BLEU values summary .}
     \label{table:1}
     \end{table}
-On the other hand, the BLEU value after the experiment on the model together with the curriculum approach
-scored a value of 13.29, which is lower than the results achieved by the baseline, then lower than the BLEU values in \cite{Leclair2020}.
-This means that in this case the curriculum approach does not work in the view of collecting better results.
+In addition to that, the BLEU value after the experiment on the model together with the curriculum approach
+scored a value of 13.29, which is lower than the results achieved by the baseline, then lower than the BLEU values in the 
+reference work \cite{Leclair2020}.
+This means that, in this case, the curriculum approach does not work in the view of collecting better results.
 However, it must be said that the model used in our experiment is different from the 
-model used by the authors of the paper we took as reference; this might mean that the differences observed
-may be caused by the fact that the original model should have been used and not on the technique applied.\\
-Also on perfect predictions we do not have better results, and we can observe - as showed in Table~\ref{table:2} - that the values are not 
-that much distant one from another.
+model used by the authors of the paper we took as reference; so the absence of improvement might
+depend on that.\\
+Even if perfect predictions results are not included in the paper \cite{Leclair2020}, we decided to report
+those as well. Also on perfect predictions we do not have better results, and we can observe - as showed in Table~\ref{table:2} - that the
+percentages of the baseline experiment are quite close to those obtained by the curriculum learning experiment.
 \begin{table}[h!]
     \centering
     \begin{tabular}{l|r|r} 
     %\multicolumn{3}{c}{Perfect predictions} \\
-    & Baseline & Baby-step\\ [0.5ex] 
+    & Baseline & Baby Step\\ [0.5ex] 
     \hline
     BEAM 1 & 4.66 \% & 4.64 \%\\  
     BEAM 5 & 6.68 \% & 6.53 \% \\ 
@@ -118,4 +119,9 @@ that much distant one from another.
     \caption{Perfect predictions summary.}
     \label{table:2}
 \end{table}
+This evidence could support the hypothesis teorized downstream of the BLEU values obtained 
+that the negative results - in terms of curriculum learning 
+expectations missed - may depend on the type of neural network used. 
+In fact, if the network had been sufficiently 
+fit, the BLEU values should have been similar to those obtained by LeClair \cite{Leclair2020} at the very least.
 \section{Log generation task}
