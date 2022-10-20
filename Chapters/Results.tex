@@ -134,11 +134,13 @@ In fact, if the network had been sufficiently
 fit, the BLEU values should have been similar to those obtained by LeClair \cite{Leclair2020} at the very least.
 
 \section{Log generation task}
-In the paper from which we started to test curriculum learning on a log generation task the authors used
-correct predictions to assess four experimented models output of different pre-training strategies. 
+In the paper from which we started to test curriculum learning on a log generation task, the authors used
+correct predictions to assess 4 experimented models output of different pre-training strategies. 
 By analogy, as discussed in section~\ref{section:cdtask}, we cannot properly compare our results to those 
 obtained by Mastropaolo \textit{et al.} in \cite{Mastropaolo2022}, because the neural networks used are different.
-However, accordingly to the metric used by the scholars to evaluate their results, we report perfect prediction percentages as well.
+The authors did not rely on BLEU values they obtained. They state that such a number is difficult to 
+interpret since there is no accepted threshold above which an automatically generated text is considered of 
+good quality. Thus, they took into account a qualitative analysis based on correct predictions and so did we.
 \begin{table}[h!]
     \centering
     \begin{tabular}{l|r|r} 
@@ -160,16 +162,19 @@ However, accordingly to the metric used by the scholars to evaluate their result
     \caption{Log generation: perfect predictions.}
     \label{table:3}
 \end{table}
-As showed in table~\ref{table:3} the model did not perform well. The low percentages even on the baseline
-leads to thinking that the neural network used was not suitable enough for the task considered. 
+As showed in table~\ref{table:3} the model did not perform well. 
+Yet, even if the results are generally negative, one consideration might be still done:
+if the baseline model trained needed 35 possible
+beam sizes to get 0.25\% of perfect predictions on target, the model trained with Baby Steps approach got to the same 
+result with only 15 beam widths. Even if it is only a very few percentage points, this outcome might derive from the starting small strategy
+that helps to learn sooner.
+The low percentages even on the baseline
+leads to think that the neural network used was not suitable enough for the task considered. 
 As explained in the previous section~\ref{section:cdtask}, the baseline metrics leaked from the model we used
 should have been similar to those obtained in the paper took as reference. Since this did not happen,
 one might think that the negative results obtained from the curriculum learning experiment do not directly 
 depend on the curriculum approach, rather from the architecture used.
-The authors did not rely on BLEU values they obtained. They state that such a number is difficult to 
-interpret since there is no accepted threshold above which an automatically generated text is considered of 
-good quality. Thus, they took into account a qualitative analysis based on correct predictions.\\
-However, we report also BLEU results.
+However, other than the metric used by the scholars to evaluate their results, we report BLEU results as well in table~\ref{table:4}.
 \begin{table}[h!]
     \centering
     \begin{tabular}{l|r|r|r|r|r}
@@ -182,4 +187,4 @@ However, we report also BLEU results.
     \label{table:4}
 \end{table}
 As revealed by the percentages in table~\ref{table:3}, the Baby Steps algorithm did not perform well
-on log generation task and the BLEU results confirm such finding.
+on log generation task and the BLEU results in table~\ref{table:4} confirm such finding.
