@@ -1,12 +1,11 @@
-\chapter{Analysis of results}
+\chapter{Analysis of Results}
 In the following section the results 
-achieved by NMT Encoder-Decoder with curriculum learning and
-by the baselines for the 3 tasks we considered are reported.
+achieved by NMT Encoder-Decoder baselines and with curriculum learning for the 3 tasks we considered were reported.
 We used different evaluation metrics for each of the tasks, depending on the metric considered to 
 assess the results in the pieces of work we considered as main references - perfect predictions on the first, 
 BLEU metric for the second and third tasks. 
 
-\section{Bug fixing task}
+\section{Bug fixing Task}
 To begin with, as assessed by Tufano \textit{et al.} \cite{Tufano2019} we used 
 perfect predictions as a metric to evaluate the model performances. In the paper we took as reference
 to test curriculum learning on, the authors differentiated 2 types of datasets; (i) the first one constituted by methods
@@ -39,21 +38,21 @@ by the models for different beam sizes.
     \label{table:pp_bugfixing}
 \end{table}
 Increasing the beam size, and generating more candidate patches accordingly,
-the percentages of BFPs for which the models can perfectly generate the corresponding
-fixed code - starting from the input buggy code - increases. If the baseline model can predict
+the percentages of BFPs for which the model could perfectly generate the corresponding
+fixed code - starting from the input buggy code - increase. If the baseline model was able to predict
 the fixed code of 5.22\% of the BFPs with only one attempt, the same model together with 
-curriculum learning approach predicts 5.34\% of the same BFPs. It is a 
-better result, moreover, looking at bigger beam sizes, the model with curriculum learning performs 
-even better, almost triplicating the percentage of perfect predictions of beam size 1 when 5 patches are generated,
-reaching 37.39\% when 50 candidate patches are considered. Overall, it can be seen that
+curriculum learning approach predicted 5.34\% of the same BFPs. As a matter of fact, it is a 
+better result. Moreover, looking at bigger beam sizes, the model with curriculum learning performed 
+even better, almost triplicating the percentage of perfect predictions of beam size 1 when 5 patches were generated,
+reaching 37.39\% when 50 candidate patches were considered. Overall, it can be seen that
 the improvement margin is constant.\\
 On a second evaluation, we carried on a complementary analysis based on perfect predictions
 obtained when the model generated 10 candidate patches for each prediction. 
 As can be seen 
-in Table~\ref{table:pp_bugfixing_overlap}, the combination between the two models 
-leads to a reasonable percentage of perfect predictions, i.e. 42.38\%. However, the model 
-with curriculum learning approach performs better than the canonical learning approach. Indeed, 44.63\% of BFPs are correctly predicted
-only by the model with Baby Steps. On the other hand, only 12.97\% of perfect predictions are from the baseline.
+in table~\ref{table:pp_bugfixing_overlap}, the combination between the two models 
+leads to a reasonable percentage of perfect predictions, i.e., 42.38\%. However, the model 
+with curriculum learning approach performed better than the canonical learning approach. Indeed, 44.63\% of BFPs were correctly predicted
+only by the model with Baby Steps scheduler. On the other hand, only 12.97\% of perfect predictions were from the baseline.
 \begin{table}[h!]
     \centering
     \begin{tabular}{l|r|r|r}
@@ -68,14 +67,14 @@ This result not only indicates that the two approaches are complementary for
 the bug-fixing task, but also that the model with curriculum learning reports even 
 better outcomes. Considering that the curriculum approach implemented is one of the easiest ones,
 those results recall the need to better tuning the approach with the aim of 
-other improvements in the ability of such a model to exploit the knowledge acquired on 
+other improvements in the ability of such model to exploit the knowledge acquired on 
 this specific task. 
 
-\section{Code summarization task}\label{section:cdtask}
+\section{Code Summarization Task}\label{section:cdtask}
 In the study took as reference for the code summarization task, the authors used different neural networks to 
 assess the quality of their work. So, we could not compare appropriately our results to theirs.
 However, as said before, we reproduced the experiment on a baseline model,
-i.e. on the model without any curriculum learning approach applied - using the NMT Encoder-Decoder architecture.
+i.e., on the model without any curriculum learning approach applied - using the NMT Encoder-Decoder architecture.
 The experiment on the baseline model totalized a BLEU-A score of 13.70 that is lower than 
 each of the scores obtained by the authors of \cite{Leclair2020} of about 6 BLEU points. 
 \begin{table}[h!]
@@ -99,12 +98,12 @@ n-grams from length 1 to 4 - as shown in table~\ref{table:1}.\\
 In addition to that, the BLEU value after the experiment on the model together with the curriculum approach
 scored a value of 13.29, which is lower than the results achieved by the baseline, then lower than the BLEU values in the 
 reference work \cite{Leclair2020}.
-This means that, in this case, the curriculum approach does not work in the view of collecting better results.
+This means that, in this case, the curriculum approach did not work in the view of collecting better results.
 However, it must be said that the model used in our experiment is different from the 
 model used by the authors of the paper we took as reference; so the absence of improvement might
 depend on that.\\
-Even if perfect predictions results are not included in the paper \cite{Leclair2020}, we decided to report
-those as well. Also on perfect predictions we do not have better results, and we can observe - as showed in Table~\ref{table:2} - that the
+Even if perfect predictions results were not included in the paper \cite{Leclair2020}, we decided to report
+those as well. Also on perfect predictions we did not have better results, and we can observe - as showed in table~\ref{table:2} - that the
 percentages of the baseline experiment are quite close to those obtained by the curriculum learning experiment.
 \begin{table}[h!]
     \centering
@@ -133,12 +132,12 @@ expectations missed - may depend on the type of neural network used.
 In fact, if the network had been sufficiently 
 fit, the BLEU values should have been similar to those obtained by LeClair \cite{Leclair2020} at the very least.
 
-\section{Log generation task}
-In the paper from which we started to test curriculum learning on a log generation task, the authors used
-correct predictions to assess 4 experimented models output of different pre-training strategies. 
+\section{Log Generation Task}
+In the paper from which we started to test curriculum learning on - in the case of the log generation task - the authors used
+correct predictions to assess the outputs of 4 experimented models based on different pre-training strategies. 
 By analogy, as discussed in section~\ref{section:cdtask}, we cannot properly compare our results to those 
 obtained by Mastropaolo \textit{et al.} in \cite{Mastropaolo2022}, because the neural networks used are different.
-The authors did not rely on BLEU values they obtained. They state that such a number is difficult to 
+The authors did not rely on BLEU values they obtained. They stated that such a number is difficult to 
 interpret since there is no accepted threshold above which an automatically generated text is considered of 
 good quality. Thus, they took into account a qualitative analysis based on correct predictions and so did we.
 \begin{table}[h!]
@@ -155,26 +154,25 @@ good quality. Thus, they took into account a qualitative analysis based on corre
     BEAM 25 &  0.24\% &  0.25\%\\
     BEAM 30 &  0.24\% &  0.25\%\\
     BEAM 35 &  0.25\% &  0.25\%\\
-    BEAM 40 &  0.26\% &  \%\\
-    BEAM 45 &  0.27\%& \%\\
-    BEAM 50 &  0.28\%& \%\\ [1ex]
+    BEAM 40 &  0.26\% &  0.25\%\\
+    BEAM 45 &  0.27\% & 0.25\%\\
+    BEAM 50 &  0.28\% & 0.26\%\\ [1ex]
     \end{tabular}
     \caption{Log generation: perfect predictions.}
     \label{table:3}
 \end{table}
 As showed in table~\ref{table:3} the model did not perform well. 
-Yet, even if the results are generally negative, one consideration might be still done:
-if the baseline model trained needed 35 possible
-beam sizes to get 0.25\% of perfect predictions on target, the model trained with Baby Steps approach got to the same 
+Yet, even if the results were generally negative, one consideration might be still done:
+if the trained baseline model needed 35 possible
+beam sizes to get 0.25\% of perfect predictions on target, the trained model with Baby Steps approach got to the same 
 result with only 15 beam widths. Even if it is only a very few percentage points, this outcome might derive from the starting small strategy
 that helps to learn sooner.
 The low percentages even on the baseline
-leads to think that the neural network used was not suitable enough for the task considered. 
+leads to think that the neural network used was not suitable enough for the task considered.
 As explained in the previous section~\ref{section:cdtask}, the baseline metrics leaked from the model we used
-should have been similar to those obtained in the paper took as reference. Since this did not happen,
+should have been similar to those obtained in the paper taken as reference. Since this did not happen,
 one might think that the negative results obtained from the curriculum learning experiment do not directly 
 depend on the curriculum approach, rather from the architecture used.
-However, other than the metric used by the scholars to evaluate their results, we report BLEU results as well in table~\ref{table:4}.
 \begin{table}[h!]
     \centering
     \begin{tabular}{l|r|r|r|r|r}
@@ -186,5 +184,6 @@ However, other than the metric used by the scholars to evaluate their results, w
     \caption{Log generation: BLEU values summary.}
     \label{table:4}
 \end{table}
+However, other than the metric used by the scholars to evaluate their results, we reported BLEU results as well in table~\ref{table:4}.
 As revealed by the percentages in table~\ref{table:3}, the Baby Steps algorithm did not perform well
-on log generation task and the BLEU results in table~\ref{table:4} confirm such finding.
+on log generation task, and the BLEU results in table~\ref{table:4} confirmed such finding.

@@ -1,15 +1,15 @@
 \chapter{Conclusion and Future Works}
 In this work we wanted to test the curriculum learning approach on code related tasks.
 In order to test this new technique we decided to take as reference 3 pieces of work and to compare 
-our findings to the results originaly achieved, by using deep learning models.
+our findings to the results originally achieved, by using deep learning models.
 As explained in Chapter \ref{chapter:MAO} there are well-known advantages that curriculum learning
 brougth to the current state of the art. However, it is also true that advantages and benefits depend highly on the data 
 that the model takes in input and on the curriculum design. Consequently, the results with curriculum applied might not always be better than 
 those obtained by the training on plain models. 
 In fact, we could notice that if on bug-fixing task the model with curriculum learning 
-took better results not only in terms of performance but also of accuracy, 
-in the case of the second task, i.e. code summarization, the results achieved in \cite{Leclair2020}
-are definetly better. The same happened in the case of the log generation task (see \cite{Mastropaolo2022}).
+took better results in terms of performance, 
+in the case of the second task, i.e., code summarization, the results achieved in \cite{Leclair2020}
+are definitely better. The same happened in the case of the log generation task (see \cite{Mastropaolo2022}).
 Nevertheless, it must be said that we focused our attention on the technique for the training process, but in order to achieve better 
 results other enhancements migh be done. To provide an illustration, if for the first task we used the very same model 
 to train both the baseline model and the model with curriculum learning approach integrated, in the second and third cases the model used as for the training was not the 
@@ -29,7 +29,7 @@ In any case, reproducing code summarization and log generation tasks on the very
 \textit{Baby Steps} curriculum approach would be a first move towards possible future works. In fact, not only will this experiment answer 
 some of the questions that our results lead to, but also it would make it possible to compare reliably the results obtained with curriculum 
 learning to those obtained by the scholars on the baselines.\\
-Regardless to the results collected, we can very well acknowledge that curriculum learning outcomes highly depend on the training data 
+Regardless of the results collected, we can very well acknowledge that curriculum learning outcomes highly depend on the training data 
 and the curriculum design. In fact, even if we choose different \textit{Difficulty Measurers} - 
 complying with the data-driven features of the 3 datasets used - we used the same \textit{Training Scheduler} on the same training model, ending in having both positives and negatives results.
 This recalls the need of curriculum learning approach to be settled differently for each task it is applied on.\\

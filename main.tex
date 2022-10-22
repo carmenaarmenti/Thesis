@@ -167,23 +167,30 @@ morecomment=[l]{//s},
     \begin{center}
     
     \vspace*{.01\textheight}
-    {\scshape\LARGE \textbf \univname\par} % University name
-    {\scshape\LARGE \deptname\par}\vspace{0.5cm} 
-    \textsc{\LARGE \textbf{Double Master's Degree}}\\[0.1cm] % Thesis type
-    \footnotesize{\textsl{organized by UNIMOL and USI}}\\[0.5cm]
+    %{\scshape\LARGE \textbf \univname\par} % University name
+    %{\scshape\LARGE \deptname\par}\vspace{0.5cm} 
+    %\textsc{\Huge \textbf{Double Master's degree}}\\[0.1cm] % Thesis type
+    %\footnotesize{\textsl{by UNIMOL and USI}}\\[0.5cm]
+    \includegraphics[scale=0.1]{images/logo.png}\hspace{0.5cm}
+    \includegraphics[scale=0.1]{images/logo-usi.png}\\[0.6cm]
+    \textsc{\Huge \textbf{Double Master's degree}}\\[0.1cm] % Thesis type
+
     %\textsl{in}\\[0.3cm]
-    {\textsc{in}}\\[0.5cm]
+    {\textsc{in}}\\[0.3cm]
     %\textup{jointly organized by UNIMOL and USI}\\
     %\textup{in}\\[0.3cm]
-    \textsc{\LARGE Software Systems Security}\\[0.1cm]
+    \textsc{\LARGE Software System Security}\\[0.1cm]
     {\textsc{and}}\\[0.3cm]
     \textsc{\LARGE Software and Data Engineering}\\[0.5cm]
+    %\footnotesize{\textsl{submitted to the University of Molise and the Università della Svizzera Italiana
+    %in partial fulfillment \\ of the requirements for the double degree 
+    %"Software Systems Security" (UNIMOL)/"Software and Data Engineering" (USI).}}\\[0.5cm]
     
     \HRule \\[0.1cm] % Horizontal line
     {\huge \bfseries \ttitle\par}\vspace{0.4cm} % Thesis title
     \HRule \\[1.2cm] % Horizontal line
      
-    \begin{minipage}[t]{0.4\textwidth}
+    \begin{minipage}[t]{0.5\textwidth}
     \begin{flushleft} \large
     \emph{Author:}\\
     \authorname
@@ -193,15 +200,19 @@ morecomment=[l]{//s},
     \begin{minipage}[t]{0.4\textwidth}
     \begin{flushright} \large
     \emph{Supervisor:} \\
-    \href{https://dibt.unimol.it/staff/oliveto/}{\supname}\\[0.5cm] % Supervisor name - remove the \href bracket to remove the link 
+    \href{https://dibt.unimol.it/staff/oliveto/}{\textbf \supname}\\
+    \text{\small \textbf{University of Molise}}\\[0.6cm] % Supervisor name - remove the \href bracket to remove the link 
     \emph{{Co-supervisor:}} \\
-    \href{https://www.inf.usi.ch/faculty/bavota/#}{\cosupname}\\[0.5cm]
+    \href{https://www.inf.usi.ch/faculty/bavota/#}{\textbf \cosupname}\\
+    \text{\small \textbf{Università della Svizzera Italiana}}\\[0.5cm]
     \end{flushright}
     \end{minipage}\\[1.6cm]
      
     \vfill
     
-    %\large \textit{A thesis submitted in fulfillment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
+    %\large {\textsl {A thesis submitted to the University of Molise and the Università della Svizzera Italiana
+    %in partial fulfillment of the requirements for the double degree \\
+    %"Software Systems Security" (UNIMOL) / "Software and Data Engineering" (USI).}}\\[1.9cm] % University requirement text
     %\textit{in the}\\[0.4cm]
     %\groupname\\\deptname\\[2cm] % Research group name and department name
     
@@ -210,12 +221,16 @@ morecomment=[l]{//s},
     %{\large Software Analytics}\\
     %{\large October 27, 2022}\\[0.9cm]
 
-    {\footnotesize{\textsl{The double degree programme "Secure Software and Data Engineering" involves the Master's degree programme “Software Systems Security” (M.Sc.)
-    at UNIMOL and “Software and Data Engineering” (M.Sc.) at USI.}}}\\[0.9cm]
+    \footnotesize {\textsl {A thesis submitted to the University of Molise and the Università della Svizzera Italiana
+    in partial fulfillment of the requirements for the double degree programme "Secure Software and Data Engineering"
+    that involves the Master's degree programmes “Software System Security” (M.Sc.)
+    at UNIMOL \\ and “Software and Data Engineering” (M.Sc.) at USI.}}\\[1.2cm] % University requirement text
+    %{\footnotesize{\textsl{The double degree programme "Secure Software and Data Engineering" involves the Master's degree programme “Software Systems Security” (M.Sc.)
+    %at UNIMOL and “Software and Data Engineering” (M.Sc.) at USI.}}}\\[1.2cm]
     
     %{\large \today}\\[4cm] % Date
-
-    {\large Software Analytics}\\[0.1cm]
+    \textsc{Master thesis in}\\
+    {\large \textbf{Software Analytics}}\\[0.3cm]
     {\large October 27, 2022}
     
     \vfill
@@ -261,7 +276,7 @@ morecomment=[l]{//s},
 %----------------------------------------------------------------------------------------
 \vspace*{.03\textheight}
 \begin{flushright}
-	\dedicatory{To my family, \linebreak without whom I would not be who I am.} 
+	\dedicatory{\textsl {To my family, \linebreak without whom I would not be who I am.}} 
 \end{flushright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
